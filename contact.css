@@ -61,7 +61,7 @@ main {
 .line-btn {
   display: inline-block;
   background: linear-gradient(90deg, var(--accent-color) 60%, var(--accent-light) 100%);
-  color: #fff;
+  color: #fff !important;
   font-size: 1.1em;
   padding: 0.8em 1.8em;
   border-radius: var(--border-radius-lg);
