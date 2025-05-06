@@ -56,3 +56,46 @@
   .line-btn.clicked {
     transform: scale(0.95);
   }
+
+/* --- ここから追加・修正 --- */
+.contact-methods {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.contact-methods .contact-box {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 420px;
+  background: #fff;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2em 1.5em 1.5em 1.5em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+
+.contact-methods .contact-box:not(:last-child) {
+  /* PC時のみ右側に余白 */
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .contact-methods {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .contact-methods .contact-box {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+/* --- ここまで追加・修正 --- */
