@@ -1,0 +1,257 @@
+/* プロフィールページ固有スタイル */
+@import 'common.css';
+
+/* プロフィールカード */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2.5em;
+  background: linear-gradient(120deg, var(--card-color-1) 60%, var(--card-color-2) 100%);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2.5em 2.2em;
+  margin-bottom: 2.8em;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.profile .hero-photo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  border: 5px solid #fff;
+  background: var(--bg-gradient-1);
+  transition: all 0.4s cubic-bezier(.25, .1, .25, 1.5);
+}
+
+.profile .hero-photo:hover {
+  box-shadow: 0 15px 30px rgba(25, 118, 210, 0.25);
+  transform: scale(1.05) translateY(-5px);
+}
+
+.profile .profile-text {
+  flex: 1;
+  font-size: 1.15em;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.animated-hero-photo {
+  opacity: 0;
+  transform: scale(0.85);
+  animation: heroPhotoFadeIn 1.2s cubic-bezier(.25, .1, .25, 1.5) 0.4s forwards;
+}
+
+@keyframes heroPhotoFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* メッセージセクション */
+.message {
+  background: linear-gradient(120deg, var(--card-color-2) 30%, white 100%);
+  border-radius: var(--border-radius-md);
+  padding: 2em 1.8em;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.5em;
+}
+
+.message::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.message h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.message p {
+  position: relative;
+  z-index: 1;
+  line-height: 1.8;
+  font-size: 1.05em;
+}
+
+/* 強み・特徴セクション */
+.strengths ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.strengths li {
+  background: var(--highlight-color);
+  border-radius: var(--border-radius-sm);
+  padding: 1.2em 1.4em;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1em;
+  position: relative;
+  transition: all var(--transition-normal);
+  padding-left: 2em;
+}
+
+.strengths li::before {
+  content: '★';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0.8em;
+  font-size: 1em;
+}
+
+.strengths li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* サービス概要セクション */
+.service-summary ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-summary li {
+  background: var(--card-color-1);
+  border-radius: var(--border-radius-sm);
+  padding: 1em 1.4em;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1em;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.service-summary li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--card-color-1) 0%, white 100%);
+}
+
+/* 資格セクション */
+.qualifications ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.qualifications li {
+  background: #f8f9fa;
+  border-radius: var(--border-radius-sm);
+  padding: 1em 1.4em;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 0.8em;
+  position: relative;
+  transition: all var(--transition-normal);
+  padding-left: 2em;
+}
+
+.qualifications li::before {
+  content: '✓';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0.8em;
+  font-weight: bold;
+}
+
+.qualifications li:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 会社情報セクション */
+.company-info {
+  background: var(--card-color-2);
+  border-radius: var(--border-radius-md);
+  padding: 1.8em 1.5em;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2.5em;
+}
+
+.company-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-info th, .company-info td {
+  padding: 0.8em 1em;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.company-info th {
+  width: 25%;
+  color: var(--primary-dark);
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.company-info a {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--primary-light);
+  transition: all var(--transition-normal);
+  padding-bottom: 2px;
+}
+
+.company-info a:hover {
+  color: var(--primary-dark);
+  border-bottom: 1px solid var(--primary-dark);
+}
+
+/* CTA セクション */
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--card-color-1) 0%, white 100%);
+  border-radius: var(--border-radius-md);
+  padding: 2.5em 1.5em;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  z-index: 1;
+} 
