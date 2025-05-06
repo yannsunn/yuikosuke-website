@@ -1,63 +1,171 @@
+/* お問い合わせページ固有スタイル */
+@import 'common.css';
+
+/* メインコンテンツレイアウト */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+/* カードボックススタイル */
+.card-box {
+  background: #fff;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2em 1.8em;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.card-box:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.card-box::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* お問い合わせリード部分 */
+.contact-lead {
+  background: linear-gradient(120deg, var(--card-color-1) 60%, var(--card-color-2) 100%);
+  text-align: center;
+}
+
+.contact-lead h2 {
+  position: relative;
+  z-index: 1;
+  color: var(--primary-dark);
+  margin-bottom: 0.8em;
+}
+
+.contact-lead p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
 /* LINE公式アカウント準備中のスタイル */
 .line-btn {
-    display: inline-block;
-    background: linear-gradient(90deg, var(--accent-color) 60%, var(--accent-light) 100%);
-    color: #fff;
-    font-size: 1.1em;
-    padding: 0.8em 1.8em;
-    border-radius: var(--border-radius-lg);
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(6, 199, 85, 0.15);
-    transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .line-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.5s, height 0.5s;
-    z-index: -1;
-  }
-  
-  .line-btn:hover:not(.disabled) {
-    background: linear-gradient(90deg, var(--accent-dark) 60%, var(--accent-light) 100%);
-    box-shadow: 0 8px 20px rgba(6, 199, 85, 0.25);
-    transform: translateY(-3px);
-    color: #fff;
-  }
-  
-  .line-btn:hover:not(.disabled)::before {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .line-btn.disabled {
-    background: #a0a0a0;
-    cursor: not-allowed;
-    opacity: 0.7;
-    box-shadow: none;
-  }
-  
-  .line-btn.disabled:hover {
-    transform: none;
-    box-shadow: none;
-  }
-  
-  .line-btn.clicked {
-    transform: scale(0.95);
-  }
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-color) 60%, var(--accent-light) 100%);
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.8em 1.8em;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.15);
+  transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-/* --- ここから追加・修正 --- */
+.line-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+
+.line-btn:hover:not(.disabled) {
+  background: linear-gradient(90deg, var(--accent-dark) 60%, var(--accent-light) 100%);
+  box-shadow: 0 8px 20px rgba(6, 199, 85, 0.25);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.line-btn:hover:not(.disabled)::before {
+  width: 300px;
+  height: 300px;
+}
+
+.line-btn.disabled {
+  background: #a0a0a0;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.line-btn.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.line-btn.clicked {
+  transform: scale(0.95);
+}
+
+/* メールボタンスタイル */
+.mail-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--mail-color) 60%, var(--mail-light) 100%);
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.8em 1.8em;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+  transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.mail-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+
+.mail-btn:hover {
+  background: linear-gradient(90deg, var(--mail-dark) 60%, var(--mail-color) 100%);
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.25);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.mail-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.mail-btn.clicked {
+  transform: scale(0.95);
+}
+
+/* お問い合わせ方法セクション */
 .contact-methods {
   display: flex;
   gap: 2em;
@@ -79,14 +187,107 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-.contact-methods .contact-box:not(:last-child) {
-  /* PC時のみ右側に余白 */
-  margin-right: 0;
+.contact-methods .contact-box:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
 }
 
+.contact-methods .contact-box.mail {
+  border-left: 4px solid var(--mail-color);
+}
+
+.contact-methods .contact-box.line {
+  border-left: 4px solid var(--accent-color);
+}
+
+.contact-methods .contact-box h3 {
+  color: var(--primary-dark);
+  margin-bottom: 0.8em;
+}
+
+.contact-methods .contact-box p {
+  margin-bottom: 1.5em;
+  flex-grow: 1;
+}
+
+.contact-methods .contact-box a[href^="mailto:"] {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--primary-color);
+  padding-bottom: 2px;
+  transition: all var(--transition-normal);
+}
+
+.contact-methods .contact-box a[href^="mailto:"]:hover {
+  color: var(--primary-dark);
+  border-bottom: 1px solid var(--primary-dark);
+}
+
+/* 問い合わせ例リスト */
+.contact-examples ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 1.5em 0;
+}
+
+.contact-examples li {
+  padding: 0.8em 1.2em;
+  background: var(--card-color-1);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0.8em;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  padding-left: 2em;
+}
+
+.contact-examples li::before {
+  content: '→';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0.8em;
+  font-weight: bold;
+}
+
+.contact-examples li:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: var(--shadow-md) !important;
+  background: linear-gradient(135deg, var(--card-color-1) 0%, white 100%);
+}
+
+/* プライバシーポリシーリンク */
+.privacy-link {
+  text-align: center;
+}
+
+.privacy-link a {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+}
+
+.privacy-link a:hover {
+  background: rgba(25, 118, 210, 0.1);
+  color: var(--primary-dark);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 3em;
+  color: var(--text-light);
+}
+
+/* レスポンシブデザイン */
 @media (max-width: 900px) {
   .contact-methods {
     flex-direction: column;
@@ -98,4 +299,27 @@
     margin-right: 0;
   }
 }
-/* --- ここまで追加・修正 --- */
+
+@media (max-width: 700px) {
+  main {
+    padding: 0 1em;
+  }
+  
+  .card-box {
+    padding: 1.5em 1.2em;
+  }
+  
+  .contact-lead h2 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-box {
+    padding: 1.2em 1em;
+  }
+  
+  .contact-methods .contact-box {
+    padding: 1.5em 1.2em;
+  }
+}
