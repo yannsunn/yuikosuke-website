@@ -131,6 +131,7 @@ main {
   transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
   position: relative;
   z-index: 2;
+  text-shadow: 0 2px 8px rgba(25, 118, 210, 0.18), 0 1px 0 #1976d2;
 }
 
 .mail-btn::before {
