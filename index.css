@@ -268,3 +268,47 @@
     font-size: 1.05em;
   }
 }
+
+/* モダンなカット写真デザイン（四角形・縦長）用 */
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  justify-content: center;
+}
+
+.hero-image-modern {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-photo-modern {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.4s cubic-bezier(.25, .1, .25, 1.5);
+  background: #fff;
+}
+
+.hero-photo-modern:hover {
+  transform: scale(1.04) translateY(-8px);
+  box-shadow: 0 20px 40px rgba(25, 118, 210, 0.4), 0 0 0 2px rgba(6, 199, 85, 0.1);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .hero-photo-modern {
+    width: 220px;
+    height: 300px;
+  }
+}
