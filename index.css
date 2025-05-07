@@ -227,6 +227,8 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.8);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cta::before {
@@ -243,6 +245,7 @@
 
 .cta h2 {
   margin-bottom: 1em;
+  font-size: 1.6em;
 }
 
 .cta p {
@@ -265,6 +268,8 @@
   gap: 2em;
   margin-top: 2em;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cta-buttons a {
@@ -274,6 +279,7 @@
   padding: 1em 2em;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .cta-buttons .line-btn {
@@ -336,19 +342,42 @@
   }
   
   .cta {
-    padding: 2.5em 1.5em;
+    padding: 2.5em 1.2em;
+  }
+  
+  .cta h2 {
+    font-size: 1.4em;
+  }
+  
+  .cta p {
+    font-size: 1em;
+    padding: 0 0.5em;
   }
   
   .cta-buttons {
     flex-direction: column;
     align-items: center;
     gap: 1.5em;
+    padding: 0 0.5em;
   }
   
   .cta-buttons a {
     width: 100%;
     max-width: 280px;
     text-align: center;
+    font-size: 1rem;
+    padding: 0.9em 1.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  .cta {
+    padding: 2em 1em;
+  }
+  
+  .cta-buttons a {
+    max-width: 250px;
+    font-size: 0.95rem;
   }
 }
 
@@ -358,6 +387,8 @@
   align-items: center;
   gap: 3em;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-image-modern {
@@ -393,6 +424,73 @@
   .hero-photo-modern {
     width: 220px;
     height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-photo-modern {
+    width: 180px;
+    height: 250px;
+  }
+  
+  .hero h2 {
+    font-size: 1.5em;
+  }
+  
+  .hero p {
+    font-size: 1em;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.1em;
+  }
+  
+  .benefit-icon {
+    font-size: 2.2em;
+  }
+  
+  h2 {
+    font-size: 1.4em;
+  }
+  
+  .intro h2 {
+    font-size: 1.5em;
+  }
+  
+  .intro-content {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-photo-modern {
+    width: 160px;
+    height: 220px;
+  }
+  
+  .benefit-card {
+    padding: 1.2em 0.8em;
+  }
+  
+  .hero-buttons a, 
+  .cta-buttons a {
+    font-size: 0.95rem;
+    padding: 0.8em 1.2em;
+  }
+  
+  .tagline {
+    font-size: 1.15em;
   }
 }
 
@@ -538,6 +636,7 @@
   padding: 2.5em 2em;
   box-shadow: var(--shadow-md);
   margin-bottom: 2.5em;
+  overflow: hidden;
 }
 
 .testimonials h2 {
@@ -558,6 +657,10 @@
   padding: 1.5em;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial:hover {
@@ -571,6 +674,7 @@
   line-height: 1.6;
   position: relative;
   padding-left: 1.5em;
+  flex-grow: 1;
 }
 
 .quote::before {
@@ -707,22 +811,39 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
   .testimonial {
     width: 100%;
+    margin: 0 auto;
   }
-  .slider-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
-    line-height: 32px;
+  
+  .testimonials {
+    padding: 2em 1.2em;
   }
-  .prev-btn {
-    left: -16px;
+  
+  .testimonials-grid {
+    gap: 1.2em;
   }
-  .next-btn {
-    right: -16px;
+}
+
+@media (max-width: 480px) {
+  .testimonial {
+    padding: 1.2em 1em;
+  }
+  
+  .quote {
+    font-size: 0.95em;
+  }
+  
+  .author {
+    font-size: 0.9em;
   }
 }
