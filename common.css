@@ -26,12 +26,19 @@ body::-webkit-scrollbar {
 
 /* iPhone固有の問題対策 */
 @media screen and (max-width: 450px) {
-  html, body {
-    position: fixed;
+  html {
     position: relative;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
     -webkit-overflow-scrolling: touch;
   }
   
