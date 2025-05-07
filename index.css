@@ -145,6 +145,8 @@
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5em;
   margin-bottom: 2em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .services-grid li {
@@ -158,6 +160,10 @@
   display: flex;
   align-items: center;
   min-height: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .services-grid li::before {
@@ -166,6 +172,7 @@
   font-weight: bold;
   margin-right: 10px;
   font-size: 1.2em;
+  flex-shrink: 0;
 }
 
 .services-grid li:hover {
@@ -331,6 +338,12 @@
   
   .services-grid {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+  
+  .services-grid li {
+    padding: 1em 1.2em;
+    font-size: 0.95em;
   }
   
   .testimonial {
@@ -342,16 +355,22 @@
   }
   
   .cta {
-    padding: 2.5em 1.2em;
+    padding: 2.5em 1.5em;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .cta h2 {
     font-size: 1.4em;
+    width: 100%;
   }
   
   .cta p {
     font-size: 1em;
     padding: 0 0.5em;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .cta-buttons {
@@ -359,6 +378,7 @@
     align-items: center;
     gap: 1.5em;
     padding: 0 0.5em;
+    width: 100%;
   }
   
   .cta-buttons a {
@@ -370,14 +390,34 @@
   }
 }
 
-@media (max-width: 375px) {
-  .cta {
-    padding: 2em 1em;
+@media (max-width: 480px) {
+  .services-grid li {
+    padding: 0.9em 1.1em;
+    font-size: 0.9em;
   }
   
+  .services-grid li::before {
+    font-size: 1.1em;
+    margin-right: 8px;
+  }
+  
+  .hero-image-container {
+    width: 160px;
+    height: 220px;
+  }
+  
+  .benefit-card {
+    padding: 1.2em 0.8em;
+  }
+  
+  .hero-buttons a, 
   .cta-buttons a {
-    max-width: 250px;
     font-size: 0.95rem;
+    padding: 0.8em 1.2em;
+  }
+  
+  .tagline {
+    font-size: 1.15em;
   }
 }
 
@@ -458,10 +498,6 @@
   
   .benefit-icon {
     font-size: 2.2em;
-  }
-  
-  h2 {
-    font-size: 1.4em;
   }
   
   .intro h2 {

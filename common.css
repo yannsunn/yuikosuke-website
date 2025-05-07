@@ -39,6 +39,12 @@ body {
   font-size: 16px; /* ベースフォントサイズ */
   min-height: 100vh;
   background-attachment: fixed;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 h1 {
@@ -130,19 +136,49 @@ a:hover {
 @media (max-width: 500px) {
   body {
     font-size: 14px;
+    overflow-x: hidden;
+    width: 100%;
   }
   p {
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   h1 {
     font-size: 1.5em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   h2 {
     font-size: 1.3em;
+    max-width: 100%;
   }
   .line-btn, .mail-btn, .service-btn {
     font-size: 0.95rem;
     padding: 0.7em 1.5em;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    padding: 0 0.8em;
+  }
+  
+  h1 {
+    font-size: 1.4em;
+    width: 95%;
+  }
+  
+  h2 {
+    font-size: 1.25em;
+  }
+  
+  .line-btn, .mail-btn, .service-btn {
+    font-size: 0.9rem;
+    padding: 0.6em 1.2em;
   }
 }
 
@@ -322,6 +358,9 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5em;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* カードボックス共通スタイル */
