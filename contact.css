@@ -6,6 +6,8 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* カードボックススタイル */
@@ -18,6 +20,8 @@ main {
   position: relative;
   overflow: hidden;
   transition: all var(--transition-normal);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card-box:hover {
@@ -163,6 +167,8 @@ main {
   align-items: stretch;
   margin-bottom: 2em;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-methods .contact-box {
@@ -178,6 +184,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   transition: box-shadow 0.3s, transform 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-methods .contact-box:hover {
@@ -233,6 +241,8 @@ main {
   transition: all var(--transition-normal);
   position: relative;
   padding-left: 2em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-examples li::before {
@@ -256,24 +266,25 @@ main {
 
 .privacy-link a {
   display: inline-block;
-  padding: 0.6em 1.2em;
-  color: var(--primary-color);
-  font-weight: 600;
-  transition: all var(--transition-normal);
+  color: var(--primary-dark);
   text-decoration: none;
+  transition: all var(--transition-normal);
+  padding: 0.5em 1em;
   border-radius: var(--border-radius-sm);
+  background: var(--highlight-color);
 }
 
 .privacy-link a:hover {
-  background: rgba(25, 118, 210, 0.1);
-  color: var(--primary-dark);
+  color: var(--primary-color);
+  background: #f0f8ff;
+  transform: translateX(5px);
 }
 
 /* フッター */
 footer {
   text-align: center;
   padding: 2em 0;
-  margin-top: 3em;
+  margin-top: 4em;
   color: var(--text-light);
 }
 
@@ -281,40 +292,75 @@ footer {
 @media (max-width: 900px) {
   .contact-methods {
     flex-direction: column;
-    gap: 1.5em;
+    align-items: center;
   }
   .contact-methods .contact-box {
-    max-width: 100%;
     width: 100%;
-    margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 1.5em;
   }
 }
 
 @media (max-width: 700px) {
   main {
-    padding: 0 1em;
+    padding: 0 1.2em;
+    width: 100%;
   }
-  
   .card-box {
     padding: 1.5em 1.2em;
+    width: 100%;
   }
-  
   .contact-lead h2 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 }
 
 @media (max-width: 500px) {
   .card-box {
     padding: 1.2em 1em;
+    width: 100%;
   }
-  
   .contact-methods .contact-box {
-    padding: 1.5em 1.2em;
+    padding: 1.5em 1.2em 1.2em 1.2em;
+    width: 100%;
+  }
+  .mail-btn, .line-btn {
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .contact-examples li {
+    font-size: 0.95em;
+    padding: 0.7em 1em 0.7em 1.8em;
+  }
+  .contact-methods .contact-content {
+    min-height: 60px;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-methods .contact-box h3 {
+    font-size: 1.1em;
+  }
+  .contact-methods .contact-content {
+    font-size: 0.9em;
+  }
+  .mail-btn, .line-btn {
+    font-size: 0.95em;
+  }
+  .contact-examples li {
+    font-size: 0.9em;
+  }
+  .contact-lead p {
+    font-size: 0.95em;
   }
 }
 
 .contact-methods .contact-content {
-  flex-grow: 1;
-  margin-bottom: 1.5em;
+  min-height: 90px;
+  margin-bottom: 0.5em;
+  line-height: 1.8;
 }
