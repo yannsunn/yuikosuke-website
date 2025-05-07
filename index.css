@@ -222,10 +222,11 @@
   text-align: center;
   background: linear-gradient(135deg, var(--card-color-2) 0%, white 100%);
   border-radius: var(--border-radius-md);
-  padding: 2.5em 1.5em;
+  padding: 3em 2em;
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .cta::before {
@@ -252,10 +253,42 @@
 
 .cta .line-btn {
   font-size: 1.2em;
-  margin-bottom: 0.5em;
   padding: 1em 2.5em;
   position: relative;
   z-index: 1;
+}
+
+/* CTA改良 */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.cta-buttons a {
+  min-width: 220px;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1em 2em;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .line-btn {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+  border: none;
+}
+
+.cta-buttons .mail-btn {
+  background: linear-gradient(135deg, var(--mail-color), var(--mail-dark));
+  border: none;
+}
+
+.cta-buttons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* レスポンシブデザイン */
@@ -292,6 +325,30 @@
   
   .services-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .testimonial {
+    width: 85%;
+  }
+  
+  .benefit-card {
+    padding: 1.5em 1em;
+  }
+  
+  .cta {
+    padding: 2.5em 1.5em;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  
+  .cta-buttons a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 }
 
@@ -558,20 +615,6 @@
   font-size: 1.2em;
 }
 
-/* CTA改良 */
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
-  margin-top: 1.5em;
-  flex-wrap: wrap;
-}
-
-.cta-buttons a {
-  min-width: 200px;
-  text-align: center;
-}
-
 /* フッター改良 */
 footer {
   background: var(--primary-dark);
@@ -663,27 +706,6 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .testimonial {
-    width: 85%;
-  }
-  
-  .benefit-card {
-    padding: 1.5em 1em;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons a {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
   }
 }
 
