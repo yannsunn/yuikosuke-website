@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.opacity = 1;
         section.style.transform = 'none';
         section.style.transition = 'opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1)';
+        
+        // フッターの場合は特別な処理を追加
+        if (section.tagName.toLowerCase() === 'footer') {
+          section.classList.add('fadein-visible');
+        }
       }
     });
   };
