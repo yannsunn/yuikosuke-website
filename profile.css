@@ -123,14 +123,14 @@
   margin-bottom: 1em;
   position: relative;
   transition: all var(--transition-normal);
-  padding-left: 2em;
+  padding-left: 3em;
 }
 
 .strengths li::before {
   content: '★';
   color: var(--accent-color);
   position: absolute;
-  left: 0.8em;
+  left: 1.2em;
   font-size: 1em;
 }
 
