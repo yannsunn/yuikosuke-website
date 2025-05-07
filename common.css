@@ -30,13 +30,15 @@
 
 body {
   font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
-  background: linear-gradient(120deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+  background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   letter-spacing: 0.03em;
   line-height: 1.6;
   font-size: 16px; /* ベースフォントサイズ */
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -71,7 +73,7 @@ a:hover {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -82,7 +84,7 @@ a:hover {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
@@ -147,7 +149,25 @@ a:hover {
 /* --- ナビゲーション共通デザイン追加 --- */
 header h1 {
   text-align: center;
-  margin: 1em auto 0.8em;
+  margin: 1.2em auto 1em;
+  font-weight: 700;
+  color: var(--primary-dark);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.3em;
+}
+
+header h1::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-light));
+  bottom: 0;
+  left: 25%;
+  border-radius: 2px;
 }
 
 header nav {
@@ -155,21 +175,28 @@ header nav {
   gap: 1.5em;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
   flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.8em;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(5px);
 }
 
 header nav a {
   color: var(--primary-color);
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.4em 1em;
+  padding: 0.5em 1.2em;
   border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
   text-align: center;
   min-width: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 header nav a:hover,
@@ -177,8 +204,8 @@ header nav a.active {
   background: var(--accent-color);
   color: #fff;
   font-weight: 700;
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 700px) {
@@ -302,11 +329,12 @@ main {
   background: #fff;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-md);
-  padding: 2em 1.8em;
-  margin-bottom: 2em;
+  padding: 2.2em 2em;
+  margin-bottom: 2.5em;
   position: relative;
   overflow: hidden;
   transition: all var(--transition-normal);
+  border-left: 4px solid var(--accent-color);
 }
 .card-box:hover {
   box-shadow: var(--shadow-lg);
@@ -319,12 +347,12 @@ main {
     padding: 0 1em;
   }
   .card-box {
-    padding: 1.5em 1.2em;
+    padding: 1.8em 1.5em;
   }
 }
 @media (max-width: 500px) {
   .card-box {
-    padding: 1.2em 1em;
+    padding: 1.5em 1.2em;
   }
 }
 
@@ -346,24 +374,41 @@ main {
 
 .service-btn, .more-btn {
   font-size: 1rem;
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-btn:hover, .more-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* フッターアニメーション */
 footer.fadein-section {
   animation-delay: 0.5s;
-  background: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
   color: white;
-  padding: 2em 0 0.5em 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5em 0 0.8em 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
 }
 
 footer .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2em;
+  gap: 2.5em;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2em 1em 2em;
+  padding: 0 2em 1.5em 2em;
 }
 
 footer.fadein-visible .footer-content > div {
@@ -377,14 +422,15 @@ footer .footer-logo {
 }
 
 footer .footer-logo h3 {
-  font-size: 1.8em;
-  margin-bottom: 0.1em;
-  font-weight: 600;
+  font-size: 1.9em;
+  margin-bottom: 0.15em;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer .footer-logo p {
-  font-size: 1em;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05em;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 footer .footer-links {
@@ -396,17 +442,35 @@ footer .footer-links {
 
 footer .footer-links a {
   text-align: center;
-  padding: 0.5em 0;
-  min-width: 120px;
+  padding: 0.6em 0;
+  min-width: 140px;
   color: white;
   text-decoration: none;
-  transition: transform 0.3s ease;
-  font-size: 1em;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+  position: relative;
 }
 
 footer .footer-links a:hover {
   transform: translateY(-3px);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+footer .footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+footer .footer-links a:hover::after {
+  width: 50%;
 }
 
 footer .footer-contact {
@@ -415,24 +479,49 @@ footer .footer-contact {
 }
 
 footer .footer-contact p {
-  margin: 0.3em 0;
-  color: rgba(255, 255, 255, 0.9);
+  margin: 0.4em 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95em;
 }
 
 footer .footer-contact a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
 }
 
 footer .footer-contact a:hover {
-  text-decoration: underline;
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+footer .footer-contact a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+footer .footer-contact a:hover::after {
+  width: 100%;
 }
 
 footer .footer-bottom {
   text-align: center;
-  padding-top: 1em;
-  margin-top: 1em;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.2em;
+  margin-top: 1.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer .footer-bottom small {
+  opacity: 0.8;
+  letter-spacing: 0.05em;
 }
 
 footer.fadein-visible .footer-bottom {
@@ -445,4 +534,53 @@ footer.fadein-visible .footer-bottom {
     grid-template-columns: 1fr;
     gap: 1.5em;
   }
+}
+
+/* ヘッダースタイルを共通化 */
+h2 {
+  position: relative;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  border-radius: 2px;
+}
+
+/* フェードインセクション共通スタイル */
+.fadein-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fadein-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* セクションの装飾 */
+section {
+  position: relative;
+  padding: 1em 0 1.5em;
+  margin-bottom: 1em;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  border-radius: 2px;
 } 
