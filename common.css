@@ -145,6 +145,11 @@ a:hover {
 }
 
 /* --- ナビゲーション共通デザイン追加 --- */
+header h1 {
+  text-align: center;
+  margin: 1em auto 0.8em;
+}
+
 header nav {
   display: flex;
   gap: 1.5em;
