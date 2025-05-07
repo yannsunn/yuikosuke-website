@@ -70,4 +70,100 @@ document.addEventListener('DOMContentLoaded', function() {
   sections.forEach((section, index) => {
     section.style.setProperty('--section-index', index);
   });
+
+  // お客様の声スライダーの実装
+  const initTestimonialSlider = () => {
+    const slider = document.querySelector('.testimonials-slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.slider-dots');
+    
+    if (!slider || !prevBtn || !nextBtn || !dotsContainer) return;
+    
+    const testimonials = slider.querySelectorAll('.testimonial');
+    let currentSlide = 0;
+    let autoSlideInterval;
+    
+    // ドットの生成
+    testimonials.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+    
+    const dots = dotsContainer.querySelectorAll('.dot');
+    
+    // スライド移動関数
+    const goToSlide = (index) => {
+      if (index < 0) index = testimonials.length - 1;
+      if (index >= testimonials.length) index = 0;
+      
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      currentSlide = index;
+      
+      // アクティブドットの更新
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      
+      // 自動スライドのリセット
+      resetAutoSlide();
+    };
+    
+    // 前のスライドへ
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentSlide - 1);
+    });
+    
+    // 次のスライドへ
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentSlide + 1);
+    });
+    
+    // 自動スライド機能
+    const startAutoSlide = () => {
+      autoSlideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, 5000); // 5秒ごとに切り替え
+    };
+    
+    // 自動スライドのリセット
+    const resetAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    };
+    
+    // 最初のスライダー設定
+    goToSlide(0);
+    startAutoSlide();
+    
+    // タッチスワイプ対応
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+    
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, false);
+    
+    const handleSwipe = () => {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // 左スワイプ → 次へ
+        goToSlide(currentSlide + 1);
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        // 右スワイプ → 前へ
+        goToSlide(currentSlide - 1);
+      }
+    };
+  };
+  
+  // スライダーの初期化
+  initTestimonialSlider();
 });
