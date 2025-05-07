@@ -159,6 +159,11 @@ main {
   transform: scale(0.95);
 }
 
+.mail-icon {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
 /* お問い合わせ方法セクション */
 .contact-methods {
   display: flex;
@@ -204,6 +209,8 @@ main {
 .contact-methods .contact-box h3 {
   color: var(--primary-dark);
   margin-bottom: 0.8em;
+  text-align: center;
+  font-size: 1.3em;
 }
 
 .contact-methods .contact-box p {
@@ -211,18 +218,34 @@ main {
   flex-grow: 1;
 }
 
-.contact-methods .contact-box a[href^="mailto:"] {
+/* メールアドレス表示の最適化 */
+.mail-address {
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+.mail-link {
   color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px dashed var(--primary-color);
   padding-bottom: 2px;
   transition: all var(--transition-normal);
+  font-size: 1.05em;
+  display: inline-block;
 }
 
-.contact-methods .contact-box a[href^="mailto:"]:hover {
+.mail-link:hover {
   color: var(--primary-dark);
   border-bottom: 1px solid var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.mail-description {
+  text-align: center;
+  font-size: 0.95em;
+  color: var(--text-light);
+  line-height: 1.7;
 }
 
 /* 問い合わせ例リスト */
@@ -330,6 +353,10 @@ footer {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+  }
+  .mail-link {
+    font-size: 0.95em;
+    word-break: break-all;
   }
   .contact-examples li {
     font-size: 0.95em;
