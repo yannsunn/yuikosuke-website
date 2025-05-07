@@ -163,6 +163,8 @@ header nav a {
   transition: background 0.2s, color 0.2s;
   text-decoration: none;
   display: inline-block;
+  text-align: center;
+  min-width: 120px;
 }
 
 header nav a:hover,
@@ -175,6 +177,11 @@ header nav a.active {
   header nav {
     flex-direction: column;
     gap: 0.7em;
+  }
+  
+  header nav a {
+    width: 80%;
+    min-width: 200px;
   }
 }
 /* --- ここまで --- */
