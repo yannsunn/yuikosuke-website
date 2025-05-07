@@ -8,6 +8,22 @@ html, body, div, section, main, header, footer, article, aside, nav {
   box-sizing: border-box !important;
 }
 
+/* スクロールバー自体の非表示 */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  background: transparent;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* iPhone固有の問題対策 */
 @media screen and (max-width: 450px) {
   html, body {
