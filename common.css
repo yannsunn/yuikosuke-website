@@ -248,11 +248,43 @@ header nav a.active {
   header nav {
     flex-direction: column;
     gap: 0.7em;
+    padding: 0.7em 0.5em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   header nav a {
-    width: 80%;
-    min-width: 200px;
+    width: 90%;
+    min-width: 0;
+    padding: 0.7em 0.5em;
+    font-size: 0.95rem;
+  }
+  
+  header nav a.line-btn {
+    padding: 0.7em 0.5em;
+    font-size: 0.95rem;
+    width: 90%;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+    width: 90%;
+    margin: 1em auto 0.8em;
+    padding-bottom: 0.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav {
+    width: 100%;
+    padding: 0.6em 0.4em;
+  }
+  
+  header nav a {
+    width: 95%;
+    font-size: 0.9rem;
+    padding: 0.6em 0.4em;
   }
 }
 /* --- ここまで --- */
@@ -622,4 +654,584 @@ section::before {
   height: 3px;
   background: linear-gradient(90deg, var(--accent-color), transparent);
   border-radius: 2px;
+}
+
+/* メインコンテンツレスポンシブ調整 */
+@media (max-width: 700px) {
+  main {
+    padding: 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 0.8em;
+  }
+  
+  .card-box {
+    padding: 1.3em 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* フッターモバイル最適化 */
+@media (max-width: 700px) {
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 0 1em;
+  }
+  
+  footer .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+  }
+  
+  footer .footer-links a {
+    padding: 0.5em 0.7em;
+    min-width: 0;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 2em 0 0.8em 0;
+  }
+  
+  footer .footer-content {
+    padding: 0 0.8em;
+  }
+  
+  footer .footer-logo h3 {
+    font-size: 1.6em;
+  }
+  
+  footer .footer-contact p {
+    font-size: 0.85em;
+  }
+}
+
+/* index.css モバイル表示の調整 */
+@media (max-width: 700px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
+  }
+  
+  .hero-photo-modern {
+    width: 200px;
+    height: 270px;
+  }
+  
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+  
+  .services-grid {
+    width: 100%;
+  }
+  
+  .services-grid li {
+    width: 100%;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.8em 1em;
+  }
+  
+  .hero-photo-modern {
+    width: 180px;
+    height: 240px;
+  }
+  
+  .hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.6em;
+  }
+  
+  .tagline {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+  }
+  
+  .hero p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8em;
+    width: 100%;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8em 1em;
+    font-size: 0.95em;
+  }
+  
+  .intro {
+    padding: 1.8em 1em;
+  }
+  
+  .intro h2 {
+    font-size: 1.4em;
+  }
+  
+  .intro-content {
+    font-size: 0.95em;
+  }
+  
+  .benefit-card {
+    padding: 1.5em 1em;
+  }
+  
+  .benefit-icon {
+    font-size: 2.2em;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.1em;
+  }
+  
+  .cta {
+    padding: 2em 1em;
+  }
+  
+  .cta h2 {
+    font-size: 1.3em;
+  }
+  
+  .cta p {
+    font-size: 0.95em;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cta-buttons a {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.8em;
+    font-size: 0.95em;
+  }
+}
+
+/* contact.css モバイル表示の調整 */
+@media (max-width: 700px) {
+  .contact-methods {
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
+  }
+  
+  .contact-methods .contact-box {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5em 1.2em;
+  }
+  
+  .contact-methods .contact-box a.mail-btn,
+  .contact-methods .contact-box a.line-btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .contact-examples li {
+    padding: 0.8em 0.8em 0.8em 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-lead {
+    padding: 1.5em 1em;
+  }
+  
+  .contact-lead h2 {
+    font-size: 1.4em;
+  }
+  
+  .contact-lead p {
+    font-size: 0.95em;
+  }
+  
+  .contact-methods .contact-box {
+    padding: 1.3em 1em;
+  }
+  
+  .contact-methods .contact-box h3 {
+    font-size: 1.2em;
+  }
+  
+  .contact-content {
+    font-size: 0.9em;
+  }
+  
+  .contact-examples h3 {
+    font-size: 1.2em;
+  }
+  
+  .contact-examples li {
+    font-size: 0.9em;
+    padding: 0.7em 0.7em 0.7em 1.8em;
+  }
+  
+  .contact-examples li::before {
+    left: 0.6em;
+  }
+}
+
+/* サービスページのモバイル最適化 */
+@media (max-width: 700px) {
+  .service {
+    padding: 1.8em 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .service h2 {
+    font-size: 1.3em;
+  }
+  
+  .service p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .service {
+    padding: 1.5em 1em;
+  }
+  
+  .service h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .service h2::before {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+  }
+  
+  .service p {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+}
+
+/* プライバシーポリシーページのモバイル最適化 */
+@media (max-width: 700px) {
+  .policy-lead, 
+  .policy-section, 
+  .policy-contact {
+    padding: 1.5em 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .policy-lead h2 {
+    font-size: 1.4em;
+  }
+  
+  .policy-section h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-lead {
+    padding: 1.3em 1em;
+  }
+  
+  .policy-lead h2 {
+    font-size: 1.3em;
+  }
+  
+  .policy-lead p {
+    font-size: 0.9em;
+  }
+  
+  .policy-section {
+    padding: 1.2em 0.9em;
+  }
+  
+  .policy-section h3 {
+    font-size: 1.1em;
+  }
+  
+  .policy-section p {
+    font-size: 0.9em;
+  }
+  
+  .policy-contact {
+    padding: 1.2em 0.9em;
+  }
+}
+
+/* プロフィールページのモバイル最適化 */
+.hero-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+    padding: 2em 1.5em;
+  }
+  
+  .profile .hero-photo {
+    margin: 0 auto;
+  }
+  
+  .message {
+    padding: 1.8em 1.5em;
+  }
+  
+  .message h2 {
+    font-size: 1.4em;
+  }
+  
+  .message p {
+    font-size: 1em;
+  }
+  
+  .service-summary li {
+    padding: 1em 1.2em;
+  }
+  
+  .company-info {
+    padding: 1.5em 1em;
+  }
+  
+  .company-info th {
+    width: 30%;
+    padding: 0.7em 0.5em;
+    font-size: 0.95em;
+  }
+  
+  .company-info td {
+    padding: 0.7em 0.5em;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding: 1.5em 1em;
+  }
+  
+  .profile .hero-photo {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .profile .profile-text {
+    font-size: 1em;
+  }
+  
+  .message {
+    padding: 1.5em 1em;
+  }
+  
+  .message h2 {
+    font-size: 1.3em;
+  }
+  
+  .message p {
+    font-size: 0.9em;
+  }
+  
+  .strengths li {
+    padding: 1em 1em 1em 2.5em;
+    font-size: 0.9em;
+  }
+  
+  .strengths li::before {
+    left: 0.8em;
+  }
+  
+  .service-summary li {
+    padding: 0.9em 1em;
+    font-size: 0.9em;
+  }
+  
+  .qualifications li {
+    padding: 0.9em 0.9em 0.9em 1.8em;
+    font-size: 0.9em;
+  }
+  
+  .company-info {
+    padding: 1.2em 0.8em;
+  }
+  
+  .company-info table {
+    font-size: 0.9em;
+  }
+  
+  .company-info th {
+    width: 35%;
+    padding: 0.6em 0.4em;
+  }
+  
+  .company-info td {
+    padding: 0.6em 0.4em;
+  }
+}
+
+/* 全体の表示調整（特に小さい画面向け） */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+  
+  header h1 {
+    font-size: 1.4em;
+  }
+  
+  main {
+    padding: 0 0.6em;
+  }
+  
+  .card-box {
+    padding: 1.2em 0.8em;
+  }
+  
+  h2 {
+    font-size: 1.3em;
+  }
+  
+  h3 {
+    font-size: 1.1em;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+  
+  .line-btn, .mail-btn, .service-btn, .more-btn {
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+  }
+}
+
+/* PC表示での最適化調整 */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1100px;
+  }
+  
+  .hero-container {
+    gap: 4em;
+  }
+  
+  .hero-photo-modern {
+    width: 320px;
+    height: 420px;
+  }
+  
+  .hero-text {
+    min-width: 500px;
+  }
+  
+  .hero h2 {
+    font-size: 2.2em;
+  }
+  
+  .tagline {
+    font-size: 1.4em;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* スマートフォン横向き対応 */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .hero-photo-modern {
+    width: 180px;
+    height: 240px;
+  }
+  
+  .hero-text {
+    text-align: left;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* iOS Safari特有の問題に対応 */
+@supports (-webkit-touch-callout: none) {
+  /* iOS向けの調整 */
+  .card-box, .service, .policy-section, .contact-box, .benefit-card, .testimonial, .faq-item {
+    /* iOS Safariのホバー問題対策 */
+    transform: translateZ(0);
+  }
+  
+  /* iOSでの固定背景問題を解決 */
+  body {
+    background-attachment: scroll;
+  }
+  
+  /* iOSのフォームスタイリング問題対策 */
+  input, textarea, select, button {
+    -webkit-appearance: none;
+    border-radius: var(--border-radius-sm);
+  }
 } 
