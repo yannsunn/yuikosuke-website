@@ -109,6 +109,14 @@
 }
 
 /* 強み・特徴セクション */
+.strengths {
+  margin-bottom: 2.5em;
+}
+
+.strengths h2 {
+  margin-bottom: 1.2em;
+}
+
 .strengths ul {
   list-style: none;
   margin: 0;
@@ -118,25 +126,65 @@
 .strengths li {
   background: var(--highlight-color);
   border-radius: var(--border-radius-sm);
-  padding: 1.2em 1.4em;
+  padding: 1.3em 1.5em;
   box-shadow: var(--shadow-sm);
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   position: relative;
   transition: all var(--transition-normal);
-  padding-left: 3em;
+  padding-left: 3.2em;
+  line-height: 1.5;
 }
 
 .strengths li::before {
   content: '★';
   color: var(--accent-color);
   position: absolute;
-  left: 1.2em;
+  left: 1.3em;
   font-size: 1em;
 }
 
 .strengths li:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .strengths li {
+    padding: 1.2em 1.4em 1.2em 3em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .strengths {
+    margin-bottom: 2em;
+  }
+  
+  .strengths h2 {
+    margin-bottom: 1em;
+  }
+  
+  .strengths li {
+    padding: 1.1em 1.2em 1.1em 2.8em;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 0.9em;
+  }
+  
+  .strengths li::before {
+    left: 1.1em;
+  }
+}
+
+@media (max-width: 375px) {
+  .strengths li {
+    padding: 1em 1em 1em 2.6em;
+    font-size: 0.9em;
+  }
+  
+  .strengths li::before {
+    left: 1em;
+  }
 }
 
 /* サービス概要セクション */
