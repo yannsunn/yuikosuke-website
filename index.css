@@ -567,6 +567,11 @@
   flex-wrap: wrap;
 }
 
+.cta-buttons a {
+  min-width: 200px;
+  text-align: center;
+}
+
 /* フッター改良 */
 footer {
   background: var(--primary-dark);
@@ -677,6 +682,7 @@ footer {
   
   .cta-buttons a {
     width: 100%;
+    max-width: 280px;
     text-align: center;
   }
 }
