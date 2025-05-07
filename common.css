@@ -343,12 +343,19 @@ main {
 /* フッターアニメーション */
 footer.fadein-section {
   animation-delay: 0.5s;
+  background: var(--primary-color);
+  color: white;
+  padding: 2em 0 0.5em 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-footer .footer-content > div {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+footer .footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em 1em 2em;
 }
 
 footer.fadein-visible .footer-content > div {
@@ -361,6 +368,17 @@ footer .footer-logo {
   text-align: center;
 }
 
+footer .footer-logo h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.1em;
+  font-weight: 600;
+}
+
+footer .footer-logo p {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 footer .footer-links {
   transition-delay: 0.4s;
   display: flex;
@@ -370,8 +388,17 @@ footer .footer-links {
 
 footer .footer-links a {
   text-align: center;
-  padding: 0.4em 0;
+  padding: 0.5em 0;
   min-width: 120px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  font-size: 1em;
+}
+
+footer .footer-links a:hover {
+  transform: translateY(-3px);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 footer .footer-contact {
@@ -379,14 +406,35 @@ footer .footer-contact {
   text-align: center;
 }
 
+footer .footer-contact p {
+  margin: 0.3em 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+footer .footer-contact a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+footer .footer-contact a:hover {
+  text-decoration: underline;
+}
+
 footer .footer-bottom {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  transition-delay: 0.8s;
+  text-align: center;
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer.fadein-visible .footer-bottom {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
 } 
