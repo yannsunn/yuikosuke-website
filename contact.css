@@ -311,18 +311,45 @@ footer {
   color: var(--text-light);
 }
 
-/* 連絡先情報のモバイル最適化 */
+/* 連絡先情報の詳細な最適化 */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-contact p {
-  margin-bottom: 0.3em;
-  line-height: 1.5;
+  margin: 0.2em 0;
+  line-height: 1.4;
+  text-align: center;
 }
 
-.contact-item {
-  margin-top: 0.5em;
+.address-line {
+  margin-bottom: 0.1em !important;
 }
 
-.contact-email {
-  word-break: break-all; /* 長いメールアドレスを適切に改行 */
+.contact-line {
+  margin: 0.3em 0 !important;
+}
+
+.contact-divider {
+  height: 1px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0.5em 0;
+}
+
+.email-line {
+  margin-top: 0.4em !important;
+}
+
+.email-line a {
+  word-break: break-all;
+  display: inline-block;
+}
+
+.mobile-only {
+  display: none;
 }
 
 .footer-contact a[href^="tel"] {
@@ -361,6 +388,21 @@ footer {
   }
   .contact-lead h2 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-only {
+    display: inline;
+  }
+  
+  .footer-contact p {
+    font-size: 0.9em;
+  }
+  
+  .email-line a {
+    font-size: 0.85em;
+    margin-top: 0.2em;
   }
 }
 
@@ -424,6 +466,12 @@ footer {
   }
   .footer-contact p {
     font-size: 0.85em;
+  }
+  .email-line a {
+    font-size: 0.8em;
+  }
+  .contact-divider {
+    width: 70%;
   }
 }
 
