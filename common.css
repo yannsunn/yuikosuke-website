@@ -28,6 +28,17 @@
   --transition-slow: 0.5s cubic-bezier(.25, .1, .25, 1.1);
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* コンテナ要素の幅を制御 */
+main, header, footer, section, .hero-container, .benefits-grid, .services-grid, .testimonials-grid, .cta-buttons {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
   background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
@@ -1170,7 +1181,7 @@ section::before {
   }
   
   .hero-text {
-    min-width: 500px;
+    min-width: auto;
   }
   
   .hero h2 {

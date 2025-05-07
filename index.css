@@ -453,7 +453,7 @@
 
 .hero-text {
   flex: 1;
-  min-width: 220px;
+  min-width: auto;
 }
 
 @media (max-width: 900px) {
@@ -881,5 +881,45 @@ footer {
   
   .author {
     font-size: 0.9em;
+  }
+}
+
+/* PC表示での最適化調整 */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1100px;
+  }
+  
+  .hero-container {
+    gap: 4em;
+  }
+  
+  .hero-photo-modern {
+    width: 320px;
+    height: 420px;
+  }
+  
+  .hero-text {
+    min-width: auto;
+  }
+  
+  .hero h2 {
+    font-size: 2.2em;
+  }
+  
+  .tagline {
+    font-size: 1.4em;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
