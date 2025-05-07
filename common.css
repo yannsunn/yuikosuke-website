@@ -36,6 +36,25 @@ body {
   padding: 0;
   letter-spacing: 0.03em;
   line-height: 1.6;
+  font-size: 16px; /* ベースフォントサイズ */
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.8em;
+}
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
+}
+h3 {
+  font-size: 1.25em;
+  margin-bottom: 0.6em;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1em;
 }
 
 a {
@@ -46,12 +65,6 @@ a {
 
 a:hover {
   color: var(--primary-dark);
-}
-
-h1, h2, h3, h4 {
-  margin-top: 0;
-  line-height: 1.4;
-  color: var(--primary-color);
 }
 
 /* アニメーション */
@@ -89,17 +102,45 @@ h1, h2, h3, h4 {
 /* レスポンシブデザイン */
 @media (max-width: 900px) {
   body {
-    font-size: 98%;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 1.7em;
+  }
+  h2 {
+    font-size: 1.4em;
   }
 }
 @media (max-width: 700px) {
   body {
-    font-size: 95%;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.35em;
+  }
+  h3 {
+    font-size: 1.2em;
   }
 }
 @media (max-width: 500px) {
   body {
-    font-size: 92%;
+    font-size: 14px;
+  }
+  p {
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .line-btn, .mail-btn, .service-btn {
+    font-size: 0.95rem;
+    padding: 0.7em 1.5em;
   }
 }
 
@@ -116,7 +157,7 @@ header nav {
 header nav a {
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 1.08em;
+  font-size: 1rem;
   padding: 0.4em 1em;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
@@ -143,7 +184,7 @@ header nav a.active {
   display: inline-block;
   background: linear-gradient(90deg, var(--accent-color) 60%, var(--accent-light) 100%);
   color: #fff !important;
-  font-size: 1.1em;
+  font-size: 1rem;
   padding: 0.8em 1.8em;
   border-radius: var(--border-radius-lg);
   text-decoration: none;
@@ -196,7 +237,7 @@ header nav a.active {
   display: inline-block;
   background: linear-gradient(90deg, var(--mail-color) 60%, var(--mail-light) 100%);
   color: #fff !important;
-  font-size: 1.1em;
+  font-size: 1rem;
   padding: 0.8em 1.8em;
   border-radius: var(--border-radius-lg);
   text-decoration: none;
@@ -270,4 +311,24 @@ main {
   .card-box {
     padding: 1.2em 1em;
   }
+}
+
+.footer-logo h3 {
+  font-size: 1.3em;
+}
+.footer-logo p {
+  font-size: 0.9em;
+}
+.footer-links a {
+  font-size: 0.95em;
+}
+.footer-contact p {
+  font-size: 0.9em;
+}
+.footer-bottom small {
+  font-size: 0.85em;
+}
+
+.service-btn, .more-btn {
+  font-size: 1rem;
 } 
