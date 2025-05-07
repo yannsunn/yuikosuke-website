@@ -29,14 +29,17 @@
 }
 
 html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
 }
 
 /* コンテナ要素の幅を制御 */
 main, header, footer, section, .hero-container, .benefits-grid, .services-grid, .testimonials-grid, .cta-buttons {
   max-width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -1243,6 +1246,7 @@ section::before {
   /* iOSのフォームスタイリング問題対策 */
   input, textarea, select, button {
     -webkit-appearance: none;
+    appearance: none;
     border-radius: var(--border-radius-sm);
   }
 } 
