@@ -26,6 +26,11 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s cubic-bezier(.25, .1, .25, 1.1);
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html, body {
@@ -36,14 +41,7 @@ html, body {
   overscroll-behavior-x: none;
   margin: 0;
   padding: 0;
-}
-
-/* コンテナ要素の幅を制御 */
-main, header, footer, section, .hero-container, .benefits-grid, .services-grid, .testimonials-grid, .cta-buttons, .container {
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-x: clip;
-  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -57,10 +55,15 @@ body {
   background-attachment: fixed;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
+  width: 100vw;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+/* コンテナ要素の幅を制御 */
+main, header, footer, section, article, nav, div, .hero-container, .benefits-grid, .services-grid, .testimonials-grid, .cta-buttons, .container {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: clip;
+  width: 100%;
 }
 
 h1 {
