@@ -136,4 +136,138 @@ header nav a.active {
     gap: 0.7em;
   }
 }
-/* --- ここまで --- */ 
+/* --- ここまで --- */
+
+/* LINE/CTAボタンスタイルを共通化 */
+.line-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-color) 60%, var(--accent-light) 100%);
+  color: #fff !important;
+  font-size: 1.1em;
+  padding: 0.8em 1.8em;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.15);
+  transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.line-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+.line-btn:hover:not(.disabled) {
+  background: linear-gradient(90deg, var(--accent-dark) 60%, var(--accent-light) 100%);
+  box-shadow: 0 8px 20px rgba(6, 199, 85, 0.25);
+  transform: translateY(-3px);
+  color: #fff;
+}
+.line-btn:hover:not(.disabled)::before {
+  width: 300px;
+  height: 300px;
+}
+.line-btn.disabled {
+  background: #a0a0a0;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+.line-btn.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+.line-btn.clicked {
+  transform: scale(0.95);
+}
+
+/* メールボタンスタイルを共通化 */
+.mail-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--mail-color) 60%, var(--mail-light) 100%);
+  color: #fff !important;
+  font-size: 1.1em;
+  padding: 0.8em 1.8em;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+  transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.mail-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+.mail-btn:hover {
+  background: linear-gradient(90deg, var(--mail-dark) 60%, var(--mail-color) 100%);
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.25);
+  transform: translateY(-3px);
+  color: #fff;
+}
+.mail-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+.mail-btn.clicked {
+  transform: scale(0.95);
+}
+
+/* メインコンテンツレイアウトを共通化 */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+/* カードボックス共通スタイル */
+.card-box {
+  background: #fff;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2em 1.8em;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+.card-box:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 900px) {
+  main {
+    padding: 0 1em;
+  }
+  .card-box {
+    padding: 1.5em 1.2em;
+  }
+}
+@media (max-width: 500px) {
+  .card-box {
+    padding: 1.2em 1em;
+  }
+} 
