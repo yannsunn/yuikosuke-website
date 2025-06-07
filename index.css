@@ -5,6 +5,8 @@
 .hero {
   padding: 2.5em 0 1.5em;
   overflow: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .hero-container {
@@ -29,12 +31,21 @@
   object-fit: cover;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
-  transition: all 0.5s cubic-bezier(.25, .1, .25, 1.5);
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+  pointer-events: auto;
 }
 
 .hero-photo-modern:hover {
   transform: scale(1.01) translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hero-photo-modern:hover {
+    transform: none;
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .hero-text {
@@ -348,25 +359,39 @@
 /* レスポンシブデザイン */
 @media (max-width: 900px) {
   .hero {
-    padding: 2.5em 1.5em;
+    padding: 2em 1.5em;
+    touch-action: pan-y;
   }
   
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 2em;
+    gap: 1.5em;
   }
   
   .hero-photo-modern {
-    width: 240px;
-    height: 320px;
+    width: 220px;
+    height: 300px;
     margin: 0 auto;
+    transition: none;
+  }
+  
+  .hero-photo-modern:hover {
+    transform: none;
   }
 }
 
 @media (max-width: 600px) {
   .hero {
-    padding: 2em 1.2em;
+    padding: 1.5em 1.2em;
+    min-height: auto;
+  }
+  
+  .hero-photo-modern {
+    width: 180px;
+    height: 250px;
+    transition: none;
+    pointer-events: none;
   }
   
   .hero-image-container {
