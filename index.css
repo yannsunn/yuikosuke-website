@@ -4,6 +4,7 @@
 /* ヒーローセクション */
 .hero {
   padding: 2.5em 0 1.5em;
+  overflow: hidden;
 }
 
 .hero-container {
@@ -18,6 +19,8 @@
 
 .hero-image-modern {
   flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
 }
 
 .hero-photo-modern {
@@ -30,8 +33,8 @@
 }
 
 .hero-photo-modern:hover {
-  transform: scale(1.02) translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01) translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .hero-text {
@@ -513,8 +516,8 @@
 }
 
 .hero-photo-modern:hover {
-  transform: scale(1.04) translateY(-8px);
-  box-shadow: 0 20px 40px rgba(25, 118, 210, 0.4), 0 0 0 2px rgba(6, 199, 85, 0.1);
+  transform: scale(1.02) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(25, 118, 210, 0.3);
 }
 
 .hero-text {

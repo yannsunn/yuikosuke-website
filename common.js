@@ -110,6 +110,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // フェードイン要素の観察
+  const fadeinSections = document.querySelectorAll('.fadein-section');
+  
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fadein-visible');
+        // 一度表示されたら監視を解除（オプション）
+        // fadeInObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2, // 20%表示されたらアニメーション開始
+    rootMargin: '0px 0px -50px 0px' // 少し早めに実行
+  });
+  
+  fadeinSections.forEach(section => {
+    fadeInObserver.observe(section);
+  });
+  
+  // ナビゲーションのアクティブ状態を管理
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('header nav a');
+  
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (linkHref === currentPage) {
+      link.classList.add('active');
+    }
+  });
+  
+  // LINEボタンのクリックエフェクト
+  const lineButtons = document.querySelectorAll('.line-btn');
+  lineButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.classList.add('clicked');
+      setTimeout(() => {
+        this.classList.remove('clicked');
+      }, 300);
+    });
+  });
+  
+  // メールボタンのクリックエフェクト
+  const mailButtons = document.querySelectorAll('.mail-btn');
+  mailButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.classList.add('clicked');
+      setTimeout(() => {
+        this.classList.remove('clicked');
+      }, 300);
+    });
+  });
+
   // ページ固有の初期化関数を呼び出す
   if (typeof initPageSpecific === 'function') {
     initPageSpecific();
