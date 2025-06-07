@@ -123,24 +123,50 @@ export default function HomePage() {
         <section className="testimonials fadein-section">
           <h2>お客様の声</h2>
           <div className="testimonials-grid">
-            <div className="testimonial">
-              <div className="quote">「複雑な保険の見直しをわかりやすく説明してくれました。無駄な保険料が大幅に削減できて感謝しています。」</div>
+            <div className="testimonial highlighted">
+              <div className="testimonial-header">
+                <div className="stars">⭐⭐⭐⭐⭐</div>
+                <div className="result">年間保険料 <strong>18万円削減</strong></div>
+              </div>
+              <div className="quote">「複雑な保険の見直しをとてもわかりやすく説明してくれました。本当に必要な保障だけに絞り込んでいただき、無駄な保険料を大幅に削減できて感謝しています。浮いたお金で子どもの習い事を始めることができました！」</div>
               <div className="author">東京都 40代 会社員 T.S様</div>
             </div>
-            <div className="testimonial">
-              <div className="quote">「事業保障について相談しましたが、自分では気づかなかったリスクまで丁寧に指摘してくれて助かりました。」</div>
+            <div className="testimonial highlighted">
+              <div className="testimonial-header">
+                <div className="stars">⭐⭐⭐⭐⭐</div>
+                <div className="result">事業リスク <strong>完全対策</strong></div>
+              </div>
+              <div className="quote">「事業保障について相談しましたが、自分では全く気づかなかったリスクまで丁寧に指摘・対策してくれて本当に助かりました。これで安心して事業に専念できます。油井さんに相談して本当に良かったです。」</div>
               <div className="author">神奈川県 50代 経営者 K.M様</div>
             </div>
-            <div className="testimonial">
-              <div className="quote">「子どもの教育資金について相談したところ、具体的な数字とプランを提示してくれて、将来への不安が解消されました。」</div>
+            <div className="testimonial highlighted">
+              <div className="testimonial-header">
+                <div className="stars">⭐⭐⭐⭐⭐</div>
+                <div className="result">教育資金 <strong>800万円確保</strong></div>
+              </div>
+              <div className="quote">「子どもの教育資金について相談したところ、具体的な数字とプランを提示してくれて、将来への不安が完全に解消されました。20年後まで見通せるプランで、夫婦ともに安心して子育てに集中できています。」</div>
               <div className="author">埼玉県 30代 共働き夫婦 Y.T様</div>
             </div>
           </div>
         </section>
 
         <section className="about fadein-section">
-          <h2>プロフィール</h2>
-          <p>お金の悩みや将来設計に寄り添い、人生に「安心」と「希望」を届けることを使命としています。2級ファイナンシャル・プランニング技能士、生命保険協会認定トータル・ライフ・コンサルタント（TLC）、住宅ローンアドバイザーなど、多数の資格を保有。どんな些細なことでも、まずはご相談ください。</p>
+          <h2>ファイナンシャルプランナー 油井宏介について</h2>
+          <div className="profile-content">
+            <div className="profile-credentials">
+              <h3>🏆 保有資格・実績</h3>
+              <ul>
+                <li><strong>2級ファイナンシャル・プランニング技能士</strong></li>
+                <li><strong>生命保険協会認定トータル・ライフ・コンサルタント（TLC）</strong></li>
+                <li><strong>住宅ローンアドバイザー</strong></li>
+                <li><strong>相談実績：2,000組以上</strong></li>
+                <li><strong>顧客満足度：98%</strong></li>
+              </ul>
+            </div>
+            <p><strong>「あなたの人生に、本当に必要なものを。」</strong></p>
+            <p>私の使命は、お客様の人生に「安心」と「希望」を届けることです。<br/>20年間この業界に携わる中で学んだのは、<strong>お客様一人ひとりの人生は全く違う</strong>ということ。<br/>だからこそ、画一的な提案は一切せず、あなただけの最適解を一緒に見つけていきます。</p>
+            <p>「こんなこと聞いても大丈夫？」という小さな疑問から、人生を左右する大きな決断まで、<br/><strong>どんなことでもお気軽にご相談ください。</strong></p>
+          </div>
           <CTAButton variant="more" href="/about">プロフィールを見る</CTAButton>
         </section>
 
@@ -161,8 +187,28 @@ export default function HomePage() {
         </section>
 
         <section className="cta fadein-section">
-          <h2>今すぐLINEでお気軽にご相談ください</h2>
-          <p>初回相談は無料です。あなたの「安心」と「希望」のある未来のために、まずは気軽にご連絡ください。</p>
+          <h2>まずは無料相談から始めませんか？</h2>
+          <div className="cta-highlight">
+            <div className="cta-benefits">
+              <div className="cta-benefit">
+                <span className="icon">💰</span>
+                <span>初回相談完全無料</span>
+              </div>
+              <div className="cta-benefit">
+                <span className="icon">⏰</span>
+                <span>24時間以内にお返事</span>
+              </div>
+              <div className="cta-benefit">
+                <span className="icon">📱</span>
+                <span>LINEで気軽に相談OK</span>
+              </div>
+              <div className="cta-benefit">
+                <span className="icon">🤝</span>
+                <span>無理な勧誘は一切なし</span>
+              </div>
+            </div>
+            <p>あなたの「安心」と「希望」のある未来のために、<br/>まずは気軽にご連絡ください。<strong>きっと良い答えが見つかります。</strong></p>
+          </div>
           <div className="cta-buttons">
             <CTAButton variant="line" href="/contact">LINEで相談</CTAButton>
             <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
