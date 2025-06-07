@@ -14,36 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // スクロールで.fadein-sectionにアニメーション
-  const fadeSections = document.querySelectorAll('.fadein-section');
-  const fadeInOnScroll = () => {
-    fadeSections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 80) {
-        section.style.opacity = 1;
-        section.style.transform = 'none';
-        section.style.transition = 'opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1)';
-      }
-    });
-  };
-  fadeSections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(40px)';
-  });
-  window.addEventListener('scroll', fadeInOnScroll);
-  fadeInOnScroll();
 
-  // ヘッダーのスクロール効果
-  const header = document.querySelector('header');
-  const handleHeaderScroll = () => {
-    if (window.scrollY > 50) {
-      header.classList.add('header-scrolled');
-    } else {
-      header.classList.remove('header-scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleHeaderScroll);
-  handleHeaderScroll();
 
   // ナビゲーションのスムーズスクロール
   document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {

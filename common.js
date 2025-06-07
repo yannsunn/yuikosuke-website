@@ -16,29 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // スクロールで.fadein-sectionにアニメーション
+  // フェードイン要素の観察のみを使用
   const fadeSections = document.querySelectorAll('.fadein-section');
-  const fadeInOnScroll = () => {
-    fadeSections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 80) {
-        section.style.opacity = 1;
-        section.style.transform = 'none';
-        section.style.transition = 'opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1)';
-        
-        // フッターの場合は特別な処理を追加
-        if (section.tagName.toLowerCase() === 'footer') {
-          section.classList.add('fadein-visible');
-        }
-      }
-    });
-  };
   fadeSections.forEach(section => {
     section.style.opacity = 0;
     section.style.transform = 'translateY(40px)';
   });
-  window.addEventListener('scroll', fadeInOnScroll);
-  fadeInOnScroll();
 
   // ヘッダーのスクロール効果
   const header = document.querySelector('header');
@@ -141,27 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // LINEボタンのクリックエフェクト
-  const lineButtons = document.querySelectorAll('.line-btn');
-  lineButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      this.classList.add('clicked');
-      setTimeout(() => {
-        this.classList.remove('clicked');
-      }, 300);
-    });
-  });
-  
-  // メールボタンのクリックエフェクト
-  const mailButtons = document.querySelectorAll('.mail-btn');
-  mailButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      this.classList.add('clicked');
-      setTimeout(() => {
-        this.classList.remove('clicked');
-      }, 300);
-    });
-  });
 
   // ページ固有の初期化関数を呼び出す
   if (typeof initPageSpecific === 'function') {
