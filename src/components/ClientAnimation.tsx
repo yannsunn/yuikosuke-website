@@ -1,73 +1,76 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function ClientAnimation() {
+  const observerRef = useRef<IntersectionObserver | null>(null)
+  const isCleanedUpRef = useRef(false)
+
   useEffect(() => {
-    // フェードイン要素の観察
+    // クライアント環境チェック
+    if (typeof window === 'undefined') return
+    
+    // 重複実行防止
+    if (isCleanedUpRef.current) return
+    
+    // フェードイン要素の軽量観察
     const fadeinSections = document.querySelectorAll('.fadein-section')
     
-    const fadeInObserver = new IntersectionObserver((entries) => {
+    if (fadeinSections.length === 0) return
+
+    // 軽量化されたIntersection Observer
+    observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('fadein-visible')
+          // パフォーマンス向上: 一度表示したら監視停止
+          observerRef.current?.unobserve(entry.target)
         }
       })
     }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.1, // 軽量化
+      rootMargin: '0px 0px -20px 0px', // 軽量化
+      // iOS Safari最適化
+      root: null
     })
     
     fadeinSections.forEach(section => {
-      fadeInObserver.observe(section)
+      observerRef.current?.observe(section)
     })
 
-    // ボタンのクリック効果
+    // ボタンのクリック効果（最適化版）
     const allButtons = document.querySelectorAll('.line-btn, .mail-btn, .more-btn, .service-btn')
     
     const handleClick = (event: Event) => {
       const button = event.currentTarget as HTMLElement
-      button.classList.add('clicked')
-      setTimeout(() => button.classList.remove('clicked'), 300)
+      // CSS transformの直接操作でパフォーマンス向上
+      button.style.transform = 'scale(0.95)'
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          button.style.transform = ''
+        }, 150)
+      })
     }
     
+    // パッシブリスナーでイベント追加
     allButtons.forEach(button => {
-      button.addEventListener('click', handleClick)
+      button.addEventListener('click', handleClick, { passive: true })
     })
 
-    // パフォーマンス最適化: パッシブリスナー
-    const passiveSupported = (() => {
-      let passiveSupported = false
-      try {
-        const options = {
-          get passive() {
-            passiveSupported = true
-            return false
-          }
-        } as AddEventListenerOptions
-        const handler = () => {}
-        window.addEventListener('test' as any, handler, options)
-        window.removeEventListener('test' as any, handler, options)
-      } catch (err) {
-        passiveSupported = false
-      }
-      return passiveSupported
-    })()
+    // 🚫 問題のあったpassiveテストコードとtouchリスナーを完全削除
+    // これらがスクロール問題の主要原因でした
 
-    // タッチ操作の最適化
-    if (passiveSupported) {
-      const passiveHandler = () => {}
-      document.addEventListener('touchstart', passiveHandler, { passive: true })
-      document.addEventListener('touchmove', passiveHandler, { passive: true })
-    }
-
+    // クリーンアップ関数
     return () => {
-      fadeInObserver.disconnect()
+      if (isCleanedUpRef.current) return
+      isCleanedUpRef.current = true
+      
+      observerRef.current?.disconnect()
       allButtons.forEach(button => {
         button.removeEventListener('click', handleClick)
       })
     }
   }, [])
 
-  return null // このコンポーネントは何もレンダリングしない
+  return null
 }

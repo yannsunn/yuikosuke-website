@@ -60,14 +60,14 @@ body {
 
 body {
   font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
-  background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+  background: var(--bg-gradient-1); /* シンプル背景でスクロール最適化 */
   color: var(--text-color);
   letter-spacing: 0.03em;
   line-height: 1.6;
-  font-size: 16px; /* ベースフォントサイズ */
+  font-size: 16px;
   min-height: 100vh;
-  background-attachment: fixed;
   -webkit-text-size-adjust: 100%;
+  overscroll-behavior-y: contain;
 }
 
 /* コンテナ要素の幅を適切に制御 - 軽量版 */
@@ -78,16 +78,30 @@ main, header, footer, section {
   overflow-x: hidden;
 }
 
-/* モバイル向けスクロール最適化 - 軽量版 */
+/* モバイル向けスクロール最適化 - 最終修正版 */
 @media (max-width: 768px) {
   html {
-    scroll-behavior: auto; /* スムーススクロール無効化 */
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: auto;
+    overflow-x: hidden;
   }
   
   body {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     overscroll-behavior-y: contain;
+    background: var(--bg-gradient-1) !important;
+    /* タッチスクロール競合防止 */
+    touch-action: pan-y;
+  }
+  
+  /* 重いアニメーションをモバイルで無効化 */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
   }
   
   img {
@@ -98,8 +112,8 @@ main, header, footer, section {
   
   .hero-photo-modern,
   .animated-hero-photo {
-    touch-action: none;
-    pointer-events: none;
+    touch-action: manipulation;
+    pointer-events: auto;
     max-width: 100%;
     height: auto;
   }
@@ -682,17 +696,29 @@ h2::after {
   border-radius: 2px;
 }
 
-/* 軽量化されたフェードインセクション */
+/* 軽量化されたフェードインセクション - モバイル最適化 */
 .fadein-section {
   opacity: 0;
-  transform: translate3d(0, 10px, 0);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  will-change: opacity, transform;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* will-change削除でスクロール性能向上 */
 }
 
 .fadein-visible {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translateY(0);
+}
+
+/* モバイルではアニメーション軽量化 */
+@media (max-width: 768px) {
+  .fadein-section {
+    transition: opacity 0.2s ease;
+    transform: none;
+  }
+  
+  .fadein-visible {
+    transform: none;
+  }
 }
 
 /* アニメーション効果の追加 */
@@ -800,17 +826,20 @@ section::before {
   }
 }
 
-/* iOS Safari特有の問題に対応 */
+/* iOS Safari特有の問題に対応 - 完全版 */
 @supports (-webkit-touch-callout: none) {
-  /* iOS向けの調整 */
+  /* iOS向けの調整 - transform最適化 */
   .card-box, .service, .policy-section, .contact-box, .benefit-card, .testimonial, .faq-item {
-    /* iOS Safariのホバー問題対策 */
-    transform: translateZ(0);
+    /* ハードウェアアクセラレーション削除 - CPU負荷軽減 */
+    /* transform: translateZ(0); 削除 */
   }
   
-  /* iOSでの固定背景問題を解決 */
-  body {
-    background-attachment: scroll;
+  /* iOSでの固定背景問題を完全解決 */
+  html, body {
+    background-attachment: scroll !important;
+    /* iOS Safari スクロール性能最適化 */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   
   /* iOSのフォームスタイリング問題対策 */
@@ -818,6 +847,16 @@ section::before {
     -webkit-appearance: none;
     appearance: none;
     border-radius: var(--border-radius-sm);
+  }
+  
+  /* iOS Safari スクロール最適化 */
+  * {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
   }
 }
 
@@ -851,13 +890,16 @@ section::before {
   }
 }
 
-/* モバイル特有の問題解決 */
+/* モバイル特有の問題解決 - 最新版 */
 @media screen and (max-width: 450px) {
   html, body {
     position: relative;
     width: 100%;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling 削除（廃止予定プロパティ） */
+    /* 現代的なスクロール最適化 */
+    overscroll-behavior: contain;
+    scroll-behavior: auto;
   }
   
   img, svg {
@@ -867,6 +909,36 @@ section::before {
   
   * {
     -webkit-tap-highlight-color: transparent;
+    /* タッチ操作最適化 */
+    touch-action: manipulation;
+  }
+  
+  /* iOS Safari 追加最適化 */
+  body {
+    /* 固定背景の代替: CSSグラデーション最適化 */
+    background-image: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    /* モバイル専用スクロール最適化 */
+    -webkit-overflow-scrolling: auto; /* touchを削除 */
+    overflow: auto;
+    position: relative;
+  }
+  
+  /* モバイル専用: スクロール固まり防止 */
+  main, section, div {
+    /* 過度なtransform削除 */
+    transform: none !important;
+    /* 不要なtransition削除 */
+    transition: opacity 0.2s ease;
+  }
+  
+  /* iOS Safari: スクロール応答性向上 */
+  * {
+    -webkit-transform: none !important;
+    transform: none !important;
+    will-change: auto !important;
   }
 }
 
