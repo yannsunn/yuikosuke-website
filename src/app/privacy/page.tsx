@@ -106,10 +106,8 @@ export default function PrivacyPage() {
         <section className="policy-contact fadein-section">
           <h3>お問い合わせ窓口</h3>
           <p>
-            個人情報担当窓口<br/>
-            〒104-0043 東京都中央区湊1-8-11 八丁堀エイトビル6階<br/>
-            E-mail: <a href="mailto:kosuke.yui@brightreach.co.jp">kosuke.yui@brightreach.co.jp</a><br/>
-            Tel: 03-6222-7277（受付時間 平日9:00～18:00）
+            個人情報に関するお問い合わせは、<a href="/contact">お問い合わせページ</a>よりLINEまたはメールでご連絡ください。<br/>
+            迅速かつ適切に対応いたします。
           </p>
         </section>
       </main>

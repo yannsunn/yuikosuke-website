@@ -16,10 +16,9 @@ export default function Footer() {
           <Link href="/privacy">プライバシーポリシー</Link>
         </div>
         <div className="footer-contact">
-          <p>〒104-0043 東京都中央区湊1-8-11</p>
-          <p>八丁堀エイトビル6階</p>
-          <p>Tel: 03-6222-7277</p>
-          <p>Email: <a href="mailto:kosuke.yui@brightreach.co.jp">kosuke.yui@brightreach.co.jp</a></p>
+          <p>お気軽にご相談ください</p>
+          <p><a href="/contact">LINEで相談する</a></p>
+          <p>初回相談無料</p>
         </div>
       </div>
       <div className="footer-bottom">

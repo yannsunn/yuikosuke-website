@@ -118,14 +118,13 @@ export default function AboutPage() {
         </section>
 
         <section className="company-info fadein-section">
-          <h2>会社情報（所属）</h2>
+          <h2>お問い合わせ情報</h2>
           <table>
             <tbody>
-              <tr><th>所在地</th><td>〒104-0043 東京都中央区湊1-8-11 八丁堀エイトビル6階</td></tr>
-              <tr><th>代表者</th><td>代表取締役社長　青柳 雄太郎</td></tr>
-              <tr><th>設立</th><td>2012年9月（創業）</td></tr>
-              <tr><th>事業内容</th><td>保険代理店事業、法人・個人向けファイナンシャルコンサルティング事業</td></tr>
-              <tr><th>連絡先</th><td>Tel: 03-6222-7277 / Fax: 03-3297-6076 / E-mail: <a href="mailto:kosuke.yui@brightreach.co.jp">kosuke.yui@brightreach.co.jp</a></td></tr>
+              <tr><th>活動地域</th><td>東京都中央区を中心とした関東全域</td></tr>
+              <tr><th>事業内容</th><td>ファイナンシャルプランニング、保険コンサルティング、資産形成アドバイザリー</td></tr>
+              <tr><th>連絡方法</th><td>LINEまたはメールでお気軽にお声かけください</td></tr>
+              <tr><th>相談料</th><td>初回相談無料</td></tr>
             </tbody>
           </table>
         </section>
