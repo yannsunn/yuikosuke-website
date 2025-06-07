@@ -2,9 +2,9 @@
 
 import { useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CTAButton from '@/components/CTAButton'
 import '../../styles/about.css'
 
 export default function AboutPage() {
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
         <section className="cta fadein-section">
           <h2>まずはLINEでお気軽にご相談ください！</h2>
-          <Link href="/contact" className="line-btn">LINEで相談する</Link>
+          <CTAButton variant="line" href="/contact">LINEで相談する</CTAButton>
         </section>
       </main>
 

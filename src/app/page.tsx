@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ClientAnimation from '@/components/ClientAnimation'
+import CTAButton from '@/components/CTAButton'
 import '../styles/index.css'
 
 export const metadata: Metadata = {
@@ -49,8 +49,8 @@ export default function HomePage() {
               <p className="tagline">一人ひとりの夢や目標に合わせた最適な<strong>ファイナンシャルプラン</strong>をご提案します</p>
               <p>専門のファイナンシャルプランナーが、保険・資産形成・事業保障までトータルにサポートします。複雑な金融商品の選択や将来設計のお悩みを解決し、明るい未来への架け橋となります。</p>
               <div className="hero-buttons">
-                <Link href="/contact" className="line-btn">LINEで無料相談</Link>
-                <Link href="/services" className="service-btn">サービス詳細を見る</Link>
+                <CTAButton variant="line" href="/contact">LINEで無料相談</CTAButton>
+                <CTAButton variant="service" href="/services">サービス詳細を見る</CTAButton>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function HomePage() {
             <li>住宅ローンアドバイザー</li>
             <li>法人コンサルティング</li>
           </ul>
-          <Link href="/services" className="more-btn">サービス詳細を見る</Link>
+          <CTAButton variant="more" href="/services">サービス詳細を見る</CTAButton>
         </section>
 
         <section className="testimonials fadein-section">
@@ -141,7 +141,7 @@ export default function HomePage() {
         <section className="about fadein-section">
           <h2>プロフィール</h2>
           <p>お金の悩みや将来設計に寄り添い、人生に「安心」と「希望」を届けることを使命としています。2級ファイナンシャル・プランニング技能士、生命保険協会認定トータル・ライフ・コンサルタント（TLC）、住宅ローンアドバイザーなど、多数の資格を保有。どんな些細なことでも、まずはご相談ください。</p>
-          <Link href="/about" className="more-btn">プロフィールを見る</Link>
+          <CTAButton variant="more" href="/about">プロフィールを見る</CTAButton>
         </section>
 
         <section className="faq fadein-section">
@@ -164,8 +164,8 @@ export default function HomePage() {
           <h2>今すぐLINEでお気軽にご相談ください</h2>
           <p>初回相談は無料です。あなたの「安心」と「希望」のある未来のために、まずは気軽にご連絡ください。</p>
           <div className="cta-buttons">
-            <Link href="/contact" className="line-btn">LINEで相談</Link>
-            <a href="mailto:kosuke.yui@brightreach.co.jp" className="mail-btn">メールで問い合わせ</a>
+            <CTAButton variant="line" href="/contact">LINEで相談</CTAButton>
+            <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
           </div>
         </section>
       </main>
