@@ -1,57 +1,19 @@
 'use client'
 
-import { useEffect } from 'react'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CTAButton from '@/components/CTAButton'
+import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
 import '../../styles/about.css'
 
 export default function AboutPage() {
-  useEffect(() => {
-    // フェードイン要素の観察
-    const fadeinSections = document.querySelectorAll('.fadein-section')
-    
-    const fadeInObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein-visible')
-        }
-      })
-    }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    })
-    
-    fadeinSections.forEach(section => {
-      fadeInObserver.observe(section)
-    })
-
-    // 強みセクションのホバーエフェクト強化
-    const strengthItems = document.querySelectorAll('.strengths li')
-    strengthItems.forEach(item => {
-      const handleMouseEnter = () => {
-        ;(item as HTMLElement).style.transform = 'translateY(-5px)'
-        ;(item as HTMLElement).style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.1)'
-      }
-      
-      const handleMouseLeave = () => {
-        ;(item as HTMLElement).style.transform = 'translateY(0)'
-        ;(item as HTMLElement).style.boxShadow = 'var(--shadow-sm)'
-      }
-      
-      item.addEventListener('mouseenter', handleMouseEnter)
-      item.addEventListener('mouseleave', handleMouseLeave)
-    })
-
-    return () => {
-      fadeInObserver.disconnect()
-    }
-  }, [])
 
   return (
-    <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-      <Header title="プロフィール" />
+    <>
+      <OptimizedClientAnimation />
+      <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
+        <Header title="プロフィール" />
       
       <main>
         <section className="hero fadein-section">
@@ -135,7 +97,8 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   )
 }

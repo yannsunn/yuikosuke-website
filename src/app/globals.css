@@ -6,9 +6,6 @@
 html {
   overflow-x: hidden;
   width: 100%;
-  scroll-behavior: smooth;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -19,8 +16,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* スクロールバー自体の非表示（必要に応じて） */
@@ -75,28 +70,27 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* コンテナ要素の幅を適切に制御 - 整理版 */
+/* コンテナ要素の幅を適切に制御 - 軽量版 */
 main, header, footer, section {
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
-  touch-action: pan-y;
 }
 
-/* モバイル向けスクロール最適化 */
+/* モバイル向けスクロール最適化 - 軽量版 */
 @media (max-width: 768px) {
-  * {
-    touch-action: manipulation;
+  html {
+    scroll-behavior: auto; /* スムーススクロール無効化 */
   }
   
   body {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+    overscroll-behavior-y: contain;
   }
   
   img {
-    touch-action: none;
     pointer-events: auto;
     max-width: 100%;
     height: auto;
@@ -688,16 +682,17 @@ h2::after {
   border-radius: 2px;
 }
 
-/* フェードインセクション共通スタイル */
+/* 軽量化されたフェードインセクション */
 .fadein-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
 }
 
 .fadein-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* アニメーション効果の追加 */

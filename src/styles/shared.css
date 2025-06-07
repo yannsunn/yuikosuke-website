@@ -4,8 +4,6 @@
 .hero {
   padding: 2.5em 0 1.5em;
   overflow: hidden;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
 }
 
 .hero-container {
@@ -30,20 +28,21 @@
   object-fit: cover;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
-  transition: all 0.3s ease;
-  touch-action: manipulation;
-  pointer-events: auto;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .hero-photo-modern:hover {
-  transform: scale(1.01) translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  transform: scale(1.01) translate3d(0, -2px, 0);
 }
 
 @media (hover: none) and (pointer: coarse) {
   .hero-photo-modern:hover {
     transform: none;
-    box-shadow: var(--shadow-lg);
+  }
+  
+  .hero-photo-modern {
+    transition: none; /* モバイルでトランジション無効化 */
   }
 }
 

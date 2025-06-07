@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ClientAnimation from '@/components/ClientAnimation'
+import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
 import CTAButton from '@/components/CTAButton'
 import '../styles/index.css'
 
@@ -24,7 +24,7 @@ export default function HomePage() {
 
   return (
     <>
-      <ClientAnimation />
+      <OptimizedClientAnimation />
     <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
       <Header title="FPコンサルティング" />
       
