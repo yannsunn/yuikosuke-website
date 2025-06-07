@@ -199,7 +199,15 @@
 
 .cta h2 {
   color: white;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2em;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 /* レスポンシブ対応 */

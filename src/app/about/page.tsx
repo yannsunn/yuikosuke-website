@@ -92,7 +92,8 @@ export default function AboutPage() {
         </section>
 
         <section className="cta fadein-section">
-          <h2>まずはLINEでお気軽にご相談ください！</h2>
+          <h2>お気軽にご相談ください</h2>
+          <p>まずはLINEでお気軽にメッセージをお送りください。初回相談は無料です。</p>
           <CTAButton variant="line" href="/contact">LINEで相談する</CTAButton>
         </section>
       </main>

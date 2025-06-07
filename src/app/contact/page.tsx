@@ -1,87 +1,17 @@
-'use client'
-
-import { useEffect } from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CTAButton from '@/components/CTAButton'
+import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
 import '../../styles/contact.css'
 
 export default function ContactPage() {
-  useEffect(() => {
-    // フェードイン要素の観察
-    const fadeinSections = document.querySelectorAll('.fadein-section')
-    
-    const fadeInObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein-visible')
-        }
-      })
-    }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    })
-    
-    fadeinSections.forEach(section => {
-      fadeInObserver.observe(section)
-    })
-
-    // カードボックスの遅延アニメーション
-    const cardBoxes = document.querySelectorAll('.card-box')
-    cardBoxes.forEach((card, index) => {
-      ;(card as HTMLElement).style.setProperty('--card-index', index.toString())
-      ;(card as HTMLElement).style.animationDelay = (index * 0.15) + 's'
-    })
-    
-    // コンタクトボックスのホバーエフェクト強化
-    const contactBoxes = document.querySelectorAll('.contact-box')
-    contactBoxes.forEach(box => {
-      const handleMouseEnter = () => {
-        ;(box as HTMLElement).style.transform = 'translateY(-8px)'
-        ;(box as HTMLElement).style.boxShadow = 'var(--shadow-lg)'
-      }
-      
-      const handleMouseLeave = () => {
-        ;(box as HTMLElement).style.transform = ''
-        ;(box as HTMLElement).style.boxShadow = ''
-      }
-      
-      box.addEventListener('mouseenter', handleMouseEnter)
-      box.addEventListener('mouseleave', handleMouseLeave)
-    })
-    
-    // 問い合わせ例リストのアニメーション
-    const exampleItems = document.querySelectorAll('.contact-examples li')
-    exampleItems.forEach((item, index) => {
-      ;(item as HTMLElement).style.opacity = '0'
-      ;(item as HTMLElement).style.transform = 'translateY(20px)'
-      
-      setTimeout(() => {
-        ;(item as HTMLElement).style.transition = 'all 0.5s cubic-bezier(.25, .1, .25, 1.5)'
-        ;(item as HTMLElement).style.opacity = '1'
-        ;(item as HTMLElement).style.transform = 'translateY(0)'
-      }, 300 + (index * 100))
-    })
-    
-    // メールリンクのクリックイベント拡張
-    const mailLinks = document.querySelectorAll('a[href^="mailto:"]')
-    mailLinks.forEach(link => {
-      const handleClick = () => {
-        link.classList.add('pulse')
-        setTimeout(() => link.classList.remove('pulse'), 500)
-      }
-      
-      link.addEventListener('click', handleClick)
-    })
-
-    return () => {
-      fadeInObserver.disconnect()
-    }
-  }, [])
 
   return (
-    <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-      <Header title="お問い合わせ" />
+    <>
+      <OptimizedClientAnimation />
+      <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
+        <Header title="お問い合わせ" />
       
       <main>
         <section className="contact-lead fadein-section card-box">
@@ -99,23 +29,25 @@ export default function ContactPage() {
                 <a href="mailto:kosuke.yui@brightreach.co.jp" className="mail-link">kosuke.yui@brightreach.co.jp</a>
               </p>
               <p className="mail-description">
-                お名前・ご連絡先・ご用件を明記の上、ご送信ください。
-                <br/>通常1～2営業日以内にご返信いたします。
+                お名前・ご連絡先・ご用件を明記の上、ご送信ください。<br/>
+                通常1～2営業日以内にご返信いたします。
               </p>
             </div>
-            <a href="mailto:kosuke.yui@brightreach.co.jp" className="mail-btn">
-              <span className="mail-icon">✉</span> メールで問い合わせる
-            </a>
+            <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>
+              メールで問い合わせる
+            </CTAButton>
           </div>
           <div className="contact-box line">
             <h3>LINEで問い合わせ</h3>
             <div className="contact-content">
               <p>
-                LINEでのお問い合わせは迅速なご対応が可能です。
+                LINEでのお問い合わせは迅速なご対応が可能です。<br/>
                 ご質問やご相談など、お気軽にメッセージをお送りください。
               </p>
             </div>
-            <a href="https://line.me/ja/" className="line-btn" target="_blank" rel="noopener">LINEで相談</a>
+            <CTAButton variant="line" href="https://line.me/R/ti/p/@your-line-id" external>
+              LINEで相談
+            </CTAButton>
           </div>
         </section>
 
@@ -141,7 +73,8 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   )
 }

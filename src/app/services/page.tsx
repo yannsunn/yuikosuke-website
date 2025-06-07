@@ -1,72 +1,16 @@
-'use client'
-
-import { useEffect } from 'react'
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CTAButton from '@/components/CTAButton'
+import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
 import '../../styles/services.css'
 
 export default function ServicesPage() {
-  useEffect(() => {
-    // フェードイン要素の観察
-    const fadeinSections = document.querySelectorAll('.fadein-section')
-    
-    const fadeInObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein-visible')
-        }
-      })
-    }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    })
-    
-    fadeinSections.forEach(section => {
-      fadeInObserver.observe(section)
-    })
-
-    // サービスカードの遅延アニメーション
-    const serviceCards = document.querySelectorAll('.service')
-    serviceCards.forEach((card, index) => {
-      ;(card as HTMLElement).style.setProperty('--card-index', index.toString())
-      
-      const handleMouseEnter = () => {
-        ;(card as HTMLElement).style.transform = 'translateY(-8px)'
-        ;(card as HTMLElement).style.boxShadow = '0 12px 28px rgba(0, 0, 0, 0.12)'
-      }
-      
-      const handleMouseLeave = () => {
-        ;(card as HTMLElement).style.transform = ''
-        ;(card as HTMLElement).style.boxShadow = ''
-      }
-      
-      const handleClick = (e: Event) => {
-        if ((e.target as HTMLElement).tagName === 'A') return
-        
-        const ctaSection = document.querySelector('.cta')
-        if (ctaSection) {
-          window.scrollTo({
-            top: (ctaSection as HTMLElement).offsetTop - 60,
-            behavior: 'smooth'
-          })
-        }
-      }
-      
-      card.addEventListener('mouseenter', handleMouseEnter)
-      card.addEventListener('mouseleave', handleMouseLeave)
-      card.addEventListener('click', handleClick)
-      ;(card as HTMLElement).style.cursor = 'pointer'
-    })
-
-    return () => {
-      fadeInObserver.disconnect()
-    }
-  }, [])
 
   return (
-    <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-      <Header title="サービス" />
+    <>
+      <OptimizedClientAnimation />
+      <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
+        <Header title="サービス" />
       
       <main>
         <section className="service fadein-section" id="business-protection">
@@ -105,12 +49,17 @@ export default function ServicesPage() {
         </section>
 
         <section className="cta fadein-section">
-          <Link href="/contact" className="line-btn">LINEで相談</Link>
-          <p>「何から始めればいいかわからない」という方も大歓迎です。<br/>まずはメールでご相談ください：<a href="mailto:kosuke.yui@brightreach.co.jp">kosuke.yui@brightreach.co.jp</a></p>
+          <h2>お気軽にご相談ください</h2>
+          <p>「何から始めればいいかわからない」という方も大歓迎です。</p>
+          <div className="cta-buttons">
+            <CTAButton variant="line" href="/contact">LINEで相談</CTAButton>
+            <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
+          </div>
         </section>
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   )
 }
