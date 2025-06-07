@@ -7,202 +7,62 @@
   padding: 2.2em 1.6em;
   margin-bottom: 2.2em;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-slow);
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 0.8s cubic-bezier(.77,0,.18,1) both;
-  animation-delay: calc(var(--card-index, 0) * 0.1s);
+  transition: all var(--transition-normal);
   cursor: pointer;
 }
 
-.service::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  z-index: 0;
-  transition: all var(--transition-slow);
-}
-
 .service:hover {
-  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
-}
-
-.service:hover::before {
-  transform: scale(1.2) translateX(-20px) translateY(20px);
-}
-
-.service::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 0;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-  transition: width 0.5s ease;
-}
-
-.service:hover::after {
-  width: 100%;
+  transform: translateY(-8px);
 }
 
 .service h2 {
   color: var(--primary-dark);
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
   font-size: 1.4em;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
-
-.service h2::before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
-  transform: translateY(-2px);
-  opacity: 0.2;
 }
 
 .service p {
-  position: relative;
-  z-index: 1;
-  font-size: 1.08em;
   line-height: 1.7;
-  margin-bottom: 0;
+  color: var(--text-color);
 }
 
-/* サービス個別スタイル（アイコンカラーバリエーション） */
-#business-protection h2::before {
-  background-color: #FFC107;
-}
-
-#welfare-retirement h2::before {
-  background-color: #4CAF50;
-}
-
-#inheritance-succession h2::before {
-  background-color: #9C27B0;
-}
-
-#insurance-consulting h2::before {
-  background-color: #03A9F4;
-}
-
-#asset-building h2::before {
-  background-color: #F44336;
-}
-
-#housing-loan h2::before {
-  background-color: #795548;
-}
-
-/* CTA セクション */
+/* CTA */
 .cta {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+  color: white;
   text-align: center;
-  background: linear-gradient(135deg, var(--card-color-2) 0%, white 100%);
-  border-radius: var(--border-radius-md);
-  padding: 2.5em 1.5em;
-  box-shadow: var(--shadow-md);
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.4s both;
-}
-
-.cta::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.cta h2 {
-  margin-bottom: 1em;
-  font-size: 1.6em;
-  position: relative;
-  z-index: 1;
+  padding: 3em 2em;
+  border-radius: var(--border-radius-lg);
+  margin: 3em 0;
+  box-shadow: var(--shadow-lg);
 }
 
 .cta p {
-  font-size: 1.15em;
-  max-width: 600px;
-  margin: 0 auto 1.5em auto;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 2em;
+  font-size: 1.1em;
 }
 
-.cta a[href^="mailto"] {
-  color: var(--primary-color);
-  font-weight: 700;
-  border-bottom: 1px dashed var(--primary-light);
-  padding-bottom: 2px;
-  transition: all var(--transition-normal);
+.cta a[href^="mailto:"] {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  font-weight: 600;
 }
 
-.cta a[href^="mailto"]:hover {
-  color: var(--primary-dark);
-  border-bottom: 1px solid var(--primary-dark);
+.cta a[href^="mailto:"]:hover {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-/* レスポンシブデザイン */
-@media (max-width: 900px) {
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
   .service {
-    padding: 1.8em 1.2em;
+    padding: 1.8em 1.3em;
+    margin-bottom: 1.8em;
   }
   
   .cta {
-    padding: 1.8em 1.2em;
-  }
-}
-
-@media (max-width: 700px) {
-  .service h2 {
-    font-size: 1.3em;
-  }
-  
-  .service p {
-    font-size: 1.02em;
-  }
-  
-  .cta h2 {
-    font-size: 1.4em;
-  }
-  
-  .cta p {
-    font-size: 1.05em;
-  }
-}
-
-@media (max-width: 500px) {
-  .service {
-    padding: 1.2em 1em;
-  }
-  
-  .service h2 {
-    font-size: 1.2em;
-  }
-  
-  .service p {
-    font-size: 0.98em;
-  }
-  
-  .cta {
-    padding: 1.5em 1em;
+    padding: 2.5em 1.5em;
+    margin: 2em 0;
   }
 }

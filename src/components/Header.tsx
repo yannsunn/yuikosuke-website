@@ -2,8 +2,20 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import type { NavigationItem } from '@/types'
 
-export default function Header({ title }: { title: string }) {
+interface HeaderProps {
+  title: string
+}
+
+const navigationItems: NavigationItem[] = [
+  { href: '/', label: 'トップ' },
+  { href: '/services', label: 'サービス' },
+  { href: '/about', label: 'プロフィール' },
+  { href: '/contact', label: 'LINEで相談' },
+]
+
+export default function Header({ title }: HeaderProps) {
   const pathname = usePathname()
 
   const isActive = (path: string) => {
@@ -16,18 +28,23 @@ export default function Header({ title }: { title: string }) {
     <header>
       <h1>{title}</h1>
       <nav>
-        <Link href="/" className={isActive('/') ? 'active' : ''}>
-          トップ
-        </Link>
-        <Link href="/services" className={isActive('/services') ? 'active' : ''}>
-          サービス
-        </Link>
-        <Link href="/about" className={isActive('/about') ? 'active' : ''}>
-          プロフィール
-        </Link>
-        <Link href="/contact" className={isActive('/contact') ? 'active line-btn' : 'line-btn'}>
-          LINEで相談
-        </Link>
+        {navigationItems.map((item) => {
+          const isContactButton = item.href === '/contact'
+          const baseClassName = isContactButton ? 'line-btn' : ''
+          const activeClassName = isActive(item.href) ? 'active' : ''
+          const className = [baseClassName, activeClassName].filter(Boolean).join(' ')
+          
+          return (
+            <Link 
+              key={item.href}
+              href={item.href} 
+              className={className || undefined}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </Link>
+          )
+        })}
       </nav>
     </header>
   )

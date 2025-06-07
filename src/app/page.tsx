@@ -1,50 +1,30 @@
-'use client'
-
-import { useEffect } from 'react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ClientAnimation from '@/components/ClientAnimation'
 import '../styles/index.css'
 
+export const metadata: Metadata = {
+  title: 'ホーム',
+  description: 'ファイナンシャルプランナー油井宏介の公式サイト。保険・資産形成・事業保障までトータルにサポートし、一人ひとりの人生に「安心」と「希望」を届けます。',
+  keywords: ['ファイナンシャルプランナー', '保険相談', '資産形成', '無料相談'],
+  openGraph: {
+    title: '油井宏介 | ファイナンシャルプランナー',
+    description: '保険・資産形成・事業保障までトータルにサポート。一人ひとりの人生に「安心」と「希望」を届けます。',
+    url: 'https://brightreach-hp.vercel.app',
+    siteName: '油井宏介 FP事務所',
+    type: 'website',
+    locale: 'ja_JP',
+  },
+}
+
 export default function HomePage() {
-  useEffect(() => {
-    // フェードイン要素の観察
-    const fadeinSections = document.querySelectorAll('.fadein-section')
-    
-    const fadeInObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein-visible')
-        }
-      })
-    }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    })
-    
-    fadeinSections.forEach(section => {
-      fadeInObserver.observe(section)
-    })
-
-    // ボタンのクリック効果
-    const allButtons = document.querySelectorAll('.line-btn, .mail-btn, .more-btn')
-    allButtons.forEach(button => {
-      const handleClick = () => {
-        button.classList.add('clicked')
-        setTimeout(() => button.classList.remove('clicked'), 300)
-      }
-      button.addEventListener('click', handleClick)
-      
-      return () => button.removeEventListener('click', handleClick)
-    })
-
-    return () => {
-      fadeInObserver.disconnect()
-    }
-  }, [])
 
   return (
+    <>
+      <ClientAnimation />
     <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
       <Header title="FPコンサルティング" />
       
@@ -54,11 +34,14 @@ export default function HomePage() {
             <div className="hero-image-modern">
               <Image 
                 src="/yuikosuke.jpg" 
-                alt="プロフィール写真" 
+                alt="ファイナンシャルプランナー油井宏介のプロフィール写真" 
                 width={280}
                 height={380}
                 className="hero-photo-modern animated-hero-photo"
                 priority
+                sizes="(max-width: 600px) 180px, (max-width: 900px) 220px, 280px"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Rsr1PzDhXTvfQ=="
               />
             </div>
             <div className="hero-text">
@@ -189,5 +172,6 @@ export default function HomePage() {
 
       <Footer />
     </div>
+    </>
   )
 }

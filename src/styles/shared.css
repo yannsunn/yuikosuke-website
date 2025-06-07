@@ -1,0 +1,127 @@
+/* 共通コンポーネントスタイル - 重複削除用 */
+
+/* ヒーローセクション共通 */
+.hero {
+  padding: 2.5em 0 1.5em;
+  overflow: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.hero-image-modern {
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+}
+
+.hero-photo-modern {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+  pointer-events: auto;
+}
+
+.hero-photo-modern:hover {
+  transform: scale(1.01) translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hero-photo-modern:hover {
+    transform: none;
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.hero-text {
+  flex: 1;
+  margin-left: 2em;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+/* カードボックス共通 */
+.card-box {
+  background: #fff;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2em 1.8em;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-box:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.card-box::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+  
+  .hero-photo-modern {
+    width: 220px;
+    height: 300px;
+  }
+  
+  .hero-text {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.5em 0 1em;
+  }
+  
+  .hero-photo-modern {
+    width: 180px;
+    height: 240px;
+  }
+  
+  .hero h2 {
+    font-size: 2em;
+  }
+  
+  .card-box {
+    padding: 1.5em 1.2em;
+  }
+}

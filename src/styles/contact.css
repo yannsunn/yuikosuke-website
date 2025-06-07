@@ -1,44 +1,5 @@
 /* お問い合わせページ固有スタイル */
-
-/* メインコンテンツレイアウト */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1.5em;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* カードボックススタイル */
-.card-box {
-  background: #fff;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  padding: 2em 1.8em;
-  margin-bottom: 2em;
-  position: relative;
-  overflow: hidden;
-  transition: all var(--transition-normal);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.card-box:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-3px);
-}
-
-.card-box::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  z-index: 0;
-}
+/* メイン・カードボックススタイルはshared.cssから継承 */
 
 /* お問い合わせリード部分 */
 .contact-lead {
@@ -60,102 +21,22 @@ main {
   line-height: 1.8;
 }
 
-/* LINE公式アカウント準備中のスタイル */
-.line-btn {
-  display: inline-block;
-  background: linear-gradient(90deg, var(--accent-color) 60%, var(--accent-light) 100%);
-  color: #fff !important;
-  font-size: 1.1em;
-  padding: 0.8em 1.8em;
-  border-radius: var(--border-radius-lg);
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.15);
-  transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
+/* LINE・メールボタンスタイルはglobals.cssから継承 */
 
-.line-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.5s, height 0.5s;
-  z-index: -1;
-}
-
-.line-btn:hover:not(.disabled) {
-  background: linear-gradient(90deg, var(--accent-dark) 60%, var(--accent-light) 100%);
-  box-shadow: 0 8px 20px rgba(6, 199, 85, 0.25);
-  transform: translateY(-3px);
-  color: #fff;
-}
-
-.line-btn:hover:not(.disabled)::before {
-  width: 300px;
-  height: 300px;
-}
-
-.line-btn.clicked {
-  transform: scale(0.95);
-}
-
-/* メールボタンスタイル */
+/* ページ固有の調整 */
 .mail-btn {
   display: block;
   margin: 1.5em auto 0 auto;
   text-align: center;
   width: fit-content;
   min-width: 220px;
-  background: linear-gradient(90deg, var(--mail-color) 60%, var(--mail-light) 100%);
-  color: #fff !important;
   font-size: 1.15em;
   padding: 1em 2.2em;
-  border-radius: var(--border-radius-lg);
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.18);
-  transition: all 0.3s cubic-bezier(.25, .1, .25, 1.5);
-  position: relative;
-  z-index: 2;
   text-shadow: 0 2px 8px rgba(25, 118, 210, 0.18), 0 1px 0 #1976d2;
 }
 
-.mail-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.5s, height 0.5s;
-  z-index: -1;
-}
-
 .mail-btn:hover {
-  background: linear-gradient(90deg, var(--mail-dark) 60%, var(--mail-color) 100%);
-  box-shadow: 0 12px 32px rgba(25, 118, 210, 0.25);
-  color: #fff;
   transform: translateY(-3px) scale(1.04);
-}
-
-.mail-btn:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.mail-btn.clicked {
-  transform: scale(0.95);
 }
 
 .mail-icon {
@@ -401,34 +282,21 @@ footer {
   }
 }
 
+/* レスポンシブスタイルはglobals.cssから継承、ページ固有調整のみ */
 @media (max-width: 700px) {
-  main {
-    padding: 0 1.2em;
-    width: 100%;
-  }
-  .card-box {
-    padding: 1.5em 1.2em;
-    width: 100%;
-  }
   .contact-lead h2 {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 500px) {
-  .card-box {
-    padding: 1.2em 1em;
-    width: 100%;
-  }
   .contact-methods .contact-box {
     padding: 1.5em 1.2em 1.2em 1.2em;
-    width: 100%;
   }
   .mail-btn, .line-btn {
     padding: 0.8em 1.5em;
     font-size: 1em;
     width: 100%;
-    box-sizing: border-box;
     text-align: center;
   }
   .mail-link {

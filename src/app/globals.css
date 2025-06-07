@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import '../styles/variables.css';
+@import '../styles/shared.css';
 
 /* スクロールバー非表示 - シンプルかつ効果的な実装 */
 html {
