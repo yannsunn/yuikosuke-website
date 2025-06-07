@@ -7,6 +7,8 @@ html {
   scroll-behavior: smooth;
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -86,15 +88,24 @@ main, header, footer, section {
     touch-action: manipulation;
   }
   
+  body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  
   img {
     touch-action: none;
     pointer-events: auto;
+    max-width: 100%;
+    height: auto;
   }
   
   .hero-photo-modern,
   .animated-hero-photo {
     touch-action: none;
     pointer-events: none;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -685,6 +696,27 @@ h2::after {
 .fadein-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* アニメーション効果の追加 */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
 }
 
 /* セクションの装飾 */
