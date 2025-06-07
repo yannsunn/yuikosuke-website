@@ -253,17 +253,18 @@ a:hover {
   }
 }
 
-/* --- ナビゲーション共通デザイン追加 --- */
+/* --- ナビゲーション共通デザイン修正版 --- */
 header h1 {
   text-align: center;
   margin: 1.2em auto 1em;
   font-weight: 700;
   color: var(--primary-dark);
   position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  max-width: 90%;
   padding-bottom: 0.3em;
+  box-sizing: border-box;
 }
 
 header h1::after {
@@ -273,7 +274,8 @@ header h1::after {
   height: 3px;
   background: linear-gradient(90deg, var(--accent-color), var(--primary-light));
   bottom: 0;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 2px;
 }
 
@@ -282,13 +284,16 @@ header nav {
   gap: 1.5em;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.8em;
+  margin: 0 auto 1.8em;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.5);
   padding: 0.8em;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(5px);
+  max-width: 95%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 header nav a {
@@ -301,9 +306,12 @@ header nav a {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  flex: 1 1 auto;
   min-width: 120px;
+  max-width: 200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   background: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
 }
 
 header nav a:hover,
@@ -318,29 +326,34 @@ header nav a.active {
 @media (max-width: 700px) {
   header nav {
     flex-direction: column;
-    gap: 0.7em;
-    padding: 0.7em 0.5em;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 1em;
+    padding: 1em;
+    max-width: 95%;
+    margin: 0 auto 1.8em;
+    width: calc(100% - 2em);
   }
   
   header nav a {
-    width: 90%;
+    flex: none;
+    width: 100%;
     min-width: 0;
-    padding: 0.7em 0.5em;
+    max-width: none;
+    padding: 0.8em 1em;
     font-size: 0.95rem;
+    text-align: center;
+    margin: 0 auto;
   }
   
   header nav a.line-btn {
-    padding: 0.7em 0.5em;
+    padding: 0.8em 1em;
     font-size: 0.95rem;
-    width: 90%;
+    width: 100%;
+    text-align: center;
   }
   
   header h1 {
     font-size: 1.5em;
-    width: 90%;
+    max-width: 95%;
     margin: 1em auto 0.8em;
     padding-bottom: 0.2em;
   }
@@ -348,14 +361,55 @@ header nav a.active {
 
 @media (max-width: 480px) {
   header nav {
-    width: 100%;
-    padding: 0.6em 0.4em;
+    max-width: 98%;
+    padding: 0.8em;
+    gap: 0.8em;
+    width: calc(100% - 1em);
+    margin: 0 auto 1.8em;
   }
   
   header nav a {
-    width: 95%;
+    width: 100%;
     font-size: 0.9rem;
-    padding: 0.6em 0.4em;
+    padding: 0.7em 0.8em;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    font-size: 1.4em;
+    max-width: 98%;
+    margin: 1em auto 0.8em;
+    text-align: center;
+  }
+}
+
+/* 極小画面対応 */
+@media (max-width: 360px) {
+  header {
+    padding: 0 0.5em;
+  }
+  
+  header nav {
+    max-width: 100%;
+    padding: 0.6em;
+    gap: 0.6em;
+    width: calc(100% - 1em);
+    margin: 0 auto 1.5em;
+  }
+  
+  header nav a {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.6em 0.5em;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 1.3em;
+    max-width: 100%;
+    margin: 0.8em auto 0.6em;
+    text-align: center;
   }
 }
 /* --- ここまで --- */
