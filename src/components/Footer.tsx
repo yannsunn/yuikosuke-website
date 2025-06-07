@@ -16,9 +16,8 @@ export default function Footer() {
           <Link href="/privacy">プライバシーポリシー</Link>
         </div>
         <div className="footer-contact">
-          <p>お気軽にご相談ください</p>
-          <p><a href="/contact">LINEで相談する</a></p>
-          <p>初回相談無料</p>
+          <p>東京都・神奈川県を中心にサポート</p>
+          <p>kosuke.yui@brightreach.co.jp</p>
         </div>
       </div>
       <div className="footer-bottom">
