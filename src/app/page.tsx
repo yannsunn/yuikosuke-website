@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '油井宏介 | ファイナンシャルプランナー',
     description: '保険・資産形成・事業保障までトータルにサポート。一人ひとりの人生に「安心」と「希望」を届けます。',
-    url: 'https://brightreach-hp.vercel.app',
+    url: 'https://yuikosuke-website.vercel.app',
     siteName: '油井宏介 FP事務所',
     type: 'website',
     locale: 'ja_JP',
