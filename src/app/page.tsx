@@ -98,12 +98,29 @@ export default function HomePage() {
         </section>
 
         <section className="strengths fadein-section">
-          <h2>3つの強み</h2>
-          <ol>
-            <li><b>専門知識と実績による安心サポート</b><br/>公的資格と豊富な経験で、あなたに最適なプランをご提案。複雑な金融商品の中から、本当に必要なものだけを厳選します。</li>
-            <li><b>生涯に寄り添うトータルプランニング</b><br/>保険・資産・事業・相続までワンストップでサポート。人生の各ステージでシームレスなサービスを提供します。</li>
-            <li><b>親しみやすさと迅速な対応</b><br/>LINEで気軽に相談できる身近なパートナー。専門家特有の難解さを排除し、わかりやすく丁寧な説明を心がけています。</li>
-          </ol>
+          <h2>私の強み・大切にしていること</h2>
+          <div className="strengths-grid">
+            <div className="strength-card">
+              <div className="strength-number">01</div>
+              <h3>公的資格と豊富な実務経験による<br/>「安心」のご提案</h3>
+              <p>2級ファイナンシャル・プランニング技能士、生命保険協会認定TLC、住宅ローンアドバイザーなど多数の資格と20年の実務経験で、あなたに最適なプランをご提案。複雑な金融商品の中から、本当に必要なものだけを厳選し、安心してお任せいただけるサービスを提供します。</p>
+            </div>
+            <div className="strength-card">
+              <div className="strength-number">02</div>
+              <h3>保険・資産・事業・相続まで<br/>ワンストップでサポート</h3>
+              <p>一つの窓口ですべてのお金の悩みを解決。複数の専門家を探す手間なく、人生の各ステージに応じた総合的なプランニングを提供。ライフプランの変化にも柔軟に対応し、長期的な視点でお客様の資産と将来を守ります。</p>
+            </div>
+            <div className="strength-card">
+              <div className="strength-number">03</div>
+              <h3>LINEで気軽に相談できる<br/>親しみやすさ</h3>
+              <p>「専門家に相談するのは敷居が高い...」そんな心配は無用です。LINEでお気軽にご相談いただけ、専門用語を使わずわかりやすい説明を心がけています。24時間以内にお返事し、どんな些細なことでも丁寧にお答えします。</p>
+            </div>
+            <div className="strength-card">
+              <div className="strength-number">04</div>
+              <h3>お客様一人ひとりの想いに<br/>寄り添う誠実な対応</h3>
+              <p>お客様の価値観、家族構成、将来の夢まで、すべてを理解した上でプランを作成。押し売りや無理な勧誘は一切せず、お客様のペースに合わせて進めます。「この人になら安心して任せられる」と思っていただける信頼関係を大切にしています。</p>
+            </div>
+          </div>
         </section>
 
         <section className="services fadein-section">
