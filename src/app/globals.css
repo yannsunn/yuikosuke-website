@@ -30,33 +30,7 @@ body {
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #1976d2;
-  --primary-dark: #1251a2;
-  --primary-light: #64b5f6;
-  --accent-color: #06c755;
-  --accent-dark: #04a94b;
-  --accent-light: #43e97b;
-  --mail-color: #1976d2;
-  --mail-dark: #1251a2;
-  --mail-light: #64b5f6;
-  --bg-gradient-1: #f8fafc;
-  --bg-gradient-2: #e3fcec;
-  --card-color-1: #e3fcec;
-  --card-color-2: #fffde7;
-  --highlight-color: #f0f4c3;
-  --text-color: #333;
-  --text-light: #666;
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
-  --border-radius-sm: 8px;
-  --border-radius-md: 16px;
-  --border-radius-lg: 24px;
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s cubic-bezier(.25, .1, .25, 1.1);
-}
+/* CSS Variables now imported from variables.css - No duplication */
 
 body {
   font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
@@ -567,6 +541,7 @@ main {
   font-size: 0.85em;
 }
 
+/* Service/More buttons */
 .service-btn, .more-btn {
   font-size: 1rem;
   display: inline-block;
@@ -585,6 +560,42 @@ main {
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+/* SharedCTA Component Styles */
+.cta {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+  color: white;
+  text-align: center;
+  padding: 3em 2em;
+  border-radius: var(--border-radius-lg);
+  margin: 3em 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta.cta-highlight {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  box-shadow: 0 12px 30px rgba(25, 118, 210, 0.3);
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2em;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* フッターアニメーション */
@@ -859,6 +870,21 @@ section::before {
     padding: 0.5em 0.7em;
     min-width: 0;
     font-size: 0.9em;
+  }
+  
+  /* CTA responsive styles */
+  .cta {
+    padding: 2.5em 1.5em;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons > * {
+    width: 100%;
+    max-width: 280px;
   }
 }
 

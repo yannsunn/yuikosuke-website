@@ -2,18 +2,11 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import type { NavigationItem } from '@/types'
+import { navigationItems } from '@/components/Navigation'
 
 interface HeaderProps {
   title: string
 }
-
-const navigationItems: NavigationItem[] = [
-  { href: '/', label: 'トップ' },
-  { href: '/services', label: 'サービス' },
-  { href: '/about', label: 'プロフィール' },
-  { href: '/contact', label: 'お問い合わせ' },
-]
 
 export default function Header({ title }: HeaderProps) {
   const pathname = usePathname()

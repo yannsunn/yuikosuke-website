@@ -1,6 +1,13 @@
-/* 共通コンポーネントスタイル - 重複削除用 */
+/* Optimized Shared Components - Consolidated & Deduped */
 
-/* ヒーローセクション共通 */
+/* Layout Container - Used by BaseLayout */
+.layout-container {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Hero Section - Optimized */
 .hero {
   padding: 2.5em 0 1.5em;
   overflow: hidden;
@@ -29,32 +36,10 @@
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
   transition: transform 0.3s ease;
-  will-change: transform;
 }
 
 .hero-photo-modern:hover {
   transform: scale(1.01) translate3d(0, -2px, 0);
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .hero-photo-modern:hover {
-    transform: none;
-  }
-  
-  .hero-photo-modern {
-    transition: none; /* モバイルでトランジション無効化 */
-    /* iOS Safari スクロール最適化 */
-    will-change: auto;
-    transform: none;
-  }
-  
-  /* モバイル向けスクロール最適化 */
-  * {
-    /* 不要なGPUアクセラレーション削除 */
-    will-change: auto;
-    /* タッチ操作最適化 */
-    touch-action: manipulation;
-  }
 }
 
 .hero-text {
@@ -68,7 +53,7 @@
   font-weight: 700;
 }
 
-/* カードボックス共通 */
+/* Card Box - Consolidated */
 .card-box {
   background: #fff;
   border-radius: var(--border-radius-md);
@@ -87,19 +72,20 @@
   transform: translateY(-3px);
 }
 
-.card-box::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  z-index: 0;
+/* Mobile Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hero-photo-modern:hover {
+    transform: none;
+  }
+  
+  .hero-photo-modern {
+    transition: none;
+    will-change: auto;
+    transform: none;
+  }
 }
 
-/* レスポンシブ対応 */
+/* Responsive Design - Optimized */
 @media (max-width: 900px) {
   .hero-container {
     flex-direction: column;

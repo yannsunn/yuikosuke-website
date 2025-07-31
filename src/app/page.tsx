@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
+import BaseLayout from '@/components/BaseLayout'
+import SharedCTA from '@/components/SharedCTA'
 import CTAButton from '@/components/CTAButton'
 import '../styles/index.css'
 
@@ -21,12 +20,8 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-
   return (
-    <>
-      <OptimizedClientAnimation />
-    <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-      <Header title="FPコンサルティング" />
+    <BaseLayout title="FPコンサルティング">
       
       <main>
         <section className="hero fadein-section">
@@ -187,38 +182,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="cta fadein-section">
-          <h2>まずは無料相談から始めませんか？</h2>
-          <div className="cta-highlight">
-            <div className="cta-benefits">
-              <div className="cta-benefit">
-                <span className="icon">💰</span>
-                <span>初回相談完全無料</span>
-              </div>
-              <div className="cta-benefit">
-                <span className="icon">⏰</span>
-                <span>迅速な対応</span>
-              </div>
-              <div className="cta-benefit">
-                <span className="icon">📱</span>
-                <span>お気軽にご相談OK</span>
-              </div>
-              <div className="cta-benefit">
-                <span className="icon">🤝</span>
-                <span>無理な勧誘は一切なし</span>
-              </div>
-            </div>
-            <p>お金に関するご相談をお受けしています。<br/>まずはお気軽にお声がけください。</p>
-          </div>
-          <div className="cta-buttons">
-            <CTAButton variant="primary" href="/contact">お問い合わせ</CTAButton>
-            <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
-          </div>
-        </section>
+        <SharedCTA 
+          title="まずは無料相談から始めませんか？"
+          description="お金に関するご相談をお受けしています。まずはお気軽にお声がけください。"
+          variant="highlight"
+        />
       </main>
-
-      <Footer />
-    </div>
-    </>
+    </BaseLayout>
   )
 }

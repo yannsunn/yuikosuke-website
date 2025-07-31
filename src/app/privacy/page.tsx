@@ -1,61 +1,11 @@
 'use client'
 
-import { useEffect } from 'react'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import BaseLayout from '@/components/BaseLayout'
 import '../../styles/privacy.css'
 
 export default function PrivacyPage() {
-  useEffect(() => {
-    // フェードイン要素の観察
-    const fadeinSections = document.querySelectorAll('.fadein-section')
-    
-    const fadeInObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein-visible')
-        }
-      })
-    }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    })
-    
-    fadeinSections.forEach(section => {
-      fadeInObserver.observe(section)
-    })
-
-    // ポリシーセクションのホバーエフェクトを強化
-    const policySections = document.querySelectorAll('.policy-section')
-    policySections.forEach(section => {
-      const handleMouseEnter = () => {
-        ;(section as HTMLElement).style.transform = 'translateY(-5px)'
-        ;(section as HTMLElement).style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.1)'
-      }
-      
-      const handleMouseLeave = () => {
-        ;(section as HTMLElement).style.transform = 'translateY(0)'
-        ;(section as HTMLElement).style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)'
-      }
-      
-      section.addEventListener('mouseenter', handleMouseEnter)
-      section.addEventListener('mouseleave', handleMouseLeave)
-    })
-
-    // フェードインの時間差を設定
-    const sections = document.querySelectorAll('section')
-    sections.forEach((section, index) => {
-      ;(section as HTMLElement).style.animationDelay = (index * 0.1) + 's'
-    })
-
-    return () => {
-      fadeInObserver.disconnect()
-    }
-  }, [])
-
   return (
-    <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-      <Header title="プライバシーポリシー" />
+    <BaseLayout title="プライバシーポリシー" showAnimation={false}>
       
       <main>
         <section className="policy-lead fadein-section">
@@ -111,8 +61,6 @@ export default function PrivacyPage() {
           </p>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </BaseLayout>
   )
 }

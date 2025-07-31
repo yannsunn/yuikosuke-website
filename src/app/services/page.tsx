@@ -1,16 +1,10 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import CTAButton from '@/components/CTAButton'
-import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
+import BaseLayout from '@/components/BaseLayout'
+import SharedCTA from '@/components/SharedCTA'
 import '../../styles/services.css'
 
 export default function ServicesPage() {
-
   return (
-    <>
-      <OptimizedClientAnimation />
-      <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-        <Header title="サービス" />
+    <BaseLayout title="サービス">
       
       <main>
         <section className="service fadein-section" id="business-protection">
@@ -48,18 +42,8 @@ export default function ServicesPage() {
           <p>法人向けの財務戦略、節税対策、企業保険の最適化など、中小企業の経営者様の資金繰りや将来設計をトータルでサポートします。</p>
         </section>
 
-        <section className="cta fadein-section">
-          <h2>今すぐお気軽にご相談ください</h2>
-          <p>初回相談は無料です。あなたの「安心」と「希望」のある未来のために、まずは気軽にご連絡ください。</p>
-          <div className="cta-buttons">
-            <CTAButton variant="primary" href="/contact">お問い合わせ</CTAButton>
-            <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
-          </div>
-        </section>
+        <SharedCTA />
       </main>
-
-        <Footer />
-      </div>
-    </>
+    </BaseLayout>
   )
 }

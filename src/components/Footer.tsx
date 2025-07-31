@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { footerNavigationItems } from '@/components/Navigation'
 
 export default function Footer() {
   return (
@@ -9,11 +10,11 @@ export default function Footer() {
           <p>ファイナンシャルプランナー 油井宏介</p>
         </div>
         <div className="footer-links">
-          <Link href="/">トップ</Link>
-          <Link href="/services">サービス</Link>
-          <Link href="/about">プロフィール</Link>
-          <Link href="/contact">お問い合わせ</Link>
-          <Link href="/privacy">プライバシーポリシー</Link>
+          {footerNavigationItems.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
         </div>
         <div className="footer-contact">
           <p>東京都・神奈川県を中心にサポート</p>

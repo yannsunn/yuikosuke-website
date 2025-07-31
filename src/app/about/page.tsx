@@ -1,19 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import CTAButton from '@/components/CTAButton'
-import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
+import BaseLayout from '@/components/BaseLayout'
+import SharedCTA from '@/components/SharedCTA'
 import '../../styles/about.css'
 
 export default function AboutPage() {
-
   return (
-    <>
-      <OptimizedClientAnimation />
-      <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-        <Header title="プロフィール" />
+    <BaseLayout title="プロフィール">
       
       <main>
         <section className="hero fadein-section">
@@ -91,18 +85,8 @@ export default function AboutPage() {
           </table>
         </section>
 
-        <section className="cta fadein-section">
-          <h2>今すぐお気軽にご相談ください</h2>
-          <p>初回相談は無料です。あなたの「安心」と「希望」のある未来のために、まずは気軽にご連絡ください。</p>
-          <div className="cta-buttons">
-            <CTAButton variant="primary" href="/contact">お問い合わせ</CTAButton>
-            <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
-          </div>
-        </section>
+        <SharedCTA />
       </main>
-
-        <Footer />
-      </div>
-    </>
+    </BaseLayout>
   )
 }

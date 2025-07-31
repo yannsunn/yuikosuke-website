@@ -1,17 +1,11 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import BaseLayout from '@/components/BaseLayout'
 import CTAButton from '@/components/CTAButton'
-import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
 import '../../styles/contact.css'
 
 export default function ContactPage() {
-
   return (
-    <>
-      <OptimizedClientAnimation />
-      <div style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-        <Header title="お問い合わせ" />
+    <BaseLayout title="お問い合わせ">
       
       <main>
         <section className="contact-lead fadein-section card-box">
@@ -60,9 +54,6 @@ export default function ContactPage() {
           <Link href="/privacy">▶ プライバシーポリシーはこちら</Link>
         </section>
       </main>
-
-        <Footer />
-      </div>
-    </>
+    </BaseLayout>
   )
 }
