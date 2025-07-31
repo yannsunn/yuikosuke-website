@@ -1,189 +1,347 @@
 /* プロフィールページ固有スタイル */
 
-/* メッセージセクション */
+/* Premium Message Section */
 .message {
-  background: linear-gradient(135deg, var(--card-color-1) 0%, var(--card-color-2) 100%);
-  border-radius: var(--border-radius-lg);
-  padding: 2.5em 2em;
-  margin: 3em 0;
-  box-shadow: var(--shadow-md);
+  background: var(--card-bg-luxury);
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 3rem;
+  margin: 4rem 0;
+  box-shadow: var(--shadow-luxury);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 41, 59, 0.08);
+}
+
+.message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+}
+
+.message::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .message h2 {
   color: var(--primary-dark);
-  margin-bottom: 1.5em;
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .message p {
-  font-size: 1.05em;
-  line-height: 1.8;
-  max-width: 700px;
+  font-size: 1.125rem;
+  line-height: var(--line-height-relaxed);
+  max-width: 800px;
   margin: 0 auto;
+  color: var(--text-color);
+  font-weight: var(--font-weight-normal);
+  position: relative;
+  z-index: 1;
 }
 
-/* 強み・大切にしていることセクション */
+/* Premium Strengths Section */
 .strengths {
-  padding: 3em 0;
+  padding: 4rem 0;
 }
 
 .strengths ul {
   list-style: none;
   padding: 0;
-  max-width: 800px;
-  margin: 2em auto 0;
+  max-width: 900px;
+  margin: 3rem auto 0;
 }
 
 .strengths li {
-  background: #fff;
-  border-radius: var(--border-radius-md);
-  padding: 1.5em 2em;
-  margin-bottom: 1em;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  background: var(--card-bg-luxury);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-luxury);
   position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 41, 59, 0.08);
+}
+
+.strengths li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .strengths li:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  box-shadow: var(--shadow-luxury);
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.2);
 }
 
 .strengths li::before {
   content: '✓';
   position: absolute;
-  left: 1em;
+  left: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--accent-color);
-  color: white;
-  width: 1.5em;
-  height: 1.5em;
+  background: var(--gradient-accent);
+  color: var(--text-inverse);
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 0.8em;
+  font-weight: var(--font-weight-extrabold);
+  font-size: 0.875rem;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
 }
 
 .strengths li {
-  padding-left: 4em;
+  padding-left: 5rem;
+  font-size: 1.0625rem;
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
 }
 
-/* サービス要約セクション */
+/* Premium Service Summary Section */
 .service-summary {
-  background: linear-gradient(120deg, var(--card-color-2) 0%, var(--card-color-1) 100%);
-  border-radius: var(--border-radius-lg);
-  padding: 2.5em 2em;
-  margin: 3em 0;
-  box-shadow: var(--shadow-md);
+  background: var(--card-bg-luxury);
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 3rem;
+  margin: 4rem 0;
+  box-shadow: var(--shadow-luxury);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 41, 59, 0.08);
+}
+
+.service-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+}
+
+.service-summary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .service-summary h2 {
   text-align: center;
   color: var(--primary-dark);
-  margin-bottom: 2em;
+  margin-bottom: 3rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);  
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .service-summary ul {
   list-style: none;
   padding: 0;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .service-summary li {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: var(--border-radius-md);
-  padding: 1.5em;
-  margin-bottom: 1em;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  background: var(--card-bg-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-luxury);
+  border: 1px solid rgba(30, 41, 59, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-summary li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gradient-accent);
 }
 
 .service-summary li:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-luxury);
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.2);
 }
 
 .service-summary b {
   color: var(--primary-dark);
-  font-size: 1.1em;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-normal);
 }
 
-/* 保有資格セクション */
+/* Premium Qualifications Section */
 .qualifications {
-  padding: 3em 0;
+  padding: 4rem 0;
 }
 
 .qualifications ul {
   list-style: none;
   padding: 0;
-  max-width: 600px;
-  margin: 2em auto 0;
+  max-width: 700px;
+  margin: 3rem auto 0;
 }
 
 .qualifications li {
-  background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
-  color: white;
-  padding: 1em 1.5em;
-  margin-bottom: 0.8em;
-  border-radius: var(--border-radius-md);
-  font-weight: 600;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  background: var(--gradient-luxury);
+  color: var(--text-inverse);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+  border-radius: var(--border-radius-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.0625rem;
+  letter-spacing: var(--letter-spacing-wide);
+  box-shadow: var(--shadow-luxury);
+  transition: all var(--transition-luxury);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.qualifications li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
 }
 
 .qualifications li:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--accent-light);
 }
 
-/* 会社情報セクション */
+.qualifications li:hover::before {
+  opacity: 1;
+}
+
+/* Premium Company Info Section */
 .company-info {
-  background: #fff;
-  border-radius: var(--border-radius-lg);
-  padding: 2.5em 2em;
-  margin: 3em 0;
-  box-shadow: var(--shadow-md);
+  background: var(--card-bg-luxury);
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 3rem;
+  margin: 4rem 0;
+  box-shadow: var(--shadow-luxury);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 41, 59, 0.08);
+}
+
+.company-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
 }
 
 .company-info h2 {
   text-align: center;
   color: var(--primary-dark);
-  margin-bottom: 2em;
+  margin-bottom: 3rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .company-info table {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 1;
 }
 
 .company-info th,
 .company-info td {
-  padding: 1em;
+  padding: 1.5rem;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.08);
 }
 
 .company-info th {
-  background: var(--card-color-1);
+  background: var(--gradient-subtle);
   color: var(--primary-dark);
-  font-weight: 600;
-  width: 30%;
-  min-width: 120px;
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.0625rem;
+  letter-spacing: var(--letter-spacing-wide);
+  width: 35%;
+  min-width: 140px;
 }
 
 .company-info td {
   color: var(--text-color);
+  font-weight: var(--font-weight-normal);
+  font-size: 1rem;
+  line-height: var(--line-height-relaxed);
+  background: var(--card-bg-primary);
 }
 
-.company-info tr:hover {
-  background: rgba(240, 247, 255, 0.5);
+.company-info tr:hover td {
+  background: var(--bg-secondary);
+}
+
+.company-info tr:last-child th,
+.company-info tr:last-child td {
+  border-bottom: none;
 }
 
 /* CTA styles now handled by SharedCTA component - removed duplication */

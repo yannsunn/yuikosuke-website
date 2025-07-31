@@ -1,24 +1,59 @@
 /* お問い合わせページ固有スタイル */
 /* メイン・カードボックススタイルはshared.cssから継承 */
 
-/* お問い合わせリード部分 */
+/* Premium Contact Lead Section */
 .contact-lead {
-  background: linear-gradient(120deg, var(--card-color-1) 60%, var(--card-color-2) 100%);
+  background: var(--card-bg-luxury);
   text-align: center;
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 3rem;
+  margin: 4rem 0;
+  box-shadow: var(--shadow-luxury);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 41, 59, 0.08);
+}
+
+.contact-lead::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+}
+
+.contact-lead::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .contact-lead h2 {
   position: relative;
   z-index: 1;
   color: var(--primary-dark);
-  margin-bottom: 0.8em;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  font-size: 2rem;
 }
 
 .contact-lead p {
   position: relative;
   z-index: 1;
-  font-size: 1.1em;
-  line-height: 1.8;
+  font-size: 1.125rem;
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Primary/CTA・メールボタンスタイルはglobals.cssから継承 */
@@ -57,45 +92,85 @@
 }
 
 .contact-methods .contact-box {
-  flex: 1 1 320px;
-  min-width: 260px;
-  max-width: 420px;
-  background: #fff;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  padding: 2em 1.5em 1.5em 1.5em;
+  flex: 1 1 360px;
+  min-width: 320px;
+  max-width: 480px;
+  background: var(--card-bg-luxury);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-luxury);
+  padding: 3rem 2.5rem;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: all var(--transition-luxury);
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 41, 59, 0.08);
 }
 
 .contact-methods .contact-box:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.2);
 }
 
-.contact-methods .contact-box.mail {
-  border-left: 4px solid var(--mail-color);
+.contact-methods .contact-box.mail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 0 2px 2px 0;
 }
 
-.contact-methods .contact-box.primary {
-  border-left: 4px solid var(--accent-color);
+.contact-methods .contact-box.primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: 0 2px 2px 0;
+}
+
+.contact-methods .contact-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .contact-methods .contact-box h3 {
   color: var(--primary-dark);
-  margin-bottom: 0.8em;
+  margin-bottom: 1.25rem;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-snug);
+  position: relative;
+  z-index: 1;
 }
 
 .contact-methods .contact-box p {
-  margin-bottom: 1.5em;
+  margin-bottom: 2rem;
   flex-grow: 1;
+  font-size: 1rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--text-color);
+  font-weight: var(--font-weight-normal);
+  position: relative;
+  z-index: 1;
 }
 
 /* メールアドレス表示の最適化 */
@@ -128,38 +203,45 @@
   line-height: 1.7;
 }
 
-/* 問い合わせ例リスト */
+/* Premium Contact Examples List */
 .contact-examples ul {
   list-style: none;
   padding: 0;
-  margin: 1em 0 1.5em 0;
+  margin: 1.5rem 0 2rem 0;
 }
 
 .contact-examples li {
-  padding: 0.8em 1.2em;
-  background: var(--card-color-1);
-  border-radius: var(--border-radius-sm);
-  margin-bottom: 0.8em;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1rem;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  transition: all var(--transition-luxury);
   position: relative;
-  padding-left: 2em;
+  padding-left: 3rem;
   width: 100%;
   box-sizing: border-box;
+  border: 1px solid rgba(30, 41, 59, 0.06);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
 }
 
 .contact-examples li::before {
   content: '→';
   color: var(--accent-color);
   position: absolute;
-  left: 0.8em;
-  font-weight: bold;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 1.125rem;
 }
 
 .contact-examples li:hover {
   transform: translateY(-3px) !important;
-  box-shadow: var(--shadow-md) !important;
-  background: linear-gradient(135deg, var(--card-color-1) 0%, white 100%);
+  box-shadow: var(--shadow-luxury) !important;
+  background: var(--card-bg-luxury);
+  border-color: rgba(212, 175, 55, 0.2);
 }
 
 /* プライバシーポリシーリンク */
