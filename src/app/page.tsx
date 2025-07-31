@@ -103,22 +103,22 @@ export default function HomePage() {
             <div className="strength-card">
               <div className="strength-number">01</div>
               <h3>公的資格と豊富な実務経験による<br/>「安心」のご提案</h3>
-              <p>2級ファイナンシャル・プランニング技能士、生命保険協会認定TLC、住宅ローンアドバイザーなど多数の資格と20年の実務経験で、あなたに最適なプランをご提案。複雑な金融商品の中から、本当に必要なものだけを厳選し、安心してお任せいただけるサービスを提供します。</p>
+              <p>2級ファイナンシャル・プランニング技能士、生命保険協会認定TLC、住宅ローンアドバイザーなどの資格を活かし、お客様に適したプランをご提案いたします。</p>
             </div>
             <div className="strength-card">
               <div className="strength-number">02</div>
               <h3>保険・資産・事業・相続まで<br/>ワンストップでサポート</h3>
-              <p>一つの窓口ですべてのお金の悩みを解決。複数の専門家を探す手間なく、人生の各ステージに応じた総合的なプランニングを提供。ライフプランの変化にも柔軟に対応し、長期的な視点でお客様の資産と将来を守ります。</p>
+              <p>保険・資産形成・事業保障・相続まで、幅広い分野にわたって総合的にサポートいたします。ライフプランの変化にも柔軟に対応します。</p>
             </div>
             <div className="strength-card">
               <div className="strength-number">03</div>
               <h3>お気軽に相談できる<br/>親しみやすさ</h3>
-              <p>「専門家に相談するのは敷居が高い...」そんな心配は無用です。お気軽にご相談いただけ、専門用語を使わずわかりやすい説明を心がけています。24時間以内にお返事し、どんな些細なことでも丁寧にお答えします。</p>
+              <p>お気軽にご相談いただけるよう、専門用語を使わずわかりやすい説明を心がけています。どんな些細なことでも丁寧にお答えします。</p>
             </div>
             <div className="strength-card">
               <div className="strength-number">04</div>
               <h3>お客様一人ひとりの想いに<br/>寄り添う誠実な対応</h3>
-              <p>お客様の価値観、家族構成、将来の夢まで、すべてを理解した上でプランを作成。押し売りや無理な勧誘は一切せず、お客様のペースに合わせて進めます。「この人になら安心して任せられる」と思っていただける信頼関係を大切にしています。</p>
+              <p>お客様の価値観、家族構成、将来の目標を理解した上でプランを作成いたします。押し売りや無理な勧誘は一切いたしません。</p>
             </div>
           </div>
         </section>
@@ -134,35 +134,22 @@ export default function HomePage() {
             <li>住宅ローンアドバイザー</li>
             <li>法人コンサルティング</li>
           </ul>
-          <CTAButton variant="more" href="/services">サービス詳細を見る</CTAButton>
         </section>
 
-        <section className="testimonials fadein-section">
-          <h2>お客様の声</h2>
-          <div className="testimonials-grid">
-            <div className="testimonial highlighted">
-              <div className="testimonial-header">
-                <div className="stars">⭐⭐⭐⭐⭐</div>
-                <div className="result">年間保険料 <strong>18万円削減</strong></div>
-              </div>
-              <div className="quote">「複雑な保険の見直しをとてもわかりやすく説明してくれました。本当に必要な保障だけに絞り込んでいただき、無駄な保険料を大幅に削減できて感謝しています。浮いたお金で子どもの習い事を始めることができました！」</div>
-              <div className="author">東京都 40代 会社員 T.S様</div>
+        <section className="approach fadein-section">
+          <h2>私のアプローチ</h2>
+          <div className="approach-content">
+            <div className="approach-item">
+              <h3>丁寧なヒアリング</h3>
+              <p>お客様の価値観、家族構成、将来の目標まで、しっかりとお話を伺います。</p>
             </div>
-            <div className="testimonial highlighted">
-              <div className="testimonial-header">
-                <div className="stars">⭐⭐⭐⭐⭐</div>
-                <div className="result">事業リスク <strong>完全対策</strong></div>
-              </div>
-              <div className="quote">「事業保障について相談しましたが、自分では全く気づかなかったリスクまで丁寧に指摘・対策してくれて本当に助かりました。これで安心して事業に専念できます。油井さんに相談して本当に良かったです。」</div>
-              <div className="author">神奈川県 50代 経営者 K.M様</div>
+            <div className="approach-item">
+              <h3>わかりやすい説明</h3>
+              <p>専門用語を使わず、図表やシミュレーションを用いて分かりやすくご説明します。</p>
             </div>
-            <div className="testimonial highlighted">
-              <div className="testimonial-header">
-                <div className="stars">⭐⭐⭐⭐⭐</div>
-                <div className="result">教育資金 <strong>800万円確保</strong></div>
-              </div>
-              <div className="quote">「子どもの教育資金について相談したところ、具体的な数字とプランを提示してくれて、将来への不安が完全に解消されました。20年後まで見通せるプランで、夫婦ともに安心して子育てに集中できています。」</div>
-              <div className="author">埼玉県 30代 共働き夫婦 Y.T様</div>
+            <div className="approach-item">
+              <h3>継続的なサポート</h3>
+              <p>一度きりの提案で終わらず、ライフステージの変化に合わせてサポートします。</p>
             </div>
           </div>
         </section>
@@ -171,20 +158,17 @@ export default function HomePage() {
           <h2>ファイナンシャルプランナー 油井宏介について</h2>
           <div className="profile-content">
             <div className="profile-credentials">
-              <h3>🏆 保有資格・実績</h3>
+              <h3>🏆 保有資格</h3>
               <ul>
                 <li><strong>2級ファイナンシャル・プランニング技能士</strong></li>
                 <li><strong>生命保険協会認定トータル・ライフ・コンサルタント（TLC）</strong></li>
                 <li><strong>住宅ローンアドバイザー</strong></li>
-                <li><strong>相談実績：2,000組以上</strong></li>
-                <li><strong>顧客満足度：98%</strong></li>
               </ul>
             </div>
             <p><strong>「あなたの人生に、本当に必要なものを。」</strong></p>
-            <p>私の使命は、お客様の人生に「安心」と「希望」を届けることです。<br/>20年間この業界に携わる中で学んだのは、<strong>お客様一人ひとりの人生は全く違う</strong>ということ。<br/>だからこそ、画一的な提案は一切せず、あなただけの最適解を一緒に見つけていきます。</p>
-            <p>「こんなこと聞いても大丈夫？」という小さな疑問から、人生を左右する大きな決断まで、<br/><strong>どんなことでもお気軽にご相談ください。</strong></p>
+            <p>お客様一人ひとりの状況や目標は全く違います。<br/>だからこそ、画一的な提案はいたしません。あなたに適した解策を一緒に考えていきます。</p>
+            <p>小さな疑問から大きな決断まで、どんなことでもお気軽にご相談ください。</p>
           </div>
-          <CTAButton variant="more" href="/about">プロフィールを見る</CTAButton>
         </section>
 
         <section className="faq fadein-section">
@@ -213,7 +197,7 @@ export default function HomePage() {
               </div>
               <div className="cta-benefit">
                 <span className="icon">⏰</span>
-                <span>24時間以内にお返事</span>
+                <span>迅速な対応</span>
               </div>
               <div className="cta-benefit">
                 <span className="icon">📱</span>
@@ -224,7 +208,7 @@ export default function HomePage() {
                 <span>無理な勧誘は一切なし</span>
               </div>
             </div>
-            <p>あなたの「安心」と「希望」のある未来のために、<br/>まずは気軽にご連絡ください。<strong>きっと良い答えが見つかります。</strong></p>
+            <p>お金に関するご相談をお受けしています。<br/>まずはお気軽にお声がけください。</p>
           </div>
           <div className="cta-buttons">
             <CTAButton variant="primary" href="/contact">お問い合わせ</CTAButton>

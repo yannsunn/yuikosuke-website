@@ -1,24 +1,24 @@
 /* CSS Custom Properties - Design Token System */
 
 :root {
-  /* カラーシステム - HSL基盤 */
+  /* カラーシステム - HSL基盤（プロフェッショナル配色） */
   --primary-hue: 210;
-  --primary-sat: 79%;
-  --accent-hue: 130;
-  --accent-sat: 95%;
+  --primary-sat: 35%;
+  --accent-hue: 210;
+  --accent-sat: 45%;
   
   /* プライマリカラー */
-  --primary-50: hsl(var(--primary-hue), var(--primary-sat), 95%);
-  --primary-100: hsl(var(--primary-hue), var(--primary-sat), 85%);
-  --primary-500: hsl(var(--primary-hue), var(--primary-sat), 45%);
-  --primary-600: hsl(var(--primary-hue), var(--primary-sat), 35%);
-  --primary-700: hsl(var(--primary-hue), var(--primary-sat), 25%);
+  --primary-50: hsl(var(--primary-hue), var(--primary-sat), 96%);
+  --primary-100: hsl(var(--primary-hue), var(--primary-sat), 88%);
+  --primary-500: hsl(var(--primary-hue), var(--primary-sat), 55%);
+  --primary-600: hsl(var(--primary-hue), var(--primary-sat), 45%);
+  --primary-700: hsl(var(--primary-hue), var(--primary-sat), 35%);
   
   /* アクセントカラー */
   --accent-50: hsl(var(--accent-hue), var(--accent-sat), 95%);
-  --accent-500: hsl(var(--accent-hue), var(--accent-sat), 40%);
-  --accent-600: hsl(var(--accent-hue), var(--accent-sat), 30%);
-  --accent-700: hsl(var(--accent-hue), var(--accent-sat), 20%);
+  --accent-500: hsl(var(--accent-hue), var(--accent-sat), 65%);
+  --accent-600: hsl(var(--accent-hue), var(--accent-sat), 55%);
+  --accent-700: hsl(var(--accent-hue), var(--accent-sat), 45%);
   
   /* セマンティックカラー */
   --color-primary: var(--primary-500);
@@ -29,24 +29,24 @@
   --color-accent-light: var(--accent-50);
   
   /* 背景色 */
-  --color-bg-primary: hsl(210, 40%, 98%);
-  --color-bg-secondary: hsl(var(--accent-hue), 60%, 96%);
-  --color-card-1: hsl(var(--accent-hue), 60%, 94%);
-  --color-card-2: hsl(54, 100%, 97%);
-  --color-highlight: hsl(54, 77%, 87%);
+  --color-bg-primary: hsl(210, 15%, 98%);
+  --color-bg-secondary: hsl(210, 20%, 96%);
+  --color-card-1: hsl(210, 15%, 97%);
+  --color-card-2: hsl(210, 10%, 98%);
+  --color-highlight: hsl(210, 25%, 92%);
   
   /* テキストカラー */
   --color-text-primary: hsl(0, 0%, 15%);
   --color-text-secondary: hsl(0, 0%, 40%);
   --color-text-muted: hsl(0, 0%, 60%);
   
-  /* シャドウ */
-  --shadow-color: 0 0 0;
-  --shadow-xs: 0 1px 2px hsla(var(--shadow-color) / 0.05);
-  --shadow-sm: 0 4px 6px hsla(var(--shadow-color) / 0.05);
-  --shadow-md: 0 6px 16px hsla(var(--shadow-color) / 0.08);
-  --shadow-lg: 0 12px 28px hsla(var(--shadow-color) / 0.12);
-  --shadow-xl: 0 20px 40px hsla(var(--shadow-color) / 0.15);
+  /* シャドウ（より控えめ） */
+  --shadow-color: 210 15% 8%;
+  --shadow-xs: 0 1px 2px hsla(var(--shadow-color) / 0.04);
+  --shadow-sm: 0 2px 4px hsla(var(--shadow-color) / 0.04);
+  --shadow-md: 0 4px 12px hsla(var(--shadow-color) / 0.06);
+  --shadow-lg: 0 8px 20px hsla(var(--shadow-color) / 0.08);
+  --shadow-xl: 0 12px 32px hsla(var(--shadow-color) / 0.10);
   
   /* ボーダー半径 */
   --radius-xs: 0.25rem;
