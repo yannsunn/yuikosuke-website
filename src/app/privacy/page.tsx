@@ -106,7 +106,7 @@ export default function PrivacyPage() {
         <section className="policy-contact fadein-section">
           <h3>お問い合わせ窓口</h3>
           <p>
-            個人情報に関するお問い合わせは、<a href="/contact">お問い合わせページ</a>よりLINEまたはメールでご連絡ください。<br/>
+            個人情報に関するお問い合わせは、<a href="/contact">お問い合わせページ</a>よりメールでご連絡ください。<br/>
             迅速かつ適切に対応いたします。
           </p>
         </section>

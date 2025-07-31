@@ -37,18 +37,6 @@ export default function ContactPage() {
               メールで問い合わせる
             </CTAButton>
           </div>
-          <div className="contact-box line">
-            <h3>LINEで問い合わせ</h3>
-            <div className="contact-content">
-              <p>
-                LINEでのお問い合わせは迅速なご対応が可能です。<br/>
-                ご質問やご相談など、お気軽にメッセージをお送りください。
-              </p>
-            </div>
-            <CTAButton variant="line" href="https://line.me/R/ti/p/@your-line-id" external>
-              LINEで相談
-            </CTAButton>
-          </div>
         </section>
 
         <section className="contact-examples fadein-section card-box">

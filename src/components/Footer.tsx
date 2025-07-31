@@ -12,7 +12,7 @@ export default function Footer() {
           <Link href="/">トップ</Link>
           <Link href="/services">サービス</Link>
           <Link href="/about">プロフィール</Link>
-          <Link href="/contact">LINEで相談</Link>
+          <Link href="/contact">お問い合わせ</Link>
           <Link href="/privacy">プライバシーポリシー</Link>
         </div>
         <div className="footer-contact">

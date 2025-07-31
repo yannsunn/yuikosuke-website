@@ -49,7 +49,7 @@ export default function HomePage() {
               <p className="tagline">一人ひとりの夢や目標に合わせた最適な<strong>ファイナンシャルプラン</strong>をご提案します</p>
               <p>専門のファイナンシャルプランナーが、保険・資産形成・事業保障までトータルにサポートします。複雑な金融商品の選択や将来設計のお悩みを解決し、明るい未来への架け橋となります。</p>
               <div className="hero-buttons">
-                <CTAButton variant="line" href="/contact">LINEで無料相談</CTAButton>
+                <CTAButton variant="primary" href="/contact">無料相談</CTAButton>
                 <CTAButton variant="service" href="/services">サービス詳細を見る</CTAButton>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function HomePage() {
             <div className="benefit-card">
               <div className="benefit-icon">💬</div>
               <h3>気軽に相談できる<br/>アクセシビリティ</h3>
-              <p>LINEを活用した気軽な相談環境で、いつでもどこでもお金の悩みを解決できます。</p>
+              <p>オンラインを活用した気軽な相談環境で、いつでもどこでもお金の悩みを解決できます。</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-icon">🤝</div>
@@ -112,8 +112,8 @@ export default function HomePage() {
             </div>
             <div className="strength-card">
               <div className="strength-number">03</div>
-              <h3>LINEで気軽に相談できる<br/>親しみやすさ</h3>
-              <p>「専門家に相談するのは敷居が高い...」そんな心配は無用です。LINEでお気軽にご相談いただけ、専門用語を使わずわかりやすい説明を心がけています。24時間以内にお返事し、どんな些細なことでも丁寧にお答えします。</p>
+              <h3>お気軽に相談できる<br/>親しみやすさ</h3>
+              <p>「専門家に相談するのは敷居が高い...」そんな心配は無用です。お気軽にご相談いただけ、専門用語を使わずわかりやすい説明を心がけています。24時間以内にお返事し、どんな些細なことでも丁寧にお答えします。</p>
             </div>
             <div className="strength-card">
               <div className="strength-number">04</div>
@@ -217,7 +217,7 @@ export default function HomePage() {
               </div>
               <div className="cta-benefit">
                 <span className="icon">📱</span>
-                <span>LINEで気軽に相談OK</span>
+                <span>お気軽にご相談OK</span>
               </div>
               <div className="cta-benefit">
                 <span className="icon">🤝</span>
@@ -227,7 +227,7 @@ export default function HomePage() {
             <p>あなたの「安心」と「希望」のある未来のために、<br/>まずは気軽にご連絡ください。<strong>きっと良い答えが見つかります。</strong></p>
           </div>
           <div className="cta-buttons">
-            <CTAButton variant="line" href="/contact">LINEで相談</CTAButton>
+            <CTAButton variant="primary" href="/contact">お問い合わせ</CTAButton>
             <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
           </div>
         </section>

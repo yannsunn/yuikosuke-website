@@ -4,7 +4,7 @@ import Link from 'next/link'
 import type { ComponentProps } from 'react'
 
 interface CTAButtonProps {
-  variant: 'line' | 'mail' | 'service' | 'more'
+  variant: 'primary' | 'mail' | 'service' | 'more'
   href: string
   children: React.ReactNode
   className?: string
@@ -13,7 +13,7 @@ interface CTAButtonProps {
 }
 
 const variantClasses = {
-  line: 'line-btn',
+  primary: 'primary-btn',
   mail: 'mail-btn', 
   service: 'service-btn',
   more: 'more-btn'

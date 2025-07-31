@@ -52,7 +52,7 @@ export default function AboutPage() {
           <ul>
             <li>公的資格と豊富な実務経験による「安心」のご提案</li>
             <li>保険・資産・事業・相続までワンストップでサポート</li>
-            <li>LINEで気軽に相談できる親しみやすさ</li>
+            <li>お気軽に相談できる親しみやすさ</li>
             <li>お客様一人ひとりの想いに寄り添う誠実な対応</li>
           </ul>
         </section>
@@ -85,17 +85,17 @@ export default function AboutPage() {
             <tbody>
               <tr><th>活動地域</th><td>東京都中央区を中心とした関東全域</td></tr>
               <tr><th>事業内容</th><td>ファイナンシャルプランニング、保険コンサルティング、資産形成アドバイザリー</td></tr>
-              <tr><th>連絡方法</th><td>LINEまたはメールでお気軽にお声かけください</td></tr>
+              <tr><th>連絡方法</th><td>メールでお気軽にお声かけください</td></tr>
               <tr><th>相談料</th><td>初回相談無料</td></tr>
             </tbody>
           </table>
         </section>
 
         <section className="cta fadein-section">
-          <h2>今すぐLINEでお気軽にご相談ください</h2>
+          <h2>今すぐお気軽にご相談ください</h2>
           <p>初回相談は無料です。あなたの「安心」と「希望」のある未来のために、まずは気軽にご連絡ください。</p>
           <div className="cta-buttons">
-            <CTAButton variant="line" href="/contact">LINEで相談</CTAButton>
+            <CTAButton variant="primary" href="/contact">お問い合わせ</CTAButton>
             <CTAButton variant="mail" href="mailto:kosuke.yui@brightreach.co.jp" external>メールで問い合わせ</CTAButton>
           </div>
         </section>

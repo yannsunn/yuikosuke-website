@@ -12,7 +12,7 @@ const navigationItems: NavigationItem[] = [
   { href: '/', label: 'トップ' },
   { href: '/services', label: 'サービス' },
   { href: '/about', label: 'プロフィール' },
-  { href: '/contact', label: 'LINEで相談' },
+  { href: '/contact', label: 'お問い合わせ' },
 ]
 
 export default function Header({ title }: HeaderProps) {
@@ -30,7 +30,7 @@ export default function Header({ title }: HeaderProps) {
       <nav>
         {navigationItems.map((item) => {
           const isContactButton = item.href === '/contact'
-          const baseClassName = isContactButton ? 'line-btn' : ''
+          const baseClassName = isContactButton ? 'primary-btn' : ''
           const activeClassName = isActive(item.href) ? 'active' : ''
           const className = [baseClassName, activeClassName].filter(Boolean).join(' ')
           

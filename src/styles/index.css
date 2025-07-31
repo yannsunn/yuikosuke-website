@@ -1341,14 +1341,14 @@
 }
 
 /* ボタンのインタラクション改善 */
-.line-btn,
+.primary-btn,
 .mail-btn,
 .service-btn {
   position: relative;
   overflow: hidden;
 }
 
-.line-btn::after,
+.primary-btn::after,
 .mail-btn::after,
 .service-btn::after {
   content: '';
@@ -1363,14 +1363,14 @@
   transition: width 0.6s, height 0.6s;
 }
 
-.line-btn:hover::after,
+.primary-btn:hover::after,
 .mail-btn:hover::after,
 .service-btn:hover::after {
   width: 300px;
   height: 300px;
 }
 
-.line-btn:active,
+.primary-btn:active,
 .mail-btn:active,
 .service-btn:active {
   transform: translateY(-3px) scale(0.95);
@@ -1443,7 +1443,7 @@
 .strength-card:focus,
 .testimonial:focus,
 .faq-item:focus,
-.line-btn:focus,
+.primary-btn:focus,
 .mail-btn:focus,
 .service-btn:focus {
   outline: 3px solid var(--accent-color);

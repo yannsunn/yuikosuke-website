@@ -21,7 +21,7 @@
   line-height: 1.8;
 }
 
-/* LINE・メールボタンスタイルはglobals.cssから継承 */
+/* Primary/CTA・メールボタンスタイルはglobals.cssから継承 */
 
 /* ページ固有の調整 */
 .mail-btn {
@@ -82,7 +82,7 @@
   border-left: 4px solid var(--mail-color);
 }
 
-.contact-methods .contact-box.line {
+.contact-methods .contact-box.primary {
   border-left: 4px solid var(--accent-color);
 }
 
@@ -293,7 +293,7 @@ footer {
   .contact-methods .contact-box {
     padding: 1.5em 1.2em 1.2em 1.2em;
   }
-  .mail-btn, .line-btn {
+  .mail-btn, .primary-btn {
     padding: 0.8em 1.5em;
     font-size: 1em;
     width: 100%;
@@ -331,7 +331,7 @@ footer {
   .contact-methods .contact-content {
     font-size: 0.9em;
   }
-  .mail-btn, .line-btn {
+  .mail-btn, .primary-btn {
     font-size: 0.95em;
   }
   .contact-examples li {
