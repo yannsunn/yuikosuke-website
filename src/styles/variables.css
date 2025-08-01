@@ -5,9 +5,9 @@
   --primary-color: #1e293b;        /* Deep slate navy - trust and stability */
   --primary-dark: #0f172a;         /* Charcoal navy - authority */
   --primary-light: #334155;        /* Warm slate - approachable depth */
-  --accent-color: #d4af37;         /* Classic gold - luxury and success */
-  --accent-dark: #b8941f;          /* Rich gold - premium */
-  --accent-light: #f3e199;         /* Champagne gold - elegant highlight */
+  --accent-color: #a8a8a8;         /* Sophisticated platinum - luxury and trust */
+  --accent-dark: #8a8a8a;          /* Deep platinum - premium */
+  --accent-light: #e8e8e8;         /* Light platinum - elegant highlight */
   --secondary-color: #64748b;      /* Professional blue-grey */
   --secondary-dark: #475569;       /* Deep professional grey */
   --secondary-light: #94a3b8;      /* Soft professional grey */
@@ -32,7 +32,7 @@
   --shadow-md: 0 10px 15px rgba(30, 41, 59, 0.08), 0 4px 6px rgba(30, 41, 59, 0.04);
   --shadow-lg: 0 20px 25px rgba(30, 41, 59, 0.10), 0 8px 10px rgba(30, 41, 59, 0.05);
   --shadow-xl: 0 25px 50px rgba(30, 41, 59, 0.15), 0 12px 24px rgba(30, 41, 59, 0.08);
-  --shadow-luxury: 0 20px 40px rgba(212, 175, 55, 0.08), 0 8px 16px rgba(30, 41, 59, 0.06);
+  --shadow-luxury: 0 20px 40px rgba(168, 168, 168, 0.08), 0 8px 16px rgba(30, 41, 59, 0.06);
   
   /* Refined Border Radius */
   --border-radius-sm: 6px;
@@ -48,8 +48,8 @@
   
   /* Premium Gradients */
   --gradient-primary: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  --gradient-accent: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-  --gradient-luxury: linear-gradient(135deg, #1e293b 0%, #334155 50%, #d4af37 100%);
+  --gradient-accent: linear-gradient(135deg, #a8a8a8 0%, #8a8a8a 100%);
+  --gradient-luxury: linear-gradient(135deg, #1e293b 0%, #334155 50%, #a8a8a8 100%);
   --gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   
   /* Typography Scale - Premium Authority */
@@ -82,9 +82,9 @@
     --primary-color: #334155;
     --primary-dark: #1e293b;
     --primary-light: #475569;
-    --accent-color: #fbbf24;
-    --accent-dark: #d4af37;
-    --accent-light: #fde68a;
+    --accent-color: #c0c0c0;
+    --accent-dark: #a8a8a8;
+    --accent-light: #f0f0f0;
     
     --text-color: #f8fafc;
     --text-light: #cbd5e1;

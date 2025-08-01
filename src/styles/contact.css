@@ -1,5 +1,4 @@
-/* お問い合わせページ固有スタイル */
-/* メイン・カードボックススタイルはshared.cssから継承 */
+/* Contact Page - Optimized */
 
 /* Premium Contact Lead Section */
 .contact-lead {
@@ -31,7 +30,7 @@
   right: 0;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 168, 168, 0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -114,7 +113,7 @@
 .contact-methods .contact-box:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-6px);
-  border-color: rgba(212, 175, 55, 0.2);
+  border-color: rgba(168, 168, 168, 0.2);
 }
 
 .contact-methods .contact-box.mail::before {
@@ -146,7 +145,7 @@
   right: 0;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 168, 168, 0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -241,7 +240,7 @@
   transform: translateY(-3px) !important;
   box-shadow: var(--shadow-luxury) !important;
   background: var(--card-bg-luxury);
-  border-color: rgba(212, 175, 55, 0.2);
+  border-color: rgba(168, 168, 168, 0.2);
 }
 
 /* プライバシーポリシーリンク */
@@ -338,7 +337,7 @@ footer {
   text-decoration: underline;
 }
 
-/* レスポンシブデザイン */
+/* Responsive - Consolidated */
 @media (max-width: 900px) {
   .contact-methods {
     flex-direction: column;

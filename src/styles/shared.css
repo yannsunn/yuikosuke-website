@@ -1,4 +1,4 @@
-/* Optimized Shared Components - Consolidated & Deduped */
+/* Shared Components - Ultra Optimized */
 
 /* Layout Container - Used by BaseLayout */
 .layout-container {
@@ -72,52 +72,22 @@
   transform: translateY(-3px);
 }
 
-/* Mobile Optimizations */
+/* Mobile Touch Optimizations */
 @media (hover: none) and (pointer: coarse) {
-  .hero-photo-modern:hover {
-    transform: none;
-  }
-  
-  .hero-photo-modern {
-    transition: none;
-    will-change: auto;
-    transform: none;
-  }
+  .hero-photo-modern:hover { transform: none; }
+  .hero-photo-modern { transition: none; will-change: auto; transform: none; }
 }
 
-/* Responsive Design - Optimized */
+/* Responsive - Ultra Consolidated */
 @media (max-width: 900px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 2em;
-  }
-  
-  .hero-photo-modern {
-    width: 220px;
-    height: 300px;
-  }
-  
-  .hero-text {
-    margin-left: 0;
-  }
+  .hero-container { flex-direction: column; text-align: center; gap: 2em; }
+  .hero-photo-modern { width: 220px; height: 300px; }
+  .hero-text { margin-left: 0; }
 }
 
 @media (max-width: 600px) {
-  .hero {
-    padding: 1.5em 0 1em;
-  }
-  
-  .hero-photo-modern {
-    width: 180px;
-    height: 240px;
-  }
-  
-  .hero h2 {
-    font-size: 2em;
-  }
-  
-  .card-box {
-    padding: 1.5em 1.2em;
-  }
+  .hero { padding: 1.5em 0 1em; }
+  .hero-photo-modern { width: 180px; height: 240px; }
+  .hero h2 { font-size: 2em; }
+  .card-box { padding: 1.5em 1.2em; }
 }

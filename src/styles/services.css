@@ -1,4 +1,4 @@
-/* サービスページ固有スタイル */
+/* Services Page - Optimized */
 
 /* Premium Service Section */
 .service {
@@ -16,7 +16,7 @@
 .service:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-6px);
-  border-color: rgba(212, 175, 55, 0.2);
+  border-color: rgba(168, 168, 168, 0.2);
 }
 
 .service::before {
@@ -37,7 +37,7 @@
   right: 0;
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 168, 168, 0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -63,9 +63,8 @@
   z-index: 1;
 }
 
-/* CTA styles now handled by SharedCTA component - removed duplication */
 
-/* レスポンシブ対応 */
+/* Responsive - Consolidated */
 @media (max-width: 768px) {
   .service {
     padding: 2em 1.5em;
@@ -80,7 +79,6 @@
     padding: 2.5em 1.5em;
   }
   
-  /* CTA responsive styles handled by SharedCTA component */
 }
 
 @media (max-width: 600px) {

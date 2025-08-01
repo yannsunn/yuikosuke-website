@@ -56,11 +56,10 @@ main, header, footer, section {
   overflow-x: hidden;
 }
 
-/* モバイル向けスクロール最適化 - 最終修正版 */
+/* Mobile Optimizations - Consolidated */
 @media (max-width: 768px) {
   html {
     scroll-behavior: auto;
-    -webkit-overflow-scrolling: auto;
     overflow-x: hidden;
   }
   
@@ -68,12 +67,9 @@ main, header, footer, section {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     overscroll-behavior-y: contain;
-    background: var(--bg-gradient-1) !important;
-    /* タッチスクロール競合防止 */
     touch-action: pan-y;
   }
   
-  /* 重いアニメーションをモバイルで無効化 */
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-delay: -1ms !important;
@@ -82,18 +78,11 @@ main, header, footer, section {
     scroll-behavior: auto !important;
   }
   
-  img {
+  img, .hero-photo-modern, .animated-hero-photo {
     pointer-events: auto;
     max-width: 100%;
     height: auto;
-  }
-  
-  .hero-photo-modern,
-  .animated-hero-photo {
     touch-action: manipulation;
-    pointer-events: auto;
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -202,92 +191,43 @@ a:hover {
   }
 }
 
-/* レスポンシブデザイン */
+/* Responsive Typography - Consolidated */
 @media (max-width: 900px) {
-  body {
-    font-size: 15px;
-    overscroll-behavior-y: contain;
-  }
-  h1 {
-    font-size: 1.7em;
-  }
-  h2 {
-    font-size: 1.4em;
-  }
+  body { font-size: 15px; overscroll-behavior-y: contain; }
+  h1 { font-size: 1.7em; }
+  h2 { font-size: 1.4em; }
 }
+
 @media (max-width: 700px) {
-  body {
-    font-size: 15px;
-  }
-  h1 {
-    font-size: 1.6em;
-  }
-  h2 {
-    font-size: 1.35em;
-  }
-  h3 {
-    font-size: 1.2em;
-  }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.35em; }
+  h3 { font-size: 1.2em; }
 }
+
 @media (max-width: 500px) {
-  body {
-    font-size: 14px;
-  }
-  p {
-    line-height: 1.6;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  h1 {
-    font-size: 1.5em;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h2 {
-    font-size: 1.3em;
-    max-width: 100%;
-  }
-  .primary-btn, .mail-btn, .service-btn {
-    font-size: 0.95rem;
-    padding: 0.7em 1.5em;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+  body { font-size: 14px; }
+  p { line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+  h1 { font-size: 1.5em; width: 90%; margin: 0 auto; }
+  h2 { font-size: 1.3em; max-width: 100%; }
+  .primary-btn, .mail-btn, .service-btn { font-size: 0.95rem; padding: 0.7em 1.5em; max-width: 100%; }
 }
 
 @media (max-width: 375px) {
-  main {
-    padding: 0 0.8em;
-  }
-  
-  h1 {
-    font-size: 1.4em;
-    width: 95%;
-  }
-  
-  h2 {
-    font-size: 1.25em;
-  }
-  
-  .primary-btn, .mail-btn, .service-btn {
-    font-size: 0.9rem;
-    padding: 0.6em 1.2em;
-  }
+  main { padding: 0 0.8em; }
+  h1 { font-size: 1.4em; width: 95%; }
+  h2 { font-size: 1.25em; }
+  .primary-btn, .mail-btn, .service-btn { font-size: 0.9rem; padding: 0.6em 1.2em; }
 }
 
-/* --- ナビゲーション共通デザイン修正版 --- */
+/* Navigation - Optimized */
 header h1 {
   text-align: center;
   margin: 1.2em auto 1em;
   font-weight: 700;
   color: var(--primary-dark);
   position: relative;
-  display: block;
-  width: 100%;
   max-width: 90%;
   padding-bottom: 0.3em;
-  box-sizing: border-box;
 }
 
 header h1::after {
@@ -306,7 +246,6 @@ header nav {
   display: flex;
   gap: 1.5em;
   justify-content: center;
-  align-items: center;
   margin: 0 auto 1.8em;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.5);
@@ -315,26 +254,21 @@ header nav {
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(5px);
   max-width: 95%;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 header nav a {
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 1rem;
   padding: 0.5em 1.2em;
   border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
   text-align: center;
   flex: 1 1 auto;
   min-width: 120px;
   max-width: 200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   background: rgba(255, 255, 255, 0.7);
-  box-sizing: border-box;
 }
 
 header nav a:hover,
@@ -346,96 +280,25 @@ header nav a.active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Navigation Responsive - Consolidated */
 @media (max-width: 700px) {
-  header nav {
-    flex-direction: column;
-    gap: 1em;
-    padding: 1em;
-    max-width: 95%;
-    margin: 0 auto 1.8em;
-    width: calc(100% - 2em);
-  }
-  
-  header nav a {
-    flex: none;
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-    padding: 0.8em 1em;
-    font-size: 0.95rem;
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  header nav a.primary-btn {
-    padding: 0.8em 1em;
-    font-size: 0.95rem;
-    width: 100%;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 1.5em;
-    max-width: 95%;
-    margin: 1em auto 0.8em;
-    padding-bottom: 0.2em;
-  }
+  header nav { flex-direction: column; gap: 1em; padding: 1em; width: calc(100% - 2em); }
+  header nav a { width: 100%; padding: 0.8em 1em; font-size: 0.95rem; }
+  header h1 { font-size: 1.5em; margin: 1em auto 0.8em; padding-bottom: 0.2em; }
 }
 
 @media (max-width: 480px) {
-  header nav {
-    max-width: 98%;
-    padding: 0.8em;
-    gap: 0.8em;
-    width: calc(100% - 1em);
-    margin: 0 auto 1.8em;
-  }
-  
-  header nav a {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 0.7em 0.8em;
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  header h1 {
-    font-size: 1.4em;
-    max-width: 98%;
-    margin: 1em auto 0.8em;
-    text-align: center;
-  }
+  header nav { padding: 0.8em; gap: 0.8em; width: calc(100% - 1em); }
+  header nav a { font-size: 0.9rem; padding: 0.7em 0.8em; }
+  header h1 { font-size: 1.4em; }
 }
 
-/* 極小画面対応 */
 @media (max-width: 360px) {
-  header {
-    padding: 0 0.5em;
-  }
-  
-  header nav {
-    max-width: 100%;
-    padding: 0.6em;
-    gap: 0.6em;
-    width: calc(100% - 1em);
-    margin: 0 auto 1.5em;
-  }
-  
-  header nav a {
-    width: 100%;
-    font-size: 0.85rem;
-    padding: 0.6em 0.5em;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 1.3em;
-    max-width: 100%;
-    margin: 0.8em auto 0.6em;
-    text-align: center;
-  }
+  header { padding: 0 0.5em; }
+  header nav { padding: 0.6em; gap: 0.6em; }
+  header nav a { font-size: 0.85rem; padding: 0.6em 0.5em; }
+  header h1 { font-size: 1.3em; margin: 0.8em auto 0.6em; }
 }
-/* --- ここまで --- */
 
 /* Premium Button Styles - Luxury Financial Theme */
 .primary-btn {
@@ -573,23 +436,10 @@ main {
 .card-box:hover {
   box-shadow: var(--shadow-luxury);
   transform: translateY(-4px);
-  border-color: rgba(212, 175, 55, 0.2);
+  border-color: rgba(168, 168, 168, 0.2);
 }
 
-/* レスポンシブ調整 */
-@media (max-width: 900px) {
-  main {
-    padding: 0 1em;
-  }
-  .card-box {
-    padding: 1.8em 1.5em;
-  }
-}
-@media (max-width: 500px) {
-  .card-box {
-    padding: 1.5em 1.2em;
-  }
-}
+/* Layout Responsive - Consolidated with typography above */
 
 .footer-logo h3 {
   font-size: 1.3em;
@@ -658,7 +508,7 @@ main {
   box-shadow: var(--shadow-luxury);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(168, 168, 168, 0.2);
 }
 
 .cta::before {
@@ -668,7 +518,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at top right, rgba(168, 168, 168, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -954,118 +804,29 @@ section::before {
 }
 
 /* メインコンテンツレスポンシブ調整 */
+/* Already handled in consolidated responsive above */
+
+/* Footer Responsive - Consolidated */
 @media (max-width: 700px) {
-  main {
-    padding: 0 1em;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  section {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  footer .footer-content { grid-template-columns: 1fr; gap: 1.5em; padding: 0 1em; }
+  footer .footer-links { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5em; }
+  footer .footer-links a { padding: 0.5em 0.7em; min-width: 0; font-size: 0.9em; }
+  .cta { padding: 2.5em 1.5em; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-buttons > * { width: 100%; max-width: 280px; }
 }
 
 @media (max-width: 480px) {
-  main {
-    padding: 0 0.8em;
-  }
-  
-  .card-box {
-    padding: 1.3em 1em;
-    width: 100%;
-    box-sizing: border-box;
-  }
+  footer { padding: 2em 0 0.8em 0; }
+  footer .footer-content { padding: 0 0.8em; }
+  footer .footer-logo h3 { font-size: 1.6em; }
+  footer .footer-contact p { font-size: 0.85em; }
 }
 
-/* フッターモバイル最適化 */
-@media (max-width: 700px) {
-  footer .footer-content {
-    grid-template-columns: 1fr;
-    gap: 1.5em;
-    padding: 0 1em;
-  }
-  
-  footer .footer-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5em;
-  }
-  
-  footer .footer-links a {
-    padding: 0.5em 0.7em;
-    min-width: 0;
-    font-size: 0.9em;
-  }
-  
-  /* CTA responsive styles */
-  .cta {
-    padding: 2.5em 1.5em;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons > * {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  footer {
-    padding: 2em 0 0.8em 0;
-  }
-  
-  footer .footer-content {
-    padding: 0 0.8em;
-  }
-  
-  footer .footer-logo h3 {
-    font-size: 1.6em;
-  }
-  
-  footer .footer-contact p {
-    font-size: 0.85em;
-  }
-}
-
-/* iOS Safari特有の問題に対応 - 完全版 */
+/* iOS Safari Optimizations - Simplified */
 @supports (-webkit-touch-callout: none) {
-  /* iOS向けの調整 - transform最適化 */
-  .card-box, .service, .policy-section, .contact-box, .benefit-card, .testimonial, .faq-item {
-    /* ハードウェアアクセラレーション削除 - CPU負荷軽減 */
-    /* transform: translateZ(0); 削除 */
-  }
-  
-  /* iOSでの固定背景問題を完全解決 */
-  html, body {
-    background-attachment: scroll !important;
-    /* iOS Safari スクロール性能最適化 */
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  /* iOSのフォームスタイリング問題対策 */
-  input, textarea, select, button {
-    -webkit-appearance: none;
-    appearance: none;
-    border-radius: var(--border-radius-sm);
-  }
-  
-  /* iOS Safari スクロール最適化 */
-  * {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-  }
+  html, body { background-attachment: scroll !important; }
+  input, textarea, select, button { -webkit-appearance: none; appearance: none; border-radius: var(--border-radius-sm); }
 }
 
 /* PC表示での最適化調整 */
@@ -1098,56 +859,14 @@ section::before {
   }
 }
 
-/* モバイル特有の問題解決 - 最新版 */
+/* Small Mobile Optimizations - Consolidated */
 @media screen and (max-width: 450px) {
-  html, body {
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
-    /* -webkit-overflow-scrolling 削除（廃止予定プロパティ） */
-    /* 現代的なスクロール最適化 */
-    overscroll-behavior: contain;
-    scroll-behavior: auto;
-  }
-  
-  img, svg {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  * {
-    -webkit-tap-highlight-color: transparent;
-    /* タッチ操作最適化 */
-    touch-action: manipulation;
-  }
-  
-  /* iOS Safari 追加最適化 */
-  body {
-    /* 固定背景の代替: CSSグラデーション最適化 */
-    background-image: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    /* モバイル専用スクロール最適化 */
-    -webkit-overflow-scrolling: auto; /* touchを削除 */
-    overflow: auto;
-    position: relative;
-  }
-  
-  /* モバイル専用: スクロール固まり防止 */
-  main, section, div {
-    /* 過度なtransform削除 */
-    transform: none !important;
-    /* 不要なtransition削除 */
-    transition: opacity 0.2s ease;
-  }
-  
-  /* iOS Safari: スクロール応答性向上 */
-  * {
-    -webkit-transform: none !important;
-    transform: none !important;
-    will-change: auto !important;
-  }
+  html, body { position: relative; width: 100%; overflow-x: hidden; overscroll-behavior: contain; scroll-behavior: auto; }
+  img, svg { max-width: 100%; height: auto; }
+  * { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  body { background-attachment: scroll; overflow: auto; position: relative; }
+  main, section, div { transform: none !important; transition: opacity 0.2s ease; }
+  * { -webkit-transform: none !important; transform: none !important; will-change: auto !important; }
 }
 
  

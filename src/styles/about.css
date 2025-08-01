@@ -1,4 +1,4 @@
-/* プロフィールページ固有スタイル */
+/* About Page - Optimized */
 
 /* Premium Message Section */
 .message {
@@ -30,7 +30,7 @@
   right: 0;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 168, 168, 0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -86,14 +86,14 @@
   right: 0;
   width: 80px;
   height: 80px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 168, 168, 0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
 
 .strengths li:hover {
   box-shadow: var(--shadow-luxury);
   transform: translateY(-4px);
-  border-color: rgba(212, 175, 55, 0.2);
+  border-color: rgba(168, 168, 168, 0.2);
 }
 
 .strengths li::before {
@@ -112,7 +112,7 @@
   justify-content: center;
   font-weight: var(--font-weight-extrabold);
   font-size: 0.875rem;
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  border: 2px solid rgba(168, 168, 168, 0.3);
   box-shadow: var(--shadow-sm);
   z-index: 2;
 }
@@ -154,7 +154,7 @@
   left: 0;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 168, 168, 0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -203,7 +203,7 @@
 .service-summary li:hover {
   box-shadow: var(--shadow-luxury);
   transform: translateY(-3px);
-  border-color: rgba(212, 175, 55, 0.2);
+  border-color: rgba(168, 168, 168, 0.2);
 }
 
 .service-summary b {
@@ -239,7 +239,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(168, 168, 168, 0.3);
 }
 
 .qualifications li::before {
@@ -344,9 +344,8 @@
   border-bottom: none;
 }
 
-/* CTA styles now handled by SharedCTA component - removed duplication */
 
-/* レスポンシブ対応 */
+/* Responsive - Consolidated */
 @media (max-width: 768px) {
   .company-info table {
     font-size: 0.9em;
@@ -372,7 +371,6 @@
     font-size: 0.8em;
   }
   
-  /* CTA responsive styles handled by SharedCTA component */
   
   .strengths li, .service-summary li {
     padding: 1.2em;

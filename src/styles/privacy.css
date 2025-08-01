@@ -1,5 +1,4 @@
-/* プライバシーポリシーページ固有スタイル */
-/* メインスタイルはglobals.cssから継承 */
+/* Privacy Policy Page - Optimized */
 main {
   max-width: 840px;
 }
@@ -171,53 +170,27 @@ main {
   border-bottom: 1px solid var(--primary-dark);
 }
 
-/* レスポンシブデザイン */
-/* レスポンシブスタイルはglobals.cssから継承、ページ固有調整のみ */
+/* Responsive - Consolidated */
 @media (max-width: 900px) {
-  .policy-lead, .policy-section, .policy-contact {
-    padding: 1.5em 1.2em;
-  }
+  .policy-lead, .policy-section, .policy-contact { padding: 1.5em 1.2em; }
 }
 
 @media (max-width: 700px) {
-  .policy-lead h2 {
-    font-size: 1.6em;
-  }
-  .policy-section h3 {
-    font-size: 1.3em;
-  }
-  .policy-contact h3 {
-    font-size: 1.4em;
-  }
+  .policy-lead h2 { font-size: 1.6em; }
+  .policy-section h3 { font-size: 1.3em; }
+  .policy-contact h3 { font-size: 1.4em; }
 }
 
 @media (max-width: 500px) {
-  .policy-lead, .policy-section, .policy-contact {
-    padding: 1.2em 1em;
-  }
-  .policy-lead p, .policy-section p, .policy-contact p {
-    font-size: 0.98em;
-  }
-  .policy-lead h2 {
-    font-size: 1.5em;
-  }
-  .policy-section h3 {
-    font-size: 1.2em;
-  }
-  .policy-contact h3 {
-    font-size: 1.3em;
-  }
+  .policy-lead, .policy-section, .policy-contact { padding: 1.2em 1em; }
+  .policy-lead p, .policy-section p, .policy-contact p { font-size: 0.98em; }
+  .policy-lead h2 { font-size: 1.5em; }
+  .policy-section h3 { font-size: 1.2em; }
+  .policy-contact h3 { font-size: 1.3em; }
 }
 
 @media (max-width: 375px) {
-  .policy-lead, .policy-section, .policy-contact {
-    padding: 1em 0.8em;
-  }
-  .policy-lead h2 {
-    font-size: 1.4em;
-  }
-  .policy-lead p, .policy-section p, .policy-contact p {
-    font-size: 0.95em;
-    line-height: 1.7;
-  }
+  .policy-lead, .policy-section, .policy-contact { padding: 1em 0.8em; }
+  .policy-lead h2 { font-size: 1.4em; }
+  .policy-lead p, .policy-section p, .policy-contact p { font-size: 0.95em; line-height: 1.7; }
 }
