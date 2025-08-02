@@ -187,63 +187,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="testimonials fadein-section">
-          <h2>お客様の声</h2>
-          <div className="testimonials-grid">
-            <div className="testimonial">
-              <div className="testimonial-header">
-                <div className="stars">★★★★★</div>
-                <div className="result">保険料30%削減</div>
-              </div>
-              <p className="quote">
-                「複数の保険に加入していましたが、油井さんに見直していただいたら、保障内容はそのままで保険料が大幅に削減できました。丁寧な説明で納得して決められました。」
-              </p>
-              <p className="author">40代 男性 会社員</p>
-            </div>
-            <div className="testimonial">
-              <div className="testimonial-header">
-                <div className="stars">★★★★★</div>
-                <div className="result">老後資金の不安解消</div>
-              </div>
-              <p className="quote">
-                「老後の資金計画が不安でしたが、具体的なシミュレーションを見せていただき、今から準備すべきことが明確になりました。安心して将来を考えられるようになりました。」
-              </p>
-              <p className="author">50代 女性 自営業</p>
-            </div>
-            <div className="testimonial">
-              <div className="testimonial-header">
-                <div className="stars">★★★★★</div>
-                <div className="result">事業承継の成功</div>
-              </div>
-              <p className="quote">
-                「事業承継について何から手をつければよいか分からず困っていました。税金対策から後継者の育成まで、トータルでサポートしていただき本当に助かりました。」
-              </p>
-              <p className="author">60代 男性 経営者</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="achievements fadein-section">
-          <h2>実績で見る信頼</h2>
-          <div className="achievement-grid">
-            <div className="achievement-card">
-              <div className="achievement-number">1,200<span>件以上</span></div>
-              <p>累計相談実績</p>
-            </div>
-            <div className="achievement-card">
-              <div className="achievement-number">98<span>%</span></div>
-              <p>お客様満足度</p>
-            </div>
-            <div className="achievement-card">
-              <div className="achievement-number">15<span>年</span></div>
-              <p>業界経験</p>
-            </div>
-            <div className="achievement-card">
-              <div className="achievement-number">500<span>社以上</span></div>
-              <p>法人サポート実績</p>
-            </div>
-          </div>
-        </section>
 
         <section className="faq fadein-section">
           <h2>よくあるご質問</h2>
