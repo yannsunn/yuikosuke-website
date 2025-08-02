@@ -70,22 +70,43 @@ export default function HomePage() {
           <h2>ご相談いただくメリット</h2>
           <div className="benefits-grid">
             <div className="benefit-card">
-              <div className="benefit-icon">📋</div>
+              <div className="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                  <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13 3v5a2 2 0 002 2h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3>一人ひとりに合わせた<br/>オーダーメイドプラン</h3>
               <p>あなたの価値観やライフプランに合わせた、最適な金融商品とプランニングをご提案します。</p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">🔍</div>
+              <div className="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                  <path d="M12 2L3.09 7.26C2.36 7.72 2 8.54 2 9.45v4.11c0 5.05 3.51 9.78 8.35 10.94a2 2 0 003.3 0C18.49 23.34 22 18.61 22 13.56V9.45c0-.9-.64-1.73-1.91-2.19L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3>中立的な視点での<br/>アドバイス</h3>
               <p>特定の金融機関に縛られない、お客様の利益を最優先した中立的なアドバイスを提供します。</p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">💬</div>
+              <div className="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 10h8m-8 4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3>気軽に相談できる<br/>アクセシビリティ</h3>
               <p>オンラインを活用した気軽な相談環境で、いつでもどこでもお金の悩みを解決できます。</p>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">🤝</div>
+              <div className="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 12a4 4 0 11-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3>長期的な<br/>伴走サポート</h3>
               <p>一度きりの提案で終わらず、ライフステージの変化に合わせた継続的なサポートを行います。</p>
             </div>
@@ -163,6 +184,64 @@ export default function HomePage() {
             <p><strong>「あなたの人生に、本当に必要なものを。」</strong></p>
             <p>お客様一人ひとりの状況や目標は全く違います。<br/>だからこそ、画一的な提案はいたしません。あなたに適した解策を一緒に考えていきます。</p>
             <p>小さな疑問から大きな決断まで、どんなことでもお気軽にご相談ください。</p>
+          </div>
+        </section>
+
+        <section className="testimonials fadein-section">
+          <h2>お客様の声</h2>
+          <div className="testimonials-grid">
+            <div className="testimonial">
+              <div className="testimonial-header">
+                <div className="stars">★★★★★</div>
+                <div className="result">保険料30%削減</div>
+              </div>
+              <p className="quote">
+                「複数の保険に加入していましたが、油井さんに見直していただいたら、保障内容はそのままで保険料が大幅に削減できました。丁寧な説明で納得して決められました。」
+              </p>
+              <p className="author">40代 男性 会社員</p>
+            </div>
+            <div className="testimonial">
+              <div className="testimonial-header">
+                <div className="stars">★★★★★</div>
+                <div className="result">老後資金の不安解消</div>
+              </div>
+              <p className="quote">
+                「老後の資金計画が不安でしたが、具体的なシミュレーションを見せていただき、今から準備すべきことが明確になりました。安心して将来を考えられるようになりました。」
+              </p>
+              <p className="author">50代 女性 自営業</p>
+            </div>
+            <div className="testimonial">
+              <div className="testimonial-header">
+                <div className="stars">★★★★★</div>
+                <div className="result">事業承継の成功</div>
+              </div>
+              <p className="quote">
+                「事業承継について何から手をつければよいか分からず困っていました。税金対策から後継者の育成まで、トータルでサポートしていただき本当に助かりました。」
+              </p>
+              <p className="author">60代 男性 経営者</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="achievements fadein-section">
+          <h2>実績で見る信頼</h2>
+          <div className="achievement-grid">
+            <div className="achievement-card">
+              <div className="achievement-number">1,200<span>件以上</span></div>
+              <p>累計相談実績</p>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-number">98<span>%</span></div>
+              <p>お客様満足度</p>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-number">15<span>年</span></div>
+              <p>業界経験</p>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-number">500<span>社以上</span></div>
+              <p>法人サポート実績</p>
+            </div>
           </div>
         </section>
 

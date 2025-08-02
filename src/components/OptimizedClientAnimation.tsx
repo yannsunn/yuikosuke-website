@@ -27,15 +27,18 @@ export default function OptimizedClientAnimation() {
     if (fadeinSections.length === 0) return
 
     observerRef.current = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('fadein-visible')
+          // 要素ごとに遅延を設定してスタガーアニメーション効果
+          setTimeout(() => {
+            entry.target.classList.add('fadein-visible')
+          }, index * 50)
           observerRef.current?.unobserve(entry.target)
         }
       })
     }, {
-      threshold: 0.05,
-      rootMargin: '0px 0px -10px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     })
     
     fadeinSections.forEach(section => {

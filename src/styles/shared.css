@@ -87,6 +87,22 @@
 .hero {
   padding: 2.5em 0 1.5em;
   overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, rgba(232, 176, 75, 0.03) 0%, rgba(44, 95, 124, 0.05) 100%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(232, 176, 75, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(44, 95, 124, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(103, 185, 154, 0.05) 0%, transparent 50%);
+  z-index: 0;
 }
 
 .hero-container {
@@ -97,6 +113,8 @@
   margin: 0 auto;
   max-width: 1000px;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-image-modern {
