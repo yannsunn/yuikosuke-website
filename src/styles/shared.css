@@ -1,188 +1,56 @@
-/* Shared Components - Ultra Optimized */
+/* SHARED STYLES - SIMPLIFIED */
 
-/* Button Styles - Moved from globals.css for better visibility */
-.primary-btn {
-  display: inline-block;
-  background: var(--gradient-accent);
-  color: var(--primary-dark) !important;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 1rem 2.5rem;
-  border-radius: var(--border-radius-md);
-  text-decoration: none;
+/* Hero Image Styles */
+.hero-image img {
+  border-radius: 0.75rem;
   box-shadow: var(--shadow-md);
-  transition: all var(--transition-luxury);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  border: 2px solid var(--accent-dark);
-}
-
-.primary-btn:hover {
-  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 100%);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-  color: white !important;
-  border-color: var(--accent-color);
-}
-
-.mail-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-  color: #fff !important;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 1rem 2.5rem;
-  border-radius: 16px;
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.25);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  border: 1px solid var(--primary-light);
-}
-
-.mail-btn:hover {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
-  box-shadow: 0 6px 20px rgba(25, 118, 210, 0.35);
-  transform: translateY(-2px);
-  color: #fff;
-}
-
-.service-btn, .more-btn {
-  font-size: 1.0625rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  background: #fff;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.service-btn:hover, .more-btn:hover {
-  background: var(--primary-color);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.25);
-  border-color: var(--primary-dark);
-}
-
-/* Layout Container - Used by BaseLayout */
-.layout-container {
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 100%;
-}
-
-/* Hero Section - Optimized */
-.hero {
-  padding: 2.5em 0 1.5em;
-  overflow: hidden;
-  position: relative;
-  background: linear-gradient(135deg, rgba(232, 176, 75, 0.03) 0%, rgba(44, 95, 124, 0.05) 100%);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(232, 176, 75, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(44, 95, 124, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(103, 185, 154, 0.05) 0%, transparent 50%);
-  z-index: 0;
-}
-
-.hero-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3em;
-  margin: 0 auto;
-  max-width: 1000px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-image-modern {
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: var(--border-radius-lg);
-}
-
-.hero-photo-modern {
-  width: 280px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
   transition: transform 0.3s ease;
 }
 
-.hero-photo-modern:hover {
-  transform: scale(1.01) translate3d(0, -2px, 0);
+.hero-image img:hover {
+  transform: scale(1.02);
 }
 
-.hero-text {
-  flex: 1;
-  margin-left: 2em;
+/* Page-specific padding */
+.page-content {
+  padding: 2rem 0;
 }
 
-.hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  font-weight: 700;
-}
-
-/* Card Box - Consolidated */
-.card-box {
-  background: #fff;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  padding: 2em 1.8em;
-  margin-bottom: 2em;
-  position: relative;
-  overflow: hidden;
-  transition: all var(--transition-normal);
+/* Contact info table */
+.company-info table {
   width: 100%;
-  box-sizing: border-box;
+  border-collapse: collapse;
+  margin-top: 2rem;
 }
 
-.card-box:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-3px);
+.company-info th,
+.company-info td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* Mobile Touch Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  .hero-photo-modern:hover { transform: none; }
-  .hero-photo-modern { transition: none; will-change: auto; transform: none; }
+.company-info th {
+  font-weight: 600;
+  background: var(--bg-secondary);
+  min-width: 150px;
 }
 
-/* Responsive - Ultra Consolidated */
-@media (max-width: 900px) {
-  .hero-container { flex-direction: column; text-align: center; gap: 2em; }
-  .hero-photo-modern { width: 220px; height: 300px; }
-  .hero-text { margin-left: 0; }
-}
-
-@media (max-width: 600px) {
-  .hero { padding: 1.5em 0 1em; }
-  .hero-photo-modern { width: 180px; height: 240px; }
-  .hero h2 { font-size: 2em; }
-  .card-box { padding: 1.5em 1.2em; }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .company-info th,
+  .company-info td {
+    display: block;
+    width: 100%;
+  }
+  
+  .company-info th {
+    background: transparent;
+    padding-bottom: 0.5rem;
+  }
+  
+  .company-info td {
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
 }

@@ -1,114 +1,29 @@
-/* Sophisticated Luxury Financial Planner Variables */
+/* 🎨 CLEAN DESIGN SYSTEM - Financial Planner Professional */
 
 :root {
-  /* Professional Financial Planner Color Palette - Trust, Stability, Success */
-  --primary-color: #1A365D;        /* Deep navy blue - trust and professionalism */
-  --primary-dark: #122448;         /* Darker navy - authority and depth */
-  --primary-light: #2C5282;        /* Lighter navy - approachable professionalism */
-  --accent-color: #D69E2E;         /* Rich gold - prosperity and success */
-  --accent-dark: #B7791F;          /* Deep gold - premium quality */
-  --accent-light: #ECC94B;         /* Light gold - optimism */
-  --secondary-color: #38A169;      /* Forest green - growth and stability */
-  --secondary-dark: #276749;       /* Deep forest - financial security */
-  --secondary-light: #68D391;      /* Light green - positive growth */
+  /* Primary Colors */
+  --primary-color: #1A365D;        /* Navy blue - trust */
+  --primary-dark: #122448;         /* Dark navy */
+  --primary-light: #2C5282;        /* Light navy */
   
-  /* Enhanced Text Colors */
-  --text-color: #1e293b;           /* Rich dark text */
-  --text-light: #64748b;           /* Sophisticated grey */
-  --text-muted: #94a3b8;           /* Subtle grey */
-  --text-inverse: #f8fafc;         /* Clean white */
+  /* Accent Colors */
+  --accent-color: #D69E2E;         /* Gold - prosperity */
+  --accent-dark: #B7791F;          /* Dark gold */
+  --accent-light: #ECC94B;         /* Light gold */
   
-  /* Sophisticated Background Colors */
-  --bg-primary: #f8fafc;           /* Pure, clean white */
-  --bg-secondary: #f1f5f9;         /* Subtle warm off-white */
-  --bg-tertiary: #e2e8f0;          /* Light sophisticated grey */
-  --card-bg-primary: #ffffff;      /* Pure white cards */
-  --card-bg-secondary: #f8fafc;    /* Subtle off-white */
-  --card-bg-luxury: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); /* Premium gradient */
+  /* Text Colors */
+  --text-color: #1e293b;           /* Dark text */
+  --text-light: #64748b;           /* Light text */
+  --text-inverse: #ffffff;         /* White text */
   
-  /* Premium Shadows with Professional Undertones */
-  --shadow-subtle: 0 1px 3px rgba(26, 54, 93, 0.05), 0 1px 2px rgba(26, 54, 93, 0.02);
-  --shadow-sm: 0 4px 6px rgba(26, 54, 93, 0.06), 0 2px 4px rgba(26, 54, 93, 0.03);
-  --shadow-md: 0 10px 15px rgba(26, 54, 93, 0.08), 0 4px 6px rgba(26, 54, 93, 0.04);
-  --shadow-lg: 0 20px 25px rgba(26, 54, 93, 0.10), 0 8px 10px rgba(26, 54, 93, 0.05);
-  --shadow-xl: 0 25px 50px rgba(26, 54, 93, 0.12), 0 12px 24px rgba(26, 54, 93, 0.08);
-  --shadow-luxury: 0 20px 40px rgba(214, 158, 46, 0.08), 0 8px 16px rgba(26, 54, 93, 0.06);
+  /* Background Colors */
+  --bg-primary: #ffffff;           /* White */
+  --bg-secondary: #f8fafc;         /* Light gray */
+  --border-color: #e2e8f0;         /* Border gray */
   
-  /* Refined Border Radius */
-  --border-radius-sm: 6px;
-  --border-radius-md: 12px;
-  --border-radius-lg: 18px;
-  --border-radius-xl: 24px;
-  
-  /* Sophisticated Transitions */
-  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-luxury: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  
-  /* Premium Gradients */
-  --gradient-primary: linear-gradient(135deg, #1A365D 0%, #2C5282 100%);
-  --gradient-accent: linear-gradient(135deg, #D69E2E 0%, #ECC94B 100%);
-  --gradient-luxury: linear-gradient(135deg, #1A365D 0%, #2C5282 50%, #D69E2E 100%);
-  --gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #FBF9F4 100%);
-  
-  /* Typography Scale - Premium Authority */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-  --font-weight-black: 900;
-  
-  /* Letter Spacing for Premium Feel */
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.025em;
-  --letter-spacing-wider: 0.05em;
-  --letter-spacing-widest: 0.1em;
-  
-  /* Line Heights for Readability */
-  --line-height-tight: 1.25;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 2;
+  /* Shadows - Simplified */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode Support - Luxury Theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #334155;
-    --primary-dark: #1e293b;
-    --primary-light: #475569;
-    --accent-color: #c0c0c0;
-    --accent-dark: #a8a8a8;
-    --accent-light: #f0f0f0;
-    
-    --text-color: #f8fafc;
-    --text-light: #cbd5e1;
-    --text-muted: #94a3b8;
-    --text-inverse: #1e293b;
-    
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --card-bg-primary: #1e293b;
-    --card-bg-secondary: #334155;
-  }
-}
-
-/* モーション設定の尊重 */
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --duration-75: 0ms;
-    --duration-100: 0ms;
-    --duration-150: 0ms;
-    --duration-200: 0ms;
-    --duration-300: 0ms;
-    --duration-500: 0ms;
-    --duration-700: 0ms;
-    --duration-1000: 0ms;
-  }
-}
