@@ -66,6 +66,29 @@
   flex-wrap: wrap;
 }
 
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  margin-bottom: 3rem;
+}
+
+.intro h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+
+.intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  max-width: var(--max-width-md);
+  margin: 0 auto 1rem;
+}
+
 /* Benefits Section - Modern Cards */
 .benefits {
   text-align: center;
@@ -348,15 +371,38 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
+    gap: 2rem;
   }
   
   .hero-content h1 {
     font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  .hero-content .tagline {
+    font-size: 1.125rem;
   }
   
   .hero-buttons {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-buttons .btn {
+    min-width: 250px;
+    padding: 1rem 2rem;
+  }
+  
+  .intro {
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .intro h2 {
+    font-size: 1.75rem;
   }
   
   .benefits h2,

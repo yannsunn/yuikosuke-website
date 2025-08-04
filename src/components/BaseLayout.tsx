@@ -18,10 +18,13 @@ export default function BaseLayout({
 }: BaseLayoutProps) {
   return (
     <>
+      <a href="#main-content" className="skip-nav">
+        メインコンテンツにスキップ
+      </a>
       {showAnimation && <OptimizedClientAnimation />}
       <div className={`layout-container ${className}`}>
         <Header title={title} />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </div>
     </>

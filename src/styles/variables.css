@@ -46,6 +46,11 @@
   --transition-fast: 0.15s ease-in-out;
   --transition-base: 0.2s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
+  --transition-normal: 0.3s ease;
+  
+  /* Fonts */
+  --font-inter: 'Inter', sans-serif;
+  --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
   
   /* Max Width */
   --max-width-xl: 1200px;

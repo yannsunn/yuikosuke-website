@@ -66,6 +66,41 @@
   background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
 }
 
+/* Contact Content */
+.contact-content {
+  padding: 1rem 0;
+}
+
+.mail-address {
+  font-size: 1.25rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.mail-link {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  display: inline-block;
+}
+
+.mail-link:hover {
+  background: var(--bg-secondary);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.mail-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  text-align: center;
+  margin: 1rem 0;
+}
+
 /* Contact Box Header */
 .contact-box h3 {
   font-size: 1.75rem;
@@ -195,6 +230,11 @@
   .contact-methods {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  
+  .contact-lead {
+    padding: 3rem 1rem;
   }
   
   .contact-lead h2 {
@@ -202,14 +242,23 @@
   }
   
   .contact-box {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
   
   .contact-box h3 {
     font-size: 1.5rem;
   }
   
+  .mail-address {
+    font-size: 1.125rem;
+  }
+  
+  .mail-description {
+    font-size: 0.95rem;
+  }
+  
   .mail-btn {
     width: 100%;
+    padding: 1rem;
   }
 }

@@ -8,6 +8,37 @@
   box-sizing: border-box;
 }
 
+/* ===== ACCESSIBILITY ===== */
+/* Skip navigation for screen readers */
+.skip-nav {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-dark);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-nav:focus {
+  top: 6px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
@@ -50,23 +81,43 @@ a:hover {
   color: var(--primary-light);
 }
 
+/* Enhanced Focus Styles for Accessibility */
 a:focus,
 button:focus,
 input:focus,
 textarea:focus,
-select:focus {
-  outline: 2px solid var(--accent-color);
+select:focus,
+.btn:focus {
+  outline: 3px solid var(--accent-color);
   outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 a:focus:not(:focus-visible) {
   outline: none;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--accent-color);
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent-color);
   outline-offset: 2px;
   border-radius: 0.25rem;
+  box-shadow: 0 0 0 6px rgba(214, 158, 46, 0.2);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    background: var(--primary-dark);
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+  }
 }
 
 /* ===== LAYOUT ===== */
