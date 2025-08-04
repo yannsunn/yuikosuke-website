@@ -23,7 +23,7 @@
 .hero-image-modern::before {
   content: '';
   position: absolute;
-  inset: -1rem;
+  inset: 0;
   background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
   opacity: 0.1;
   border-radius: var(--radius-xl);
