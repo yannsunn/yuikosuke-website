@@ -308,87 +308,6 @@
   margin: 0;
 }
 
-/* お客様の声の改善 */
-.testimonial.highlighted {
-  background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
-  border: 2px solid var(--accent-color);
-  border-radius: var(--border-radius-lg);
-  padding: 2em;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.testimonial.highlighted::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-}
-
-.testimonial.highlighted:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.testimonial-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1em;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.stars {
-  color: #c0c0c0;
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-}
-
-.result {
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-dark));
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: var(--border-radius-md);
-  font-size: 0.9em;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
-}
-
-.testimonial.highlighted .quote {
-  font-size: 1.05em;
-  line-height: 1.7;
-  color: var(--text-color);
-  font-style: italic;
-  margin-bottom: 1em;
-  position: relative;
-  padding-left: 1.5em;
-}
-
-.testimonial.highlighted .quote::before {
-  content: '“';
-  position: absolute;
-  left: 0;
-  top: -0.2em;
-  font-size: 2em;
-  color: var(--accent-color);
-  font-family: serif;
-}
-
-.testimonial.highlighted .author {
-  color: var(--text-light);
-  font-weight: 600;
-  font-size: 0.9em;
-  text-align: right;
-  border-top: 1px solid rgba(6, 199, 85, 0.2);
-  padding-top: 1em;
-  margin-top: 1em;
-}
 
 /* メリットカードの改善 */
 .benefit-card.featured {
@@ -542,15 +461,16 @@
 
 /* 導入セクション - 改善版 */
 .intro {
-  background: var(--color-card-1);
-  border-radius: var(--radius-lg);
-  padding: 3em 2.5em;
-  margin: 3em 0;
+  background: var(--gradient-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 3rem;
+  margin: 4rem auto;
+  max-width: 1000px;
   box-shadow: var(--shadow-md);
   text-align: center;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(var(--primary-500), 0.1);
+  border: 1px solid rgba(26, 54, 93, 0.06);
 }
 
 .intro::before {
@@ -597,21 +517,27 @@
 
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2em;
-  margin-top: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 .benefit-card {
   background: var(--card-bg-luxury);
   border-radius: var(--border-radius-lg);
-  padding: 3rem 2.5rem;
+  padding: 2.5rem;
   text-align: center;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-luxury);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
+  border: 1px solid rgba(26, 54, 93, 0.08);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .benefit-card::before {
@@ -651,12 +577,12 @@
   margin-bottom: 1.5rem;
   display: inline-block;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(232, 176, 75, 0.15) 0%, rgba(232, 176, 75, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(214, 158, 46, 0.12) 0%, rgba(214, 158, 46, 0.05) 100%);
   border-radius: 50%;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-luxury);
-  border: 2px solid rgba(232, 176, 75, 0.3);
-  color: var(--accent-dark);
+  border: 2px solid rgba(214, 158, 46, 0.25);
+  color: var(--primary-dark);
   width: 5rem;
   height: 5rem;
   display: flex;
@@ -891,85 +817,6 @@
   font-size: 0.95em;
 }
 
-/* お客様の声 - 改善版 */
-.testimonials {
-  background: linear-gradient(135deg, var(--color-card-1) 0%, var(--color-card-2) 100%);
-  border-radius: var(--radius-lg);
-  padding: 3em 2.5em;
-  margin: 3em 0;
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(var(--primary-500), 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonials::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-}
-
-.testimonials h2 {
-  text-align: center;
-  color: var(--primary-dark);
-  margin-bottom: 2.5em;
-  font-size: 1.8em;
-  font-weight: 700;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5em;
-  margin-top: 2em;
-}
-
-.testimonial {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: var(--border-radius-lg);
-  padding: 2.5em;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(6, 199, 85, 0.1);
-}
-
-.testimonial:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.testimonial::before {
-  content: '"';
-  position: absolute;
-  top: -0.3em;
-  left: 1em;
-  font-size: 3.5em;
-  color: var(--accent-color);
-  font-family: serif;
-  line-height: 1;
-  opacity: 0.7;
-}
-
-.quote {
-  font-style: italic;
-  margin-bottom: 1.5em;
-  color: var(--text-color);
-  line-height: 1.7;
-  font-size: 1.05em;
-  padding-left: 2em;
-}
-
-.author {
-  text-align: right;
-  font-weight: 600;
-  color: var(--primary-dark);
-  font-size: 0.9em;
-}
 
 /* プロフィールセクション */
 .about {

@@ -3,27 +3,28 @@
 /* Button Styles - Moved from globals.css for better visibility */
 .primary-btn {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
-  color: #fff !important;
+  background: var(--gradient-accent);
+  color: var(--primary-dark) !important;
   font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   padding: 1rem 2.5rem;
-  border-radius: 16px;
+  border-radius: var(--border-radius-md);
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(6, 199, 85, 0.25);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-luxury);
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 1px solid var(--accent-dark);
+  border: 2px solid var(--accent-dark);
 }
 
 .primary-btn:hover {
   background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 100%);
-  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.35);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
-  color: #fff;
+  color: white !important;
+  border-color: var(--accent-color);
 }
 
 .mail-btn {
