@@ -1,7 +1,5 @@
-import type { StructuredData } from '@/types'
-
 interface StructuredDataProps {
-  data: StructuredData
+  data: any
 }
 
 export default function StructuredData({ data }: StructuredDataProps) {
@@ -16,7 +14,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
 }
 
 // 組織の構造化データを生成
-export function createOrganizationStructuredData(): StructuredData {
+export function createOrganizationStructuredData() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FinancialService',

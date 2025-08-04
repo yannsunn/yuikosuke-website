@@ -1,5 +1,21 @@
 import type { Metadata, Viewport } from 'next'
+import { Inter, Noto_Sans_JP } from 'next/font/google'
+import OptimizedClientAnimation from '@/components/OptimizedClientAnimation'
 import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-noto-sans-jp',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://yuikosuke-website.vercel.app'),
@@ -56,13 +72,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      </head>
-      <body suppressHydrationWarning>{children}</body>
+    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
+      <body>
+        <OptimizedClientAnimation />
+        {children}
+      </body>
     </html>
   )
 }

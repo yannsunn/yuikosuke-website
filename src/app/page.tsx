@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import BaseLayout from '@/components/BaseLayout'
 import Link from 'next/link'
+import StructuredData from '@/components/StructuredData'
 import '../styles/home.css'
 
 export const metadata: Metadata = {
@@ -19,8 +20,40 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "相談は無料ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、初回相談は無料です。お客様の状況をお伺いして、最適なプランをご提案します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "どのような準備が必要ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "特別な準備は不要です。現在のお悩みや目標をお聞かせください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "オンライン相談は可能ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、オンラインでの相談も対応しています。お気軽にご連絡ください。"
+        }
+      }
+    ]
+  }
+
   return (
     <BaseLayout title="FPコンサルティング">
+      <StructuredData data={faqData} />
       <main>
         <section className="hero fade-in">
           <div className="hero-image">
@@ -57,7 +90,7 @@ export default function HomePage() {
           <div className="grid grid-4">
             <div className="card benefit-card">
               <div className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
@@ -66,7 +99,7 @@ export default function HomePage() {
             </div>
             <div className="card benefit-card">
               <div className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <path d="M12 2L3.09 7.26C2.36 7.72 2 8.54 2 9.45v4.11c0 5.05 3.51 9.78 8.35 10.94a2 2 0 003.3 0C18.49 23.34 22 18.61 22 13.56V9.45c0-.9-.64-1.73-1.91-2.19L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -76,7 +109,7 @@ export default function HomePage() {
             </div>
             <div className="card benefit-card">
               <div className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
@@ -85,7 +118,7 @@ export default function HomePage() {
             </div>
             <div className="card benefit-card">
               <div className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
