@@ -20,6 +20,10 @@ export default function AboutPage() {
                 height={380}
                 className="hero-photo-modern animated-hero-photo"
                 priority
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQAAwDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAMFBv/EACQQAAIBAwMEAwAAAAAAAAAAAAECAwAEERIhMQUTQVEiYYH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAAMBAAAAAAAAAAAAAAAAAAECEQD/2gAMAwEAAhEDEQA/AOgublLdC8hOBzgZrN/lF7cflUlOPiqRxFzhQWPsUK3B1rn//9k="
+                quality={85}
+                sizes="(max-width: 768px) 250px, 280px"
               />
             </div>
             <div className="hero-text">

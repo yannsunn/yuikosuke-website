@@ -63,6 +63,10 @@ export default function HomePage() {
               width={300}
               height={400}
               priority
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQAAwDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAMFBv/EACQQAAIBAwMEAwAAAAAAAAAAAAECAwAEERIhMQUTQVEiYYH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAAMBAAAAAAAAAAAAAAAAAAECEQD/2gAMAwEAAhEDEQA/AOgublLdC8hOBzgZrN/lF7cflUlOPiqRxFzhQWPsUK3B1rn//9k="
+              quality={85}
+              sizes="(max-width: 768px) 250px, 300px"
             />
           </div>
           <div className="hero-content">
@@ -143,7 +147,7 @@ export default function HomePage() {
           </ul>
         </section>
 
-        <section className="approach fadein-section">
+        <section className="approach fade-in">
           <h2>私のアプローチ</h2>
           <div className="approach-content">
             <div className="approach-item">
@@ -161,7 +165,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="about fadein-section">
+        <section className="about fade-in">
           <h2>ファイナンシャルプランナー 油井宏介について</h2>
           <div className="profile-content">
             <div className="profile-credentials">
@@ -179,7 +183,7 @@ export default function HomePage() {
         </section>
 
 
-        <section className="faq fadein-section">
+        <section className="faq fade-in">
           <h2>よくあるご質問</h2>
           <div className="faq-item">
             <h3>相談は無料ですか？</h3>

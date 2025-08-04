@@ -8,19 +8,11 @@
   
   /* Accent Colors */
   --accent-color: #D69E2E;         /* Gold - prosperity */
-  --accent-dark: #B7791F;          /* Dark gold */
   --accent-light: #ECC94B;         /* Light gold */
-  
-  /* Secondary Colors */
-  --secondary-color: #38A169;      /* Forest green - growth */
-  --secondary-dark: #276749;       /* Deep forest */
-  --secondary-light: #68D391;      /* Light green */
   
   /* Text Colors */
   --text-color: #1e293b;           /* Dark text */
   --text-light: #64748b;           /* Light text */
-  --text-muted: #94a3b8;           /* Muted text */
-  --text-inverse: #ffffff;         /* White text */
   
   /* Background Colors */
   --bg-primary: #ffffff;           /* White */
@@ -34,24 +26,17 @@
   --white-overlay: 255, 255, 255;    /* RGB values for white */
   
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   
   /* Border Radius */
-  --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
   --radius-full: 9999px;
   
   /* Transitions */
-  --transition-fast: 0.15s ease-in-out;
   --transition-base: 0.2s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
-  --transition-normal: 0.3s ease;
   
   /* Fonts */
   --font-inter: 'Inter', sans-serif;

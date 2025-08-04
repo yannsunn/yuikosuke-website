@@ -8,14 +8,14 @@ export default function ContactPage() {
     <BaseLayout title="お問い合わせ">
       
       <main>
-        <section className="contact-lead fadein-section card-box">
+        <section className="contact-lead fade-in card-box">
           <h2>お問い合わせ</h2>
           <p>
             サービス内容に関するご質問やご相談、資料請求など、どんなことでもお気軽にご連絡ください。
           </p>
         </section>
 
-        <section className="contact-methods fadein-section">
+        <section className="contact-methods fade-in">
           <div className="contact-box mail">
             <h3>メールで問い合わせ</h3>
             <div className="contact-content">
@@ -33,7 +33,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="contact-examples fadein-section card-box">
+        <section className="contact-examples fade-in card-box">
           <h3>お問い合わせ内容の例</h3>
           <ul>
             <li>事業保障プランについて相談したい</li>
@@ -50,7 +50,7 @@ export default function ContactPage() {
           </p>
         </section>
 
-        <section className="privacy-link fadein-section card-box">
+        <section className="privacy-link fade-in card-box">
           <Link href="/privacy">▶ プライバシーポリシーはこちら</Link>
         </section>
       </main>

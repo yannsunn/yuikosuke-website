@@ -20,7 +20,7 @@ export default function SharedCTA({
   const ctaClass = `cta ${variant === 'highlight' ? 'cta-highlight' : ''} ${className}`.trim()
 
   return (
-    <section className={`${ctaClass} fadein-section`}>
+    <section className={`${ctaClass} fade-in`}>
       <h2>{title}</h2>
       <p>{description}</p>
       <div className="cta-buttons">
