@@ -102,7 +102,7 @@ a:focus-visible,
   outline: 3px solid var(--accent-color);
   outline-offset: 2px;
   border-radius: 0.25rem;
-  box-shadow: 0 0 0 6px rgba(214, 158, 46, 0.2);
+  box-shadow: 0 0 0 6px rgba(var(--accent-shadow), 0.2);
 }
 
 /* High contrast mode support */
@@ -135,7 +135,7 @@ section {
 
 /* ===== NAVIGATION ===== */
 header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(var(--white-overlay), 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding: 1.25rem 0;
@@ -198,14 +198,39 @@ header nav a:hover::before {
   width: 30px;
 }
 
-header nav a.active {
+/* Regular navigation active state */
+header nav a.active:not(.primary-btn) {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   color: white;
-  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.2);
+  box-shadow: 0 4px 12px rgba(var(--primary-shadow), 0.2);
 }
 
-header nav a.active::before {
+header nav a.active:not(.primary-btn)::before {
   display: none;
+}
+
+/* Contact button styling - higher specificity */
+header nav a.primary-btn {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+  color: var(--primary-dark);
+  box-shadow: 0 4px 16px rgba(var(--accent-shadow), 0.3);
+  font-weight: 600;
+}
+
+header nav a.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(var(--accent-shadow), 0.4);
+}
+
+header nav a.primary-btn::before {
+  display: none;
+}
+
+/* Active contact button */
+header nav a.primary-btn.active {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+  color: var(--primary-dark);
+  box-shadow: 0 6px 20px rgba(var(--accent-shadow), 0.4);
 }
 
 /* ===== BUTTONS ===== */
@@ -226,7 +251,7 @@ header nav a.active::before {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
   color: var(--primary-dark);
-  box-shadow: 0 4px 16px rgba(214, 158, 46, 0.3);
+  box-shadow: 0 4px 16px rgba(var(--accent-shadow), 0.3);
 }
 
 .btn-primary::before {
@@ -236,7 +261,7 @@ header nav a.active::before {
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(var(--white-overlay), 0.3);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.6s ease;
@@ -244,7 +269,7 @@ header nav a.active::before {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(214, 158, 46, 0.4);
+  box-shadow: 0 8px 24px rgba(var(--accent-shadow), 0.4);
 }
 
 .btn-primary:hover::before {
@@ -255,7 +280,7 @@ header nav a.active::before {
 .btn-secondary {
   background: white;
   color: var(--primary-color);
-  box-shadow: 0 4px 16px rgba(26, 54, 93, 0.1);
+  box-shadow: 0 4px 16px rgba(var(--primary-shadow), 0.1);
   border: 2px solid var(--border-color);
 }
 
@@ -264,7 +289,7 @@ header nav a.active::before {
   color: white;
   border-color: var(--primary-color);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.2);
+  box-shadow: 0 8px 24px rgba(var(--primary-shadow), 0.2);
 }
 
 /* Button Variants */
@@ -281,14 +306,14 @@ header nav a.active::before {
   text-decoration: none;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
   color: var(--primary-dark);
-  box-shadow: 0 4px 16px rgba(214, 158, 46, 0.3);
+  box-shadow: 0 4px 16px rgba(var(--accent-shadow), 0.3);
 }
 
 .primary-btn:hover,
 .service-btn:hover,
 .more-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(214, 158, 46, 0.4);
+  box-shadow: 0 8px 24px rgba(var(--accent-shadow), 0.4);
 }
 
 /* Button Sizes */
@@ -528,6 +553,22 @@ footer {
 
 .footer-links a:hover {
   color: var(--accent-light);
+}
+
+.footer-links a.active {
+  color: var(--accent-light);
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-light);
 }
 
 .footer-contact p {

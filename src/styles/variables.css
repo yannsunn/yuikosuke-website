@@ -28,6 +28,11 @@
   --bg-tertiary: #f1f5f9;          /* Lighter gray */
   --border-color: #e2e8f0;         /* Border gray */
   
+  /* Color with Opacity (for shadows and overlays) */
+  --primary-shadow: 26, 54, 93;      /* RGB values for primary */
+  --accent-shadow: 214, 158, 46;     /* RGB values for accent */
+  --white-overlay: 255, 255, 255;    /* RGB values for white */
+  
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);

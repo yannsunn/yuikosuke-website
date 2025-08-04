@@ -13,10 +13,10 @@ interface CTAButtonProps {
 }
 
 const variantClasses = {
-  primary: 'primary-btn',
-  mail: 'mail-btn', 
-  service: 'service-btn',
-  more: 'more-btn'
+  primary: 'btn btn-primary',
+  mail: 'btn btn-primary mail-btn', 
+  service: 'btn btn-primary',
+  more: 'btn btn-secondary'
 }
 
 const sizeClasses = {

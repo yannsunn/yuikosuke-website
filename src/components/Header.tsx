@@ -12,9 +12,12 @@ export default function Header({ title }: HeaderProps) {
   const pathname = usePathname()
 
   const isActive = (path: string) => {
-    if (path === '/' && pathname === '/') return true
-    if (path !== '/' && pathname === path) return true
-    return false
+    // ホームページの場合は完全一致
+    if (path === '/') {
+      return pathname === '/'
+    }
+    // その他のページは前方一致でチェック（サブページも考慮）
+    return pathname.startsWith(path)
   }
 
   return (

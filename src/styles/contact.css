@@ -143,28 +143,18 @@
   font-family: monospace;
 }
 
-/* Button Styling */
+/* Mail Button - Using global button system */
 .mail-btn {
+  /* Extends global .btn and .btn-primary */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1.25rem 2.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  font-size: 1.125rem;
-  text-decoration: none;
-  transition: all var(--transition-base);
-  box-shadow: 0 4px 16px rgba(26, 54, 93, 0.2);
   margin-top: auto;
-}
-
-.mail-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.3);
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Contact Examples */
