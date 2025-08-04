@@ -3,7 +3,7 @@ import { footerNavigationItems } from '@/components/Navigation'
 
 export default function Footer() {
   return (
-    <footer className="fadein-section">
+    <footer className="fade-in">
       <div className="footer-content">
         <div className="footer-logo">
           <h3>FP Office</h3>

@@ -1,20 +1,19 @@
-/* Privacy Policy Page - Optimized */
+/* PRIVACY POLICY PAGE - MODERN PROFESSIONAL DESIGN */
+
 main {
-  max-width: 840px;
+  max-width: var(--max-width-md);
 }
 
-/* ポリシーコンテンツスタイル */
+/* Policy Lead Section */
 .policy-lead {
-  background: linear-gradient(120deg, var(--card-color-1) 60%, var(--card-color-2) 100%);
-  border-radius: var(--border-radius-md);
-  padding: 2em 1.8em;
-  margin-bottom: 2.2em;
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(26, 54, 93, 0.2);
   position: relative;
   overflow: hidden;
-  animation: fadeInUp 0.8s cubic-bezier(.77,0,.18,1) both;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .policy-lead::before {
@@ -24,173 +23,191 @@ main {
   right: -50px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
   border-radius: 50%;
-  z-index: 0;
 }
 
 .policy-lead h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 1;
-  font-size: 1.8em;
-  margin-bottom: 0.8em;
-  display: inline-block;
-}
-
-.policy-lead h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-  border-radius: 2px;
+  color: white;
 }
 
 .policy-lead p {
+  font-size: 1.125rem;
+  line-height: 1.8;
   position: relative;
   z-index: 1;
-  font-size: 1.1em;
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
 }
 
+/* Policy Sections */
 .policy-section {
-  background: var(--highlight-color);
-  border-radius: var(--border-radius-md);
-  padding: 1.5em 2em;
-  margin-bottom: 1.5em;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
-  position: relative;
-  overflow: hidden;
-  animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
-  width: 100%;
-  box-sizing: border-box;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--accent-color);
+  transition: all var(--transition-base);
 }
 
 .policy-section:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.policy-section::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  z-index: 0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .policy-section h3 {
   color: var(--primary-dark);
-  font-size: 1.4em;
-  margin-bottom: 0.7em;
-  position: relative;
-  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .policy-section h3::before {
-  content: '•';
+  content: '●';
   color: var(--accent-color);
-  margin-right: 8px;
-  font-size: 1.2em;
-  vertical-align: middle;
+  font-size: 0.75rem;
 }
 
 .policy-section p {
-  position: relative;
-  z-index: 1;
-  line-height: 1.7;
-  margin-bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  line-height: 1.8;
+  color: var(--text-color);
 }
 
+/* Policy Contact */
 .policy-contact {
-  background: linear-gradient(135deg, var(--card-color-2) 0%, white 100%);
-  border-radius: var(--border-radius-md);
-  padding: 1.8em 2em;
-  border-left: 8px solid var(--primary-color);
-  box-shadow: var(--shadow-md);
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.4s both;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.policy-contact::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
-  z-index: 0;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .policy-contact h3 {
   color: var(--primary-dark);
-  font-size: 1.5em;
-  margin-bottom: 1em;
-  position: relative;
-  z-index: 1;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .policy-contact p {
-  position: relative;
-  z-index: 1;
+  font-size: 1.125rem;
   line-height: 1.8;
-  font-size: 1.05em;
-  width: 100%;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .policy-contact a {
   color: var(--primary-color);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  transition: all var(--transition-normal);
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-base);
 }
 
 .policy-contact a:hover {
   color: var(--primary-dark);
-  border-bottom: 1px solid var(--primary-dark);
+  border-bottom-color: var(--accent-color);
 }
 
-/* Responsive - Consolidated */
-@media (max-width: 900px) {
-  .policy-lead, .policy-section, .policy-contact { padding: 1.5em 1.2em; }
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media (max-width: 700px) {
-  .policy-lead h2 { font-size: 1.6em; }
-  .policy-section h3 { font-size: 1.3em; }
-  .policy-contact h3 { font-size: 1.4em; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media (max-width: 500px) {
-  .policy-lead, .policy-section, .policy-contact { padding: 1.2em 1em; }
-  .policy-lead p, .policy-section p, .policy-contact p { font-size: 0.98em; }
-  .policy-lead h2 { font-size: 1.5em; }
-  .policy-section h3 { font-size: 1.2em; }
-  .policy-contact h3 { font-size: 1.3em; }
+.policy-lead {
+  animation: fadeInUp 0.8s ease-out;
 }
 
-@media (max-width: 375px) {
-  .policy-lead, .policy-section, .policy-contact { padding: 1em 0.8em; }
-  .policy-lead h2 { font-size: 1.4em; }
-  .policy-lead p, .policy-section p, .policy-contact p { font-size: 0.95em; line-height: 1.7; }
+.policy-section {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.policy-section:nth-child(1) { animation-delay: 0.1s; }
+.policy-section:nth-child(2) { animation-delay: 0.2s; }
+.policy-section:nth-child(3) { animation-delay: 0.3s; }
+.policy-section:nth-child(4) { animation-delay: 0.4s; }
+.policy-section:nth-child(5) { animation-delay: 0.5s; }
+
+.policy-contact {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policy-lead {
+    padding: 2rem 1.5rem;
+  }
+  
+  .policy-lead h2 {
+    font-size: 2rem;
+  }
+  
+  .policy-section {
+    padding: 1.5rem;
+  }
+  
+  .policy-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .policy-contact {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-lead {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .policy-lead h2 {
+    font-size: 1.75rem;
+  }
+  
+  .policy-lead p {
+    font-size: 1rem;
+  }
+  
+  .policy-section {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .policy-section h3 {
+    font-size: 1.125rem;
+  }
+  
+  .policy-contact {
+    padding: 1.5rem 1rem;
+  }
+  
+  .policy-contact h3 {
+    font-size: 1.5rem;
+  }
 }

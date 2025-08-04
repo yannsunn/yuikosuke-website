@@ -1,378 +1,292 @@
-/* About Page - Optimized */
+/* ABOUT PAGE - MODERN PROFESSIONAL DESIGN */
 
-/* Premium Message Section */
-.message {
-  background: var(--card-bg-luxury);
-  border-radius: var(--border-radius-xl);
-  padding: 4rem 3rem;
-  margin: 4rem 0;
-  box-shadow: var(--shadow-luxury);
-  text-align: center;
+/* Hero Section */
+.hero {
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
 }
 
-.message::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-accent);
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
 }
 
-.message::after {
+.hero-image-modern {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-image-modern::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(168, 168, 168, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
+  inset: -1rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  opacity: 0.1;
+  border-radius: var(--radius-xl);
+  transform: rotate(-3deg);
+}
+
+.hero-photo-modern {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-slow);
+}
+
+.hero-photo-modern:hover {
+  transform: scale(1.02);
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Message Section */
+.message {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(to bottom, transparent, var(--bg-secondary), transparent);
 }
 
 .message h2 {
-  color: var(--primary-dark);
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-tight);
-  font-size: 2rem;
+  color: var(--primary-dark);
   position: relative;
-  z-index: 1;
+  display: inline-block;
+}
+
+.message h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 
 .message p {
-  font-size: 1.125rem;
-  line-height: var(--line-height-relaxed);
   max-width: 800px;
   margin: 0 auto;
+  line-height: 1.8;
   color: var(--text-color);
-  font-weight: var(--font-weight-normal);
-  position: relative;
-  z-index: 1;
+  font-size: 1.125rem;
 }
 
-/* Premium Strengths Section */
+/* Strengths Section */
 .strengths {
-  padding: 4rem 0;
+  padding: 3rem 0;
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+}
+
+.strengths h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-dark);
 }
 
 .strengths ul {
   list-style: none;
   padding: 0;
-  max-width: 900px;
-  margin: 3rem auto 0;
 }
 
 .strengths li {
-  background: var(--card-bg-luxury);
-  border-radius: var(--border-radius-lg);
-  padding: 2rem 2.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-luxury);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
-}
-
-.strengths li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, rgba(168, 168, 168, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--accent-color);
+  transition: all var(--transition-base);
 }
 
 .strengths li:hover {
-  box-shadow: var(--shadow-luxury);
-  transform: translateY(-4px);
-  border-color: rgba(168, 168, 168, 0.2);
+  transform: translateX(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.strengths li::before {
-  content: '✓';
-  position: absolute;
-  left: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--gradient-accent);
-  color: var(--text-inverse);
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: var(--font-weight-extrabold);
-  font-size: 0.875rem;
-  border: 2px solid rgba(168, 168, 168, 0.3);
-  box-shadow: var(--shadow-sm);
-  z-index: 2;
-}
-
-.strengths li {
-  padding-left: 5rem;
-  font-size: 1.0625rem;
-  line-height: var(--line-height-relaxed);
-  font-weight: var(--font-weight-medium);
-  color: var(--text-color);
-}
-
-/* Premium Service Summary Section */
+/* Service Summary */
 .service-summary {
-  background: var(--card-bg-luxury);
-  border-radius: var(--border-radius-xl);
-  padding: 4rem 3rem;
-  margin: 4rem 0;
-  box-shadow: var(--shadow-luxury);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
-}
-
-.service-summary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-accent);
-}
-
-.service-summary::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(168, 168, 168, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
+  padding: 3rem 0;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-xl);
 }
 
 .service-summary h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--primary-dark);
-  margin-bottom: 3rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-tight);  
-  font-size: 2rem;
-  position: relative;
-  z-index: 1;
 }
 
 .service-summary ul {
+  max-width: var(--max-width-md);
+  margin: 0 auto;
   list-style: none;
   padding: 0;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .service-summary li {
-  background: var(--card-bg-primary);
-  border-radius: var(--border-radius-lg);
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-luxury);
-  border: 1px solid rgba(30, 41, 59, 0.06);
-  position: relative;
-  overflow: hidden;
-}
-
-.service-summary li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--gradient-accent);
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  background: white;
+  border-radius: var(--radius-md);
+  line-height: 1.6;
+  transition: all var(--transition-base);
 }
 
 .service-summary li:hover {
-  box-shadow: var(--shadow-luxury);
-  transform: translateY(-3px);
-  border-color: rgba(168, 168, 168, 0.2);
+  background: var(--bg-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .service-summary b {
-  color: var(--primary-dark);
-  font-size: 1.25rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-normal);
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
-/* Premium Qualifications Section */
+/* Qualifications */
 .qualifications {
-  padding: 4rem 0;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.qualifications h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
 }
 
 .qualifications ul {
   list-style: none;
   padding: 0;
-  max-width: 700px;
-  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
 }
 
 .qualifications li {
-  background: var(--gradient-luxury);
-  color: var(--text-inverse);
-  padding: 1.5rem 2rem;
-  margin-bottom: 1.25rem;
-  border-radius: var(--border-radius-lg);
-  font-weight: var(--font-weight-semibold);
-  font-size: 1.0625rem;
-  letter-spacing: var(--letter-spacing-wide);
-  box-shadow: var(--shadow-luxury);
-  transition: all var(--transition-luxury);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(168, 168, 168, 0.3);
-}
-
-.qualifications li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity var(--transition-normal);
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(26, 54, 93, 0.2);
+  transition: all var(--transition-base);
 }
 
 .qualifications li:hover {
-  box-shadow: var(--shadow-xl);
   transform: translateY(-4px);
-  border-color: var(--accent-light);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.3);
 }
 
-.qualifications li:hover::before {
-  opacity: 1;
-}
-
-/* Premium Company Info Section */
+/* Company Info Table */
 .company-info {
-  background: var(--card-bg-luxury);
-  border-radius: var(--border-radius-xl);
-  padding: 4rem 3rem;
-  margin: 4rem 0;
-  box-shadow: var(--shadow-luxury);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
-}
-
-.company-info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-accent);
+  padding: 3rem 0;
+  max-width: var(--max-width-md);
+  margin: 0 auto;
 }
 
 .company-info h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--primary-dark);
-  margin-bottom: 3rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-tight);
-  font-size: 2rem;
-  position: relative;
-  z-index: 1;
 }
 
 .company-info table {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: var(--border-radius-lg);
+  background: white;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  z-index: 1;
-}
-
-.company-info th,
-.company-info td {
-  padding: 1.5rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(30, 41, 59, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .company-info th {
-  background: var(--gradient-subtle);
+  background: var(--bg-secondary);
+  padding: 1.25rem;
+  text-align: left;
+  font-weight: 600;
   color: var(--primary-dark);
-  font-weight: var(--font-weight-semibold);
-  font-size: 1.0625rem;
-  letter-spacing: var(--letter-spacing-wide);
-  width: 35%;
-  min-width: 140px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .company-info td {
+  padding: 1.25rem;
   color: var(--text-color);
-  font-weight: var(--font-weight-normal);
-  font-size: 1rem;
-  line-height: var(--line-height-relaxed);
-  background: var(--card-bg-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.company-info tr:hover td {
-  background: var(--bg-secondary);
-}
-
-.company-info tr:last-child th,
-.company-info tr:last-child td {
+.company-info tr:last-child td,
+.company-info tr:last-child th {
   border-bottom: none;
 }
 
-
-/* Responsive - Consolidated */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .company-info table {
-    font-size: 0.9em;
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.25rem;
+  }
+  
+  .message h2,
+  .strengths h2,
+  .service-summary h2,
+  .qualifications h2,
+  .company-info h2 {
+    font-size: 1.75rem;
+  }
+  
+  .qualifications ul {
+    grid-template-columns: 1fr;
   }
   
   .company-info th,
   .company-info td {
-    padding: 0.8em 0.5em;
+    display: block;
+    padding: 1rem;
   }
   
   .company-info th {
-    width: 35%;
-  }
-}
-
-@media (max-width: 600px) {
-  .message, .service-summary, .company-info, .cta {
-    padding: 2em 1.5em;
-    margin: 2em 0;
+    background: transparent;
+    border-bottom: none;
+    padding-bottom: 0.5rem;
   }
   
-  .company-info table {
-    font-size: 0.8em;
-  }
-  
-  
-  .strengths li, .service-summary li {
-    padding: 1.2em;
+  .company-info tr {
+    display: block;
+    margin-bottom: 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
   }
 }

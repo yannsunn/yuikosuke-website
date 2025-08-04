@@ -10,7 +10,7 @@ export default function AboutPage() {
     <BaseLayout title="プロフィール">
       
       <main>
-        <section className="hero fadein-section">
+        <section className="hero fade-in">
           <div className="hero-container">
             <div className="hero-image-modern">
               <Image 
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="message fadein-section">
+        <section className="message fade-in">
           <h2>ご挨拶</h2>
           <p>
             はじめまして。<br/>
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <section className="strengths fadein-section">
+        <section className="strengths fade-in">
           <h2>私の強み・大切にしていること</h2>
           <ul>
             <li>公的資格と豊富な実務経験による「安心」のご提案</li>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           </ul>
         </section>
 
-        <section className="service-summary fadein-section">
+        <section className="service-summary fade-in">
           <h2>提供できるサービス</h2>
           <ul>
             <li><b>事業保証プランニング</b>：経営者・個人事業主様の「もしも」に備える資金・保険設計</li>
@@ -63,7 +63,7 @@ export default function AboutPage() {
           </ul>
         </section>
 
-        <section className="qualifications fadein-section">
+        <section className="qualifications fade-in">
           <h2>保有資格</h2>
           <ul>
             <li>2級ファイナンシャル・プランニング技能士</li>
@@ -73,7 +73,7 @@ export default function AboutPage() {
           </ul>
         </section>
 
-        <section className="company-info fadein-section">
+        <section className="company-info fade-in">
           <h2>お問い合わせ情報</h2>
           <table>
             <tbody>

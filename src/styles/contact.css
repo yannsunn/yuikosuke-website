@@ -1,442 +1,215 @@
-/* Contact Page - Optimized */
+/* CONTACT PAGE - MODERN PROFESSIONAL DESIGN */
 
-/* Premium Contact Lead Section */
+/* Contact Lead Section */
 .contact-lead {
-  background: var(--card-bg-luxury);
   text-align: center;
-  border-radius: var(--border-radius-xl);
-  padding: 4rem 3rem;
-  margin: 4rem 0;
-  box-shadow: var(--shadow-luxury);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
+  padding: 4rem 0;
+  max-width: var(--max-width-md);
+  margin: 0 auto;
 }
 
-.contact-lead::before {
+.contact-lead h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-lead p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Contact Methods Grid */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+}
+
+/* Contact Box */
+.contact-box {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-slow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mail Box Styling */
+.contact-box.mail {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--accent-color), var(--primary-color)) border-box;
+}
+
+.contact-box.mail::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--gradient-accent);
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
 }
 
-.contact-lead::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(168, 168, 168, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.contact-lead h2 {
-  position: relative;
-  z-index: 1;
-  color: var(--primary-dark);
+/* Contact Box Header */
+.contact-box h3 {
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-tight);
-  font-size: 2rem;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.contact-lead p {
-  position: relative;
-  z-index: 1;
-  font-size: 1.125rem;
-  line-height: var(--line-height-relaxed);
-  font-weight: var(--font-weight-normal);
-  color: var(--text-color);
-  max-width: 600px;
-  margin: 0 auto;
+.contact-box h3::before {
+  content: '✉';
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0;
 }
 
-/* Primary/CTA・メールボタンスタイルはglobals.cssから継承 */
-
-/* ページ固有の調整 */
-.mail-btn {
-  display: block;
-  margin: 1.5em auto 0 auto;
+/* Email Display */
+.email-display {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
   text-align: center;
-  width: fit-content;
-  min-width: 220px;
-  font-size: 1.15em;
-  padding: 1em 2.2em;
-  text-shadow: 0 2px 8px rgba(25, 118, 210, 0.18), 0 1px 0 #1976d2;
+  border: 2px dashed var(--border-color);
+}
+
+.email-display p {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: monospace;
+}
+
+/* Button Styling */
+.mail-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 16px rgba(26, 54, 93, 0.2);
+  margin-top: auto;
 }
 
 .mail-btn:hover {
-  transform: translateY(-3px) scale(1.04);
-}
-
-.mail-icon {
-  margin-right: 8px;
-  font-weight: bold;
-}
-
-/* お問い合わせ方法セクション */
-.contact-methods {
-  display: flex;
-  gap: 2em;
-  justify-content: center;
-  align-items: stretch;
-  margin-bottom: 2em;
-  flex-wrap: wrap;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-methods .contact-box {
-  flex: 1 1 360px;
-  min-width: 320px;
-  max-width: 480px;
-  background: var(--card-bg-luxury);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-luxury);
-  padding: 3rem 2.5rem;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all var(--transition-luxury);
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(30, 41, 59, 0.08);
-}
-
-.contact-methods .contact-box:hover {
-  box-shadow: var(--shadow-xl);
-  transform: translateY(-6px);
-  border-color: rgba(168, 168, 168, 0.2);
-}
-
-.contact-methods .contact-box.mail::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--gradient-primary);
-  border-radius: 0 2px 2px 0;
-}
-
-.contact-methods .contact-box.primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--gradient-accent);
-  border-radius: 0 2px 2px 0;
-}
-
-.contact-methods .contact-box::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(168, 168, 168, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.contact-methods .contact-box h3 {
-  color: var(--primary-dark);
-  margin-bottom: 1.25rem;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-normal);
-  line-height: var(--line-height-snug);
-  position: relative;
-  z-index: 1;
-}
-
-.contact-methods .contact-box p {
-  margin-bottom: 2rem;
-  flex-grow: 1;
-  font-size: 1rem;
-  line-height: var(--line-height-relaxed);
-  color: var(--text-color);
-  font-weight: var(--font-weight-normal);
-  position: relative;
-  z-index: 1;
-}
-
-/* メールアドレス表示の最適化 */
-.mail-address {
-  text-align: center;
-  margin-bottom: 0.8em;
-}
-
-.mail-link {
-  color: var(--primary-color);
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px dashed var(--primary-color);
-  padding-bottom: 2px;
-  transition: all var(--transition-normal);
-  font-size: 1.05em;
-  display: inline-block;
-}
-
-.mail-link:hover {
-  color: var(--primary-dark);
-  border-bottom: 1px solid var(--primary-dark);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.3);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
 }
 
-.mail-description {
+/* Contact Examples */
+.contact-examples {
+  padding: 3rem 0;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  margin: 2rem 0;
+}
+
+.contact-examples h3 {
   text-align: center;
-  font-size: 0.95em;
-  color: var(--text-light);
-  line-height: 1.7;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
 }
 
-/* Premium Contact Examples List */
 .contact-examples ul {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 2rem 0;
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
 }
 
 .contact-examples li {
   padding: 1.25rem 1.5rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius-md);
-  margin-bottom: 1rem;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-luxury);
-  position: relative;
-  padding-left: 3rem;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid rgba(30, 41, 59, 0.06);
-  font-weight: var(--font-weight-medium);
-  color: var(--text-color);
-}
-
-.contact-examples li::before {
-  content: '→';
-  color: var(--accent-color);
-  position: absolute;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: var(--font-weight-extrabold);
-  font-size: 1.125rem;
+  background: white;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent-color);
+  transition: all var(--transition-base);
 }
 
 .contact-examples li:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: var(--shadow-luxury) !important;
-  background: var(--card-bg-luxury);
-  border-color: rgba(168, 168, 168, 0.2);
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* プライバシーポリシーリンク */
+/* Privacy Link */
 .privacy-link {
   text-align: center;
+  padding: 2rem 0;
 }
 
 .privacy-link a {
-  display: inline-block;
-  color: var(--primary-dark);
+  color: var(--primary-color);
   text-decoration: none;
-  transition: all var(--transition-normal);
-  padding: 0.5em 1em;
-  border-radius: var(--border-radius-sm);
-  background: var(--highlight-color);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-base);
 }
 
 .privacy-link a:hover {
-  color: var(--primary-color);
-  background: #f0f8ff;
-  transform: translateX(5px);
+  color: var(--primary-dark);
+  gap: 0.75rem;
 }
 
-/* フッター */
-footer {
-  text-align: center;
-  padding: 2em 0;
-  margin-top: 4em;
-  color: var(--text-light);
-}
-
-/* フッター連絡先のための新しいスタイル */
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5em;
-}
-
-.address-box {
-  margin-bottom: 0.5em;
-}
-
-.address-box p {
-  margin: 0.2em 0;
-  line-height: 1.4;
-}
-
-/* モバイル最適化された連絡先ボックス */
-.contact-info-box {
-  background: rgba(255, 255, 240, 0.1);
-  border-radius: 12px;
-  padding: 1.5em;
-  margin: 0.5em 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  max-width: 400px;
-  box-sizing: border-box;
-}
-
-.contact-heading {
-  color: #fff;
-  margin-bottom: 1em;
-  font-size: 1.3em;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 0.5em;
-  display: inline-block;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8em;
-}
-
-.contact-item {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.05em;
-}
-
-.contact-link {
-  color: #64b5f6;
-  font-weight: bold;
-  margin-top: 0.2em;
-  display: inline-block;
-  word-break: break-all;
-  transition: all var(--transition-normal);
-}
-
-.contact-link:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Responsive - Consolidated */
-@media (max-width: 900px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .contact-methods {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-methods .contact-box {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1.5em;
-  }
-}
-
-/* 幅が広い画面での表示調整 */
-@media (min-width: 768px) {
-  .contact-item {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5em;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .contact-link {
-    margin-top: 0;
-  }
-}
-
-/* レスポンシブスタイルはglobals.cssから継承、ページ固有調整のみ */
-@media (max-width: 700px) {
   .contact-lead h2 {
-    font-size: 1.5em;
+    font-size: 2rem;
   }
-}
-
-@media (max-width: 500px) {
-  .contact-methods .contact-box {
-    padding: 1.5em 1.2em 1.2em 1.2em;
+  
+  .contact-box {
+    padding: 2rem;
   }
-  .mail-btn, .primary-btn {
-    padding: 0.8em 1.5em;
-    font-size: 1em;
+  
+  .contact-box h3 {
+    font-size: 1.5rem;
+  }
+  
+  .mail-btn {
     width: 100%;
-    text-align: center;
   }
-  .mail-link {
-    font-size: 0.95em;
-    word-break: break-all;
-  }
-  .contact-examples li {
-    font-size: 0.95em;
-    padding: 0.7em 1em 0.7em 1.8em;
-  }
-  .contact-methods .contact-content {
-    min-height: 60px;
-    font-size: 0.95em;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-contact p {
-    font-size: 0.9em;
-  }
-  
-  .contact-info-box {
-    padding: 1.2em;
-  }
-}
-
-/* さらに小さい画面での調整 */
-@media (max-width: 375px) {
-  .contact-methods .contact-box h3 {
-    font-size: 1.1em;
-  }
-  .contact-methods .contact-content {
-    font-size: 0.9em;
-  }
-  .mail-btn, .primary-btn {
-    font-size: 0.95em;
-  }
-  .contact-examples li {
-    font-size: 0.9em;
-  }
-  .contact-lead p {
-    font-size: 0.95em;
-  }
-  
-  .contact-info-box {
-    padding: 1.2em;
-  }
-  
-  .contact-heading {
-    font-size: 1.2em;
-  }
-  
-  .contact-item {
-    font-size: 0.95em;
-  }
-}
-
-.contact-methods .contact-content {
-  min-height: 90px;
-  margin-bottom: 0.5em;
-  line-height: 1.8;
 }
