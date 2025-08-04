@@ -1,88 +1,346 @@
-/* HOME PAGE SPECIFIC STYLES - ULTRA CLEAN */
+/* HOME PAGE SPECIFIC STYLES - MODERN PROFESSIONAL */
 
-/* Hero Section */
+/* Hero Section - Modern Design */
 .hero {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  padding: 3rem 0;
+  gap: 4rem;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(214, 158, 46, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero-image {
   flex-shrink: 0;
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  border-radius: 1rem;
+  opacity: 0.1;
+  transform: rotate(-6deg);
 }
 
 .hero-image img {
-  border-radius: 0.75rem;
-  box-shadow: var(--shadow-md);
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-content .tagline {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   color: var(--text-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
-/* Benefits Grid */
+/* Benefits Section - Modern Cards */
 .benefits {
   text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, transparent, var(--bg-secondary), transparent);
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.benefits h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.benefits h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 
 .benefit-card {
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.benefit-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(214, 158, 46, 0.03), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.benefit-card:hover::after {
+  opacity: 1;
 }
 
 .benefit-icon {
-  width: 4rem;
-  height: 4rem;
-  margin: 0 auto 1rem;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-secondary);
-  border-radius: 50%;
-  color: var(--accent-color);
+  background: linear-gradient(135deg, rgba(214, 158, 46, 0.1), rgba(214, 158, 46, 0.05));
+  border-radius: 1rem;
+  color: var(--primary-dark);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+  color: white;
 }
 
 .benefit-icon svg {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.3s ease;
 }
 
-/* Services List */
+.benefit-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.benefit-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Services Section - Modern Pills */
+.services {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(26, 54, 93, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
   list-style: none;
   padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .services-list li {
-  background: var(--accent-color);
-  color: var(--primary-dark);
-  padding: 1rem;
-  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  padding: 1.25rem 1.75rem;
+  border-radius: 2rem;
   text-align: center;
   font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.025em;
+  box-shadow: 0 4px 16px rgba(26, 54, 93, 0.15);
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.services-list li:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.2);
+}
+
+.services-list li:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* FAQ Section - Modern Accordion Style */
+.faq {
+  padding: 4rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.faq .grid {
+  gap: 1.5rem;
+}
+
+.faq .card {
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.faq .card:hover {
+  border-left-color: var(--primary-color);
+  background: linear-gradient(to right, rgba(214, 158, 46, 0.02), transparent);
+}
+
+.faq h3 {
+  color: var(--primary-dark);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.faq h3::before {
+  content: 'Q';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.faq p {
+  color: var(--text-light);
+  line-height: 1.7;
+  padding-left: 2.5rem;
+}
+
+/* CTA Section - Modern Call to Action */
+.cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-50px, -50px) rotate(180deg); }
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.cta .btn-primary {
+  background: white;
+  color: var(--primary-dark);
+  font-size: 1.125rem;
+  padding: 1.25rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta .btn-primary:hover {
+  background: var(--accent-light);
 }
 
 /* Responsive */
@@ -90,19 +348,36 @@
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 3rem 0;
   }
   
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .hero-buttons {
     justify-content: center;
+  }
+  
+  .benefits h2,
+  .services h2,
+  .faq h2,
+  .cta h2 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .services-list {
     grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.875rem;
+  }
+  
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
   }
 }
