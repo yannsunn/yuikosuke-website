@@ -9,24 +9,6 @@
 }
 
 /* ===== ACCESSIBILITY ===== */
-/* Skip navigation for screen readers */
-.skip-nav {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--primary-dark);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  z-index: 1000;
-  transition: top 0.3s;
-}
-
-.skip-nav:focus {
-  top: 6px;
-}
-
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -90,7 +72,6 @@ select:focus,
 .btn:focus {
   outline: 3px solid var(--accent-color);
   outline-offset: 2px;
-  border-radius: 0.25rem;
 }
 
 a:focus:not(:focus-visible) {
@@ -101,8 +82,15 @@ a:focus-visible,
 .btn:focus-visible {
   outline: 3px solid var(--accent-color);
   outline-offset: 2px;
-  border-radius: 0.25rem;
   box-shadow: 0 0 0 6px rgba(var(--accent-shadow), 0.2);
+}
+
+/* Header navigation specific focus styles */
+header nav a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
+  box-shadow: none;
+  border-radius: 2rem;
 }
 
 /* High contrast mode support */
