@@ -19,10 +19,7 @@ export default function BaseLayout({
   return (
     <>
       {showAnimation && <OptimizedClientAnimation />}
-      <div 
-        className={`layout-container ${className}`}
-        style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}
-      >
+      <div className={`layout-container ${className}`}>
         <Header title={title} />
         <main>{children}</main>
         <Footer />
