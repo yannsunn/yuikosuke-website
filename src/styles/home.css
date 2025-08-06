@@ -47,10 +47,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary-dark);
 }
 
 .hero-content .tagline {
@@ -218,8 +215,9 @@
 }
 
 .services-list li {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  background: var(--bg-secondary);
+  color: var(--primary-dark);
+  border: 2px solid var(--primary-color);
   padding: 1.25rem 1.75rem;
   border-radius: 2rem;
   text-align: center;
