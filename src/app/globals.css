@@ -163,6 +163,11 @@ header nav a {
   font-weight: 500;
   position: relative;
   color: var(--text-color);
+  outline: none !important;
+}
+
+header nav a:focus {
+  outline: none !important;
 }
 
 header nav a::before {

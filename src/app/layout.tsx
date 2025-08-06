@@ -73,6 +73,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
+      <head>
+        <link rel="preload" as="image" href="/yuikosuke.jpg" />
+      </head>
       <body>
         <OptimizedClientAnimation />
         {children}

@@ -62,11 +62,17 @@ export default function HomePage() {
               alt="ファイナンシャルプランナー油井宏介" 
               width={300}
               height={400}
-              priority
+              priority={true}
+              loading="eager"
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQAAwDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAMFBv/EACQQAAIBAwMEAwAAAAAAAAAAAAECAwAEERIhMQUTQVEiYYH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAAMBAAAAAAAAAAAAAAAAAAECEQD/2gAMAwEAAhEDEQA/AOgublLdC8hOBzgZrN/lF7cflUlOPiqRxFzhQWPsUK3B1rn//9k="
-              quality={85}
-              sizes="(max-width: 768px) 250px, 300px"
+              quality={75}
+              sizes="(max-width: 768px) 200px, 300px"
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxWidth: '300px'
+              }}
             />
           </div>
           <div className="hero-content">
