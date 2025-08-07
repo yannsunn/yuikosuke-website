@@ -201,7 +201,7 @@ header nav a.active:not(.primary-btn)::before {
 /* Contact button styling - higher specificity */
 header nav a.primary-btn {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-  color: var(--primary-dark);
+  color: white;
   box-shadow: 0 4px 16px rgba(var(--accent-shadow), 0.3);
   font-weight: 600;
 }
@@ -218,7 +218,7 @@ header nav a.primary-btn::before {
 /* Active contact button */
 header nav a.primary-btn.active {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-  color: var(--primary-dark);
+  color: white;
   box-shadow: 0 6px 20px rgba(var(--accent-shadow), 0.4);
 }
 
@@ -239,7 +239,7 @@ header nav a.primary-btn.active {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-  color: var(--primary-dark);
+  color: white;
   box-shadow: 0 4px 16px rgba(var(--accent-shadow), 0.3);
 }
 
@@ -294,7 +294,7 @@ header nav a.primary-btn.active {
   cursor: pointer;
   text-decoration: none;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-  color: var(--primary-dark);
+  color: white;
   box-shadow: 0 4px 16px rgba(var(--accent-shadow), 0.3);
 }
 
