@@ -76,9 +76,9 @@ export default function HomePage() {
             />
           </div>
           <div className="hero-content">
-            <h1>あなたの人生に、安心と希望を</h1>
-            <p className="tagline">専門のファイナンシャルプランナーが人生設計をサポート</p>
-            <p>保険・資産形成・事業保障まで、あなたに最適なプランをご提案します。</p>
+            <h1>あなたの人生に、<br/>安心と希望を</h1>
+            <p className="tagline">専門のファイナンシャルプランナーが<br/>人生設計をサポート</p>
+            <p>保険・資産形成・事業保障まで、<br/>あなたに最適なプランをご提案します。</p>
             <div className="hero-buttons">
               <Link href="/contact" className="btn btn-primary">無料相談はこちら</Link>
               <Link href="/services" className="btn btn-secondary">サービス詳細</Link>
@@ -158,21 +158,21 @@ export default function HomePage() {
           <div className="approach-content">
             <div className="approach-item">
               <h3>丁寧なヒアリング</h3>
-              <p>お客様の価値観、家族構成、将来の目標まで、しっかりとお話を伺います。</p>
+              <p>お客様の価値観、家族構成、将来の目標まで、<br/>しっかりとお話を伺います。</p>
             </div>
             <div className="approach-item">
               <h3>わかりやすい説明</h3>
-              <p>専門用語を使わず、図表やシミュレーションを用いて分かりやすくご説明します。</p>
+              <p>専門用語を使わず、<br/>図表やシミュレーションを用いて分かりやすくご説明します。</p>
             </div>
             <div className="approach-item">
               <h3>継続的なサポート</h3>
-              <p>一度きりの提案で終わらず、ライフステージの変化に合わせてサポートします。</p>
+              <p>一度きりの提案で終わらず、<br/>ライフステージの変化に合わせてサポートします。</p>
             </div>
           </div>
         </section>
 
         <section className="about fade-in">
-          <h2>ファイナンシャルプランナー 油井宏介について</h2>
+          <h2>ファイナンシャルプランナー<br/>油井宏介について</h2>
           <div className="profile-content">
             <div className="profile-credentials">
               <h3>🏆 保有資格</h3>
@@ -183,7 +183,7 @@ export default function HomePage() {
               </ul>
             </div>
             <p><strong>「あなたの人生に、本当に必要なものを。」</strong></p>
-            <p>お客様一人ひとりの状況や目標は全く違います。<br/>だからこそ、画一的な提案はいたしません。あなたに適した解策を一緒に考えていきます。</p>
+            <p>お客様一人ひとりの状況や目標は全く違います。<br/>だからこそ、画一的な提案はいたしません。<br/>あなたに適した解策を一緒に考えていきます。</p>
             <p>小さな疑問から大きな決断まで、どんなことでもお気軽にご相談ください。</p>
           </div>
         </section>
@@ -193,21 +193,21 @@ export default function HomePage() {
           <h2>よくあるご質問</h2>
           <div className="faq-item">
             <h3>相談は無料ですか？</h3>
-            <p>はい、初回相談は無料です。お客様の状況やニーズをヒアリングし、最適なプランをご提案いたします。</p>
+            <p>はい、初回相談は無料です。<br/>お客様の状況やニーズをヒアリングし、<br/>最適なプランをご提案いたします。</p>
           </div>
           <div className="faq-item">
             <h3>どのような準備をしていけばよいですか？</h3>
-            <p>特別な準備は必要ありません。現在のお悩みや目標についてお聞かせいただければ、必要に応じて資料などをご案内いたします。</p>
+            <p>特別な準備は必要ありません。<br/>現在のお悩みや目標についてお聞かせいただければ、<br/>必要に応じて資料などをご案内いたします。</p>
           </div>
           <div className="faq-item">
             <h3>相談から契約までどのくらいかかりますか？</h3>
-            <p>お客様のペースに合わせて進めていきます。じっくり検討されたい方には、十分な検討期間を設けることも可能です。</p>
+            <p>お客様のペースに合わせて進めていきます。<br/>じっくり検討されたい方には、<br/>十分な検討期間を設けることも可能です。</p>
           </div>
         </section>
 
         <section className="cta fade-in text-center">
           <h2>まずは無料相談から始めませんか？</h2>
-          <p>お金に関するご相談をお受けしています。まずはお気軽にお声がけください。</p>
+          <p>お金に関するご相談をお受けしています。<br/>まずはお気軽にお声がけください。</p>
           <Link href="/contact" className="btn btn-primary">無料相談を申し込む</Link>
         </section>
       </main>

@@ -16,11 +16,16 @@ export default function BaseLayout({
   className = '',
   showAnimation = true 
 }: BaseLayoutProps) {
+  // ヘッダータイトルを短くしてモバイルでも見やすく
+  const displayTitle = title === 'FPコンサルティング' 
+    ? '油井宏介 FP事務所' 
+    : title;
+    
   return (
     <>
       {showAnimation && <OptimizedClientAnimation />}
       <div className={`layout-container ${className}`}>
-        <Header title={title} />
+        <Header title={displayTitle} />
         <main>{children}</main>
         <Footer />
       </div>
