@@ -3,7 +3,7 @@
 /* Contact Lead Section */
 .contact-lead {
   text-align: center;
-  padding: 4rem 0;
+  padding: 3rem 2rem;
   max-width: var(--max-width-md);
   margin: 0 auto;
 }
@@ -27,7 +27,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   max-width: var(--max-width-lg);
   margin: 0 auto;
 }
@@ -36,7 +36,7 @@
 .contact-box {
   background: white;
   border-radius: var(--radius-xl);
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
@@ -156,7 +156,7 @@
 
 /* Contact Examples */
 .contact-examples {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   background: var(--bg-secondary);
   border-radius: var(--radius-xl);
   margin: 2rem 0;

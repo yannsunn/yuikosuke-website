@@ -67,7 +67,7 @@
 
 /* Message Section */
 .message {
-  padding: 4rem 0;
+  padding: 3rem 2rem;
   text-align: center;
   background: linear-gradient(to bottom, transparent, var(--bg-secondary), transparent);
 }
@@ -102,7 +102,7 @@
 
 /* Strengths Section */
 .strengths {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   max-width: var(--max-width-md);
   margin: 0 auto;
 }
@@ -136,7 +136,7 @@
 
 /* Service Summary */
 .service-summary {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   background: var(--bg-tertiary);
   border-radius: var(--radius-xl);
 }
@@ -176,7 +176,7 @@
 
 /* Qualifications */
 .qualifications {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
@@ -213,7 +213,7 @@
 
 /* Company Info Table */
 .company-info {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   max-width: var(--max-width-md);
   margin: 0 auto;
 }

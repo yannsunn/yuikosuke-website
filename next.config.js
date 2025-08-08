@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Vercel自動デプロイ用設定
-  // output: 'export', // Vercelでは不要
+  // 静的エクスポート設定
+  output: 'export',
   trailingSlash: true,
   
-  // 画像最適化（Vercel対応）
+  // 画像最適化（静的エクスポート用）
   images: {
-    unoptimized: false, // Vercelの画像最適化を使用
+    unoptimized: true, // 静的エクスポート時は最適化を無効化
     domains: [],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
