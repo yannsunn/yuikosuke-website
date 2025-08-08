@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   authors: [{ name: '油井宏介' }],
   creator: '油井宏介',
   publisher: '油井宏介',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
     description: 'ファイナンシャルプランナー油井宏介の公式サイト。',
   },
   other: {
-    'apple-mobile-web-app-capable': 'yes',
+    'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default'
   }
 }
@@ -74,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="preload" as="image" href="/yuikosuke.jpg" />
       </head>
       <body>
