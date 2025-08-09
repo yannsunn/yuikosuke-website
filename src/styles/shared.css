@@ -2,7 +2,7 @@
 
 /* Hero Image Styles */
 .hero-image img {
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease;
 }
