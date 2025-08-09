@@ -318,6 +318,7 @@
   color: white;
   position: relative;
   overflow: hidden;
+  border-radius: 1.25rem;
 }
 
 .cta::before {
