@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     url: 'https://yuikosuke-website.vercel.app',
     title: '油井宏介 | ファイナンシャルプランナー',
     description: 'ファイナンシャルプランナー油井宏介の公式サイト。保険・資産形成・事業保障までトータルにサポート。',
-    siteName: '油井宏介 FP事務所',
+    siteName: '油井宏介 | ファイナンシャルプランナー',
   },
   twitter: {
     card: 'summary_large_image',

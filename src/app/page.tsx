@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: '油井宏介 | ファイナンシャルプランナー',
     description: '保険・資産形成・事業保障までトータルにサポート。一人ひとりの人生に「安心」と「希望」を届けます。',
     url: 'https://yuikosuke-website.vercel.app',
-    siteName: '油井宏介 FP事務所',
+    siteName: '油井宏介 | ファイナンシャルプランナー',
     type: 'website',
     locale: 'ja_JP',
   },
@@ -175,7 +175,7 @@ export default function HomePage() {
           <h2>ファイナンシャルプランナー<br/>油井宏介について</h2>
           <div className="profile-content">
             <div className="profile-credentials">
-              <h3>🏆 保有資格</h3>
+              <h3>保有資格</h3>
               <ul>
                 <li><strong>2級ファイナンシャル・プランニング技能士</strong></li>
                 <li><strong>生命保険協会認定トータル・ライフ・コンサルタント（TLC）</strong></li>

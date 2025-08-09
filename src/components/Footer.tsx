@@ -20,7 +20,7 @@ export default function Footer() {
     <footer className="fade-in">
       <div className="footer-content">
         <div className="footer-logo">
-          <h3>FP Office</h3>
+          <h3>油井宏介</h3>
           <p>ファイナンシャルプランナー 油井宏介</p>
         </div>
         <div className="footer-links">
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <small>&copy; 2024 FP Office All Rights Reserved.</small>
+        <small>&copy; 2024 油井宏介 All Rights Reserved.</small>
       </div>
     </footer>
   )

@@ -18,7 +18,7 @@ export default function BaseLayout({
 }: BaseLayoutProps) {
   // ヘッダータイトルを短くしてモバイルでも見やすく
   const displayTitle = title === 'FPコンサルティング' 
-    ? '油井宏介 FP事務所' 
+    ? '油井宏介 | ファイナンシャルプランナー' 
     : title;
     
   return (
