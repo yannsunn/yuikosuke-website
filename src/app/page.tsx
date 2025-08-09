@@ -178,7 +178,7 @@ export default function HomePage() {
               <h3>保有資格</h3>
               <ul>
                 <li><strong>2級ファイナンシャル・プランニング技能士</strong></li>
-                <li><strong>TLC（生命保険協会認定トータル・ライフ・コンサルタント）</strong></li>
+                <li><strong>TLC（生命保険協会認定）</strong></li>
                 <li><strong>住宅ローンアドバイザー</strong></li>
               </ul>
             </div>
